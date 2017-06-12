@@ -1,0 +1,38 @@
+header {
+
+  .navigation {
+    background-color: $color-primary;
+
+    .upper-header {
+      border-bottom: 1px solid #ebebeb;
+      background-color: #fff;
+
+      p {
+        padding: 7px 0;
+        font-size: 12px;
+        color: $color-secondary;
+        letter-spacing: 2px;
+      }
+    }
+    .navigation-main {
+      height: $nav-main-height;
+
+      .navigation-header .navigation-brand {
+        height: auto;
+        padding: 0;
+        display: block;
+        vertical-align: top;
+
+        img {
+          height: $nav-main-height;
+        }
+      }
+    }
+
+    @import "../components/nav-left";
+    @import "../components/nav-right";
+
+
+  }
+
+}

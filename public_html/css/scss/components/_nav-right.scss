@@ -1,0 +1,49 @@
+.navigation-right {
+
+  ul {
+    height: 100%;
+
+    li {
+      height: 100%;
+      border-left: 1px solid #1e8a36;
+
+      >a {
+        display: block;
+        position: relative;
+        padding: 10px 0;
+        color: #fff;
+        height: 100%;
+        font-size: 14px;
+
+        &:hover {
+          color: #fff;
+        }
+
+        span {
+          vertical-align: top;
+          display: inline-block;
+          height: 100%;
+          line-height: $nav-main-height - 20;
+        }
+
+        .icon-font {
+          margin-right: 3px;
+          font-size: 32px;
+        }
+
+        .cart-number {
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          border-radius: 50%;
+          background-color: #fff;
+          color: $color-primary;
+          position: absolute;
+          left: 0;
+          top: 14px;
+        }
+
+      }
+    }
+  }
+}

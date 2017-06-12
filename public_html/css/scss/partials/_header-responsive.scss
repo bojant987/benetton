@@ -1,0 +1,55 @@
+@import "../components/nav-left-responsive";
+@import "../components/nav-right-responsive";
+
+@media (min-width: 400px) {
+  header {
+
+    .navigation {
+
+      .navigation-main {
+        height: $nav-main-height;
+
+        .navigation-header .navigation-brand {
+
+          img {
+            height: $nav-main-height;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+
+    .navigation {
+      background-color: #fff;
+
+      .navigation-main {
+        height: $nav-main-height;
+
+        .navigation-header .navigation-brand {
+
+          img {
+            height: $nav-main-height;
+          }
+        }
+      }
+
+      @include nav-left-sm;
+      @include nav-right-sm;
+
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .navigation {
+      @include nav-left-md;
+    }
+
+  }
+}

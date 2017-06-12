@@ -1,0 +1,32 @@
+@mixin nav-right-sm {
+  .navigation-right {
+
+    ul {
+      margin-right: 15px;
+
+      li {
+        border-left: none;
+
+        >a {
+          color: $color-text-primary;
+          padding: 10px 5px;
+
+          &:hover {
+            color: $color-primary;
+          }
+
+          .icon-font {
+            margin-right: 3px;
+            font-size: 32px;
+          }
+
+          .cart-number {
+            background-color: $color-primary;
+            color: #fff;
+          }
+
+        }
+      }
+    }
+  }
+}

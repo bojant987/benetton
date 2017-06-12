@@ -1,0 +1,27 @@
+body {
+  font-family: $font-primary;
+  font-size: $font-size-primary;
+  color: $color-text-primary;
+}
+
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $color-text-primary;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+}
+
+@import "../components/buttons";
+@import "../components/overlay";

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Benetton-Regular";
+  src: url("fonts/benetton-regular/Benetton-Regular.eot?#iefix") format("embedded-opentype"),
+       url("fonts/benetton-regular/Benetton-Regular.otf")  format("opentype"),
+	     url("fonts/benetton-regular/Benetton-Regular.woff") format("woff"),
+       url("fonts/benetton-regular/Benetton-Regular.ttf")  format("truetype"),
+       url("fonts/benetton-regular/Benetton-Regular.svg#Benetton-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'benetton-rg';
+    src: url('fonts/benetton-rg/benetton-webfont-Regular.eot');
+    src: url('fonts/benetton-rg/benetton-webfont-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/benetton-rg/benetton-webfont-Regular.woff2') format('woff2'),
+         url('fonts/benetton-rg/benetton-webfont-Regular.woff') format('woff'),
+         url('fonts/benetton-rg/benetton-webfont-Regular.ttf') format('truetype'),
+         url('fonts/benetton-rg/benetton-webfont-Regular.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'Benetton';
+	src: url('fonts/benetton/Benetton-Regular.eot');
+	src: url('fonts/benetton/Benetton-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/benetton/Benetton-Regular.woff2') format('woff2'),
+		url('fonts/benetton/Benetton-Regular.woff') format('woff'),
+		url('fonts/benetton/Benetton-Regular.ttf') format('truetype'),
+		url('fonts/benetton/Benetton-Regular.svg#Benetton-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

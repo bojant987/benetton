@@ -1,0 +1,120 @@
+.navigation-left {
+  width: 0;
+  opacity: 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  max-height: 100%;
+  overflow-y: auto;
+  transition: 0.4s;
+
+  ul {
+
+    li {
+      height: $nav-main-height;
+      border-bottom: 1px solid #e7e7e7;
+      position: relative;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      &.bottom-links {
+        border-top: 3px solid #e7e7e7;
+
+        >a {
+          span {
+            display: inline-block;
+            vertical-align: top;
+            height: 100%;
+            line-height: $nav-main-height - 20;
+          }
+        }
+
+        .icon-font {
+          font-size: 24px;
+          margin-right: 5px;
+        }
+      }
+
+      >a {
+        display: block;
+        padding: 10px 15px;
+        color: $color-text-primary;
+        height: 100%;
+        line-height: $nav-main-height - 20;
+        letter-spacing: 2px;
+
+        &:hover {
+          color: $color-primary;
+        }
+
+        span:not(.icon-font):first-of-type {
+          padding-bottom: 10px;
+          border-bottom: 2px solid transparent;
+        }
+
+      }
+
+      .opener {
+        color: $color-text-primary;
+        display: block;
+        width: $nav-main-height;
+        height: $nav-main-height;
+        line-height: $nav-main-height;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 10;
+        // font-family: "benetton-light";
+
+        &::before {
+          content: "+";
+          font-size: 20px;
+        }
+
+        &.active::before {
+          content: "-";
+          font-size: 20px;
+        }
+      }
+
+      &.active {
+        color: $color-primary;
+
+        >a {
+          background-color: transparent;
+          color: $color-primary;
+
+          &:hover {
+            background-color: transparent;
+          }
+
+          span:first-of-type {
+            border-bottom: 2px solid $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .navigation-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  &.nav-show {
+    width: calc(100% - 64px);
+    opacity: 1;
+  }
+
+  &.nav-close {
+    width: 0;
+    opacity: 0;
+  }
+}

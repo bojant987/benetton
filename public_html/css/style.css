@@ -1,0 +1,229 @@
+/* ---- font declarations ---- */
+@font-face {
+  font-family: "Benetton-Regular";
+  src: url("fonts/benetton-regular/Benetton-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/benetton-regular/Benetton-Regular.otf") format("opentype"), url("fonts/benetton-regular/Benetton-Regular.woff") format("woff"), url("fonts/benetton-regular/Benetton-Regular.ttf") format("truetype"), url("fonts/benetton-regular/Benetton-Regular.svg#Benetton-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'benetton-rg';
+  src: url("fonts/benetton-rg/benetton-webfont-Regular.eot");
+  src: url("fonts/benetton-rg/benetton-webfont-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/benetton-rg/benetton-webfont-Regular.woff2") format("woff2"), url("fonts/benetton-rg/benetton-webfont-Regular.woff") format("woff"), url("fonts/benetton-rg/benetton-webfont-Regular.ttf") format("truetype"), url("fonts/benetton-rg/benetton-webfont-Regular.svg#webfontregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Benetton';
+  src: url("fonts/benetton/Benetton-Regular.eot");
+  src: url("fonts/benetton/Benetton-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/benetton/Benetton-Regular.woff2") format("woff2"), url("fonts/benetton/Benetton-Regular.woff") format("woff"), url("fonts/benetton/Benetton-Regular.ttf") format("truetype"), url("fonts/benetton/Benetton-Regular.svg#Benetton-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ---- global styles ---- */
+body {
+  font-family: "Benetton-Regular";
+  font-size: 13px;
+  color: #000;
+}
+
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+}
+
+.navigation-toggle {
+  display: block;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  font-size: 64px;
+  background-color: #fff;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  display: none;
+}
+
+/* ---- header styles ---- */
+header .navigation {
+  background-color: #009933;
+}
+header .navigation .upper-header {
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fff;
+}
+header .navigation .upper-header p {
+  padding: 7px 0;
+  font-size: 12px;
+  color: #0091e3;
+  letter-spacing: 2px;
+}
+header .navigation .navigation-main {
+  height: 64px;
+}
+header .navigation .navigation-main .navigation-header .navigation-brand {
+  height: auto;
+  padding: 0;
+  display: block;
+  vertical-align: top;
+}
+header .navigation .navigation-main .navigation-header .navigation-brand img {
+  height: 64px;
+}
+header .navigation .navigation-left {
+  width: 0;
+  opacity: 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  max-height: 100%;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+header .navigation .navigation-left ul li {
+  height: 64px;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+header .navigation .navigation-left ul li:last-of-type {
+  border-bottom: none;
+}
+header .navigation .navigation-left ul li.bottom-links {
+  border-top: 3px solid #e7e7e7;
+}
+header .navigation .navigation-left ul li.bottom-links > a span {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  line-height: 44px;
+}
+header .navigation .navigation-left ul li.bottom-links .icon-font {
+  font-size: 24px;
+  margin-right: 5px;
+}
+header .navigation .navigation-left ul li > a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  height: 100%;
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+header .navigation .navigation-left ul li > a:hover {
+  color: #009933;
+}
+header .navigation .navigation-left ul li > a span:not(.icon-font):first-of-type {
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+}
+header .navigation .navigation-left ul li .opener {
+  color: #000;
+  display: block;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+header .navigation .navigation-left ul li .opener::before {
+  content: "+";
+  font-size: 20px;
+}
+header .navigation .navigation-left ul li .opener.active::before {
+  content: "-";
+  font-size: 20px;
+}
+header .navigation .navigation-left ul li.active {
+  color: #009933;
+}
+header .navigation .navigation-left ul li.active > a {
+  background-color: transparent;
+  color: #009933;
+}
+header .navigation .navigation-left ul li.active > a:hover {
+  background-color: transparent;
+}
+header .navigation .navigation-left ul li.active > a span:first-of-type {
+  border-bottom: 2px solid #009933;
+}
+header .navigation .navigation-left .navigation-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+header .navigation .navigation-left.nav-show {
+  width: calc(100% - 64px);
+  opacity: 1;
+}
+header .navigation .navigation-left.nav-close {
+  width: 0;
+  opacity: 0;
+}
+header .navigation .navigation-right ul {
+  height: 100%;
+}
+header .navigation .navigation-right ul li {
+  height: 100%;
+  border-left: 1px solid #1e8a36;
+}
+header .navigation .navigation-right ul li > a {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  color: #fff;
+  height: 100%;
+  font-size: 14px;
+}
+header .navigation .navigation-right ul li > a:hover {
+  color: #fff;
+}
+header .navigation .navigation-right ul li > a span {
+  vertical-align: top;
+  display: inline-block;
+  height: 100%;
+  line-height: 44px;
+}
+header .navigation .navigation-right ul li > a .icon-font {
+  margin-right: 3px;
+  font-size: 32px;
+}
+header .navigation .navigation-right ul li > a .cart-number {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #009933;
+  position: absolute;
+  left: 0;
+  top: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */
