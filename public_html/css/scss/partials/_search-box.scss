@@ -1,0 +1,26 @@
+.search-box {
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 50px 10px;
+  display: none;
+
+  .search-box-form {
+    input {
+      margin: 0 auto 15px;
+      width: 60%;
+      height: 58px;
+      line-height: 34px;
+
+    }
+
+    button {
+      display: inline-block;
+      height: 52px;
+      background-color: $color-primary;
+      margin: 0 auto;
+      width: 40%;
+    }
+  }
+}

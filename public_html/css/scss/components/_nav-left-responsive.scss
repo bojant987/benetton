@@ -63,6 +63,7 @@
       li {
         float: left;
         height: 100%;
+
         >a {
           display: block;
           padding: 10px 15px;
@@ -70,6 +71,7 @@
           height: 100%;
           line-height: $nav-main-height - 20;
           letter-spacing: 2px;
+          border-bottom: none;
 
           &:hover {
             color: $color-primary;

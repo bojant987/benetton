@@ -1,0 +1,37 @@
+input {
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: transparent;
+  width: 100%;
+  font-size: 15px;
+  padding: 12px;
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 15px;
+    font-style: normal;
+    color: #000;
+    letter-spacing: 0.03em;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    font-size: 15px;
+    font-style: normal;
+    color: #000;
+    letter-spacing: 0.03em;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    font-size: 15px;
+    font-style: normal;
+    color: #000;
+    letter-spacing: 0.03em;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    font-size: 15px;
+    font-style: normal;
+    color: #000;
+    letter-spacing: 0.03em;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

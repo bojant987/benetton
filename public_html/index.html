@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/icon-fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
@@ -26,48 +27,182 @@
       <nav class="navigation">
         <div class="upper-header text-center">
           <p>FREE SHIPPING ON ORDERS OVER £ 66,00 AND FREE RETURNS</p>
-        </div>
+        </div>   <!-- upper-header -->
         <div class="navigation-main clearfix">
           <div class="navigation-header clearfix pull-left">
-            <button type="button" class="navigation-toggle icon-menu text-center pull-left hidden-md hidden-lg" data-role="nav-show">
+            <button type="button" class="navigation-toggle icon-menu text-center pull-left hidden-md hidden-lg popin-handler" data-role="open" data-target="navigation">
               <span class="sr-only">Toggle navigation</span>
             </button>
             <a class="navigation-brand pull-left" href="#">
               <img src="img/logo.png" alt="">
             </a>
-          </div>
-          <div class="navigation-left">
+          </div>   <!-- navigation-header -->
+          <div class="navigation-left" id="navigation">
             <ul class="list-unstyled clearfix">
-              <li><a href="#" class="text-uppercase"><span>women</span></a><span class="opener hidden-md hidden-lg text-center"></span></li>
-              <li class="active"><a href="#" class="text-uppercase"><span>men</span> <span class="sr-only">(current)</span></a><span class="opener hidden-md hidden-lg text-center"></span></li>
-              <li><a href="#" class="text-uppercase"><span>girls</span></a><span class="opener hidden-md hidden-lg text-center"></span></li>
-              <li><a href="#" class="text-uppercase"><span>boys</span></a><span class="opener hidden-md hidden-lg text-center"></span></li>
-              <li><a href="#" class="text-uppercase"><span>identity</span></a><span class="opener hidden-md hidden-lg text-center"></span></li>
+              <li>
+                <a href="#" class="text-uppercase"><span>women</span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level1"></span>
+                <ul class="nav-dropdown list-unstyled accordion-content" data-accordion="level1">
+                  <li>
+                    <a href="#" class="text-uppercase">tops</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">knitware</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">bottoms</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="active">
+                <a href="#" class="text-uppercase"><span>men</span> <span class="sr-only">(current)</span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center"></span>
+              </li>
+              <li>
+                <a href="#" class="text-uppercase"><span>girls</span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center"></span>
+              </li>
+              <li>
+                <a href="#" class="text-uppercase"><span>boys</span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center"></span>
+              </li>
+              <li>
+                <a href="#" class="text-uppercase"><span>identity</span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center"></span>
+              </li>
               <li class="bottom-links hidden-md hidden-lg"><a href="#" class="text-uppercase"><span class="icon-font icon-location"></span><span>find a store</span></a></li>
               <li class="bottom-links hidden-md hidden-lg"><a href="#" class="text-uppercase"><span class="icon-font icon-wishlist_outline"></span><span>my wishlist</span></a></li>
-              <li class="bottom-links hidden-md hidden-lg"><a href="#" class="text-uppercase"><span class="icon-font icon-user"></span><span>login</span></a></li>
+              <li class="bottom-links hidden-md hidden-lg popin-handler" data-target="login-box" data-role="open"><a href="#" class="text-uppercase"><span class="icon-font icon-user"></span><span>login</span></a></li>
               <li class="bottom-links hidden-md hidden-lg"><a href="#"><span class="icon-font icon-world"></span><span>Choose your country</span></a></li>
             </ul>
-            <button type="button" class="navigation-toggle icon-close text-center pull-right hidden-md hidden-lg" data-role="nav-close">
+            <button type="button" class="navigation-toggle icon-close text-center pull-right hidden-md hidden-lg popin-handler" data-role="close" data-target="navigation">
               <span class="sr-only">Close navigation</span>
             </button>
           </div>   <!-- navigation-left -->
           <div class="navigation-right pull-right">
             <ul class="list-inline">
-              <li><a href="#"><span class="icon-font icon-search"></span></a></li>
+              <li>
+                <a href="#" class="search-handler"><span class="icon-font icon-search"></span></a>
+                <div class="search-box">
+                  <form class="search-box-form text-center">
+                    <input type="search" name="" value="" placeholder="What are you looking for?">
+                    <button type="submit" name="button" class="login-button text-uppercase">search</button>
+                  </form>
+                </div>
+              </li>
               <li class="hidden-xs"><a href="#"><span class="icon-font icon-location"></span></a></li>
               <li class="hidden-xs"><a href="#"><span class="icon-font icon-wishlist_outline"></span></a></li>
-              <li class="hidden-xs"><a href="#"><span class="icon-font icon-user"></span><span class="hidden-md">Login</span></a></li>
-              <li><a href="#"><span class="icon-font icon-bag"></span><span class="hidden-xs hidden-md">Shopping bag</span><span class="cart-number text-center">0</span></a></li>
+              <li class="hidden-xs popin-handler" data-role="open" data-target="login-box"><a href="#"><span class="icon-font icon-user"></span><span class="hidden-md">Login</span></a></li>
+              <li class="popin-handler" data-role="open" data-target="cart-box"><a href="#"><span class="icon-font icon-bag"></span><span class="hidden-xs hidden-md">Shopping bag</span><span class="cart-number text-center">0</span></a></li>
             </ul>
           </div>   <!-- navigation-right -->
         </div>   <!-- navigation-main -->
       </nav>
+      <div class="login-box popin-box animated" id="login-box">
+        <h1>Welcome</h1>
+        <form class="login-form">
+          <input type="email" name="login-email" value="" placeholder="Enter your email address">
+          <input type="password" name="login-password" value="" placeholder="Enter your password">
+          <div class="text-right"><a href="#">Forgot Your password?</a></div>
+          <button type="submit" name="button" class="login-button text-uppercase">login</button>
+          <button type="button" name="button" class="login-button text-uppercase">connect with facebook</button>
+          <p>Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+        <span class="icon-font icon-close menu-close popin-handler" data-role="close" data-target="login-box"></span>
+      </div>   <!-- login-box -->
+      <div class="cart-box popin-box" id="cart-box">
+        <p class="cart-box-header">
+          <span class="cart-number text-center">0</span>
+          <span>Items in your bag</span>
+        </p>
+        <article class="cart-box-article">
+          <div class="row">
+            <div class="col-xs-3">
+              <img src="img/cart-box-01.jpg" alt="">
+            </div>
+            <div class="col-xs-9">
+              <div class="row">
+                <div class="col-xs-8">
+                  <article class="cart-item-info">
+                    <p>Polo with logo</p>
+                    <p><span>Size (italian): </span><span class="cart-size text-uppercase">L</span></p>
+                    <p><span>Colour: </span><span class="cart-color">red</span></p>
+                    <p><span>Qty</span>
+                      <input type="text" name="cart-qty" value="1" class="cart-qty">
+                      <a href="#" class="cart-update"><span class="icon-font icon-update"></span></a></p>
+                  </article>
+                </div>
+                <div class="col-xs-4">
+                  <article class="text-right">
+                    <p class="cart-price">£25.95</p>
+                    <a href="#" class="cart-remove"><span class="icon-font icon-trash"></span></a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>   <!-- cart-box-article -->
+        <form class="cart-box-form">
+          <div class="row">
+            <div class="col-xs-7">
+              <p class="text-uppercase text-right">subtotal</p>
+            </div>
+            <div class="col-xs-5">
+              <p class="text-right cart-price">£25.95</p>
+            </div>
+          </div>   <!-- row -->
+          <div class="row">
+            <div class="col-xs-7">
+              <p class="text-uppercase text-right">shipping</p>
+            </div>
+            <div class="col-xs-5">
+              <p class="text-right cart-price">£7.73</p>
+            </div>
+          </div>   <!-- row -->
+          <div class="input-group">
+            <input type="text" name="" value="" placeholder="Enter your code" class="cart-box-input">
+            <button type="button" name=""><span class="icon-font icon-right"></span></button>
+          </div>
+          <div class="row">
+            <div class="col-xs-7">
+              <p class="text-uppercase text-right">total</p>
+            </div>
+            <div class="col-xs-5">
+              <p class="text-right cart-price">£33.68</p>
+            </div>
+          </div>   <!-- row -->
+          <button type="submit" name="button" class="login-button text-uppercase">next</button>
+          <div class="text-center">
+            <a href="#" class="text-uppercase">view cart</a>
+          </div>
+        </form>   <!-- cart-box-form -->
+        <span class="icon-font icon-close menu-close popin-handler" data-role="close" data-target="cart-box"></span>
+      </div>   <!-- cart-box -->
     </header>
     <section class="banner">
       <img src="img/slider.jpg" alt="">
-    </section>
+    </section>   <!-- banner -->
+
     <div class="overlay"></div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

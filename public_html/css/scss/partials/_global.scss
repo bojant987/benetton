@@ -4,6 +4,10 @@ body {
   color: $color-text-primary;
 }
 
+h1 {
+  font-size: $h1-font-size;
+}
+
 p, ul {
   margin: 0;
   padding: 0;
@@ -22,6 +26,10 @@ button {
   padding: 0;
   border: 0;
 }
-
+.accordion-content {
+  display: none;
+}
 @import "../components/buttons";
 @import "../components/overlay";
+@import "../components/popin-box";
+@import "../components/input";

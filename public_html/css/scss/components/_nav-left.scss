@@ -1,20 +1,19 @@
 .navigation-left {
-  width: 0;
+  width: calc(100% - 64px);
   opacity: 0;
   background-color: #fff;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -1000px;
   z-index: 1000;
   max-height: 100%;
   overflow-y: auto;
-  transition: 0.4s;
+  transition: 0.6s;
 
   ul {
 
     li {
-      height: $nav-main-height;
-      border-bottom: 1px solid #e7e7e7;
+
       position: relative;
 
       &:last-of-type {
@@ -46,6 +45,7 @@
         height: 100%;
         line-height: $nav-main-height - 20;
         letter-spacing: 2px;
+        border-bottom: 1px solid #e7e7e7;
 
         &:hover {
           color: $color-primary;
@@ -58,7 +58,7 @@
 
       }
 
-      .opener {
+      .accordion-handler {
         color: $color-text-primary;
         display: block;
         width: $nav-main-height;
@@ -76,7 +76,7 @@
           font-size: 20px;
         }
 
-        &.active::before {
+        &.show::before {
           content: "-";
           font-size: 20px;
         }
@@ -99,6 +99,27 @@
         }
       }
     }
+
+    .nav-dropdown {
+      >li {
+        >a {
+          padding: 10px 25px;
+
+          &:hover {
+            color: $color-text-primary;
+            text-decoration: underline;
+          }
+        }
+
+        >ul a {
+          padding: 10px 35px;
+
+          &:hover {
+            color: $color-text-primary;
+          }
+        }
+      }
+    }
   }
 
   .navigation-toggle {
@@ -106,15 +127,11 @@
     top: 0;
     right: 0;
     z-index: 1000;
+    display: none;
   }
 
-  &.nav-show {
-    width: calc(100% - 64px);
+  &.navigation-show {
+    left: 0;
     opacity: 1;
-  }
-
-  &.nav-close {
-    width: 0;
-    opacity: 0;
   }
 }
