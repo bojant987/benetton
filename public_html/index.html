@@ -11,7 +11,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/icon-fonts.css" rel="stylesheet" type="text/css"/>
-    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/owl.theme.default" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
@@ -39,55 +41,936 @@
           </div>   <!-- navigation-header -->
           <div class="navigation-left" id="navigation">
             <ul class="list-unstyled clearfix">
-              <li>
+              <li class="clearfix">
                 <a href="#" class="text-uppercase"><span>women</span></a>
                 <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level1"></span>
-                <ul class="nav-dropdown list-unstyled accordion-content" data-accordion="level1">
-                  <li>
-                    <a href="#" class="text-uppercase">tops</a>
-                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
-                    <ul class="list-unstyled accordion-content" data-accordion="level2">
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix" data-accordion="level1">
+                  <li><span class="arrow arrow-1"></span><span class="arrow arrow-2"></span></li>
+                  <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">tops</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                          <li><a href="#" class="text-capitalize">polos</a></li>
+                          <li><a href="#" class="text-capitalize">tanks</a></li>
+                          <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                          <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">jackets and coats</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bags</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">clutches and pouches</a></li>
+                          <li><a href="#" class="text-capitalize">handbags</a></li>
+                          <li><a href="#" class="text-capitalize">shoulder bags</a></li>
+                          <li><a href="#" class="text-capitalize">crossbody bags</a></li>
+                          <li><a href="#" class="text-capitalize">small leather goods</a></li>
+                          <li><a href="#" class="text-capitalize">backpacks</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" class="text-uppercase">knitware</a>
-                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
-                    <ul class="list-unstyled accordion-content" data-accordion="level2">
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">intimates</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">trousers</a></li>
+                          <li><a href="#" class="text-capitalize">jeans</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">knitware</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#" class="text-uppercase">bottoms</a>
-                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
-                    <ul class="list-unstyled accordion-content" data-accordion="level2">
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
-                      <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">dresses</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">shoes</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">beachware</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">accesories and gifts</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                        </ul>
+                      </li>
                     </ul>
                   </li>
                 </ul>
-              </li>
+              </li>   <!-- top level nav -->
               <li class="active">
                 <a href="#" class="text-uppercase"><span>men</span> <span class="sr-only">(current)</span></a>
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
-              </li>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix" data-accordion="level1">
+                  <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">tops</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                          <li><a href="#" class="text-capitalize">polos</a></li>
+                          <li><a href="#" class="text-capitalize">tanks</a></li>
+                          <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                          <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">jackets and coats</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bags</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">clutches and pouches</a></li>
+                          <li><a href="#" class="text-capitalize">handbags</a></li>
+                          <li><a href="#" class="text-capitalize">shoulder bags</a></li>
+                          <li><a href="#" class="text-capitalize">crossbody bags</a></li>
+                          <li><a href="#" class="text-capitalize">small leather goods</a></li>
+                          <li><a href="#" class="text-capitalize">backpacks</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">intimates</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">trousers</a></li>
+                          <li><a href="#" class="text-capitalize">jeans</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                          <li><a href="#" class="text-capitalize">skirts</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">knitware</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">dresses</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">shoes</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-wrapper">
+                    <ul class="accordion-outer list-unstyled">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">bottoms</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">beachware</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                          <li><a href="#" class="text-capitalize">crew neck</a></li>
+                          <li><a href="#" class="text-capitalize">v-neck</a></li>
+                          <li><a href="#" class="text-capitalize">cardigans</a></li>
+                          <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                        </ul>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">accesories and gifts</a>
+                        <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                        <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>   <!-- top level nav -->
               <li>
                 <a href="#" class="text-uppercase"><span>girls</span></a>
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
-              </li>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1">
+                  <li>
+                    <a href="#" class="text-uppercase has-arrow-down">girls(1 - 14 years)</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                              <li><a href="#" class="text-capitalize">polos</a></li>
+                              <li><a href="#" class="text-capitalize">tanks</a></li>
+                              <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                              <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">trousers</a></li>
+                              <li><a href="#" class="text-capitalize">jeans</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">girls(0 - 12 months)</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                              <li><a href="#" class="text-capitalize">polos</a></li>
+                              <li><a href="#" class="text-capitalize">tanks</a></li>
+                              <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                              <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">trousers</a></li>
+                              <li><a href="#" class="text-capitalize">jeans</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>   <!-- top level nav -->
               <li>
                 <a href="#" class="text-uppercase"><span>boys</span></a>
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
-              </li>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1">
+                  <li>
+                    <a href="#" class="text-uppercase has-arrow-down">boys(1 - 14 years)</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">boys tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                              <li><a href="#" class="text-capitalize">polos</a></li>
+                              <li><a href="#" class="text-capitalize">tanks</a></li>
+                              <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                              <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">trousers</a></li>
+                              <li><a href="#" class="text-capitalize">jeans</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">baby boys(0 - 12 months)</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content" data-accordion="level2">
+                      <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">boys tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                              <li><a href="#" class="text-capitalize">polos</a></li>
+                              <li><a href="#" class="text-capitalize">tanks</a></li>
+                              <li><a href="#" class="text-capitalize">shirts and blouses</a></li>
+                              <li><a href="#" class="text-capitalize">sweatshirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">trousers</a></li>
+                              <li><a href="#" class="text-capitalize">jeans</a></li>
+                              <li><a href="#" class="text-capitalize">skirts</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                              <li><a href="#" class="text-capitalize">crew neck</a></li>
+                              <li><a href="#" class="text-capitalize">v-neck</a></li>
+                              <li><a href="#" class="text-capitalize">cardigans</a></li>
+                              <li><a href="#" class="text-capitalize">turtle necks</a></li>
+                            </ul>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                            <ul class="list-unstyled accordion-content clearfix" data-accordion="level3">
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>   <!-- top level nav -->
               <li>
-                <a href="#" class="text-uppercase"><span>identity</span></a>
+                <a href="#" class="text-uppercase sales-link"><span>sales</span></a>
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
-              </li>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1">
+                  <li>
+                    <a href="#" class="text-uppercase has-arrow-down">women</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content centered-content" data-accordion="level2">
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">men</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content centered-content" data-accordion="level2">
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">2bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">2accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">girls</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content centered-content" data-accordion="level2">
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">3bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">3accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="text-uppercase">boys</a>
+                    <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
+                    <ul class="list-unstyled accordion-content centered-content" data-accordion="level2">
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">4tops</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">4jackets and coats</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">intimates</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">knitware</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">dresses</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">shoes</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="col-wrapper">
+                        <ul class="accordion-outer list-unstyled">
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">bottoms</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                          <li class="accordion-wrapper">
+                            <a href="#" class="text-uppercase">accesories and gifts</a>
+                            <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level3"></span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>   <!-- top level nav -->
+              <li>
+                <a href="#" class="text-uppercase"><span>identity</span><span class="dropdown-arrow"></span></a>
+                <span class="accordion-handler hidden-md hidden-lg text-center"></span>
+                <ul class="nav-dropdown list-unstyled accordion-content clearfix article-dropdown" data-accordion="level1">
+                  <li class="article-wrapper">
+                    <ul class="accordion-outer list-unstyled clearfix">
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">
+                          <img src="img/knitwear-dropdown.jpg" alt="" class="hidden-xs hidden-sm">
+                          knitwear
+                        </a>
+                        <a href="#" class="text-uppercase hidden-xs hidden-sm">discover more</a>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">
+                          <img src="img/knitwear-dropdown.jpg" alt="" class="hidden-xs hidden-sm">
+                          knitwear
+                        </a>
+                        <a href="#" class="text-uppercase hidden-xs hidden-sm">discover more</a>
+                      </li>
+                      <li class="accordion-wrapper">
+                        <a href="#" class="text-uppercase">
+                          <img src="img/knitwear-dropdown.jpg" alt="" class="hidden-xs hidden-sm">
+                          knitwear
+                        </a>
+                        <a href="#" class="text-uppercase hidden-xs hidden-sm">discover more</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>   <!-- top level nav -->
               <li class="bottom-links hidden-md hidden-lg"><a href="#" class="text-uppercase"><span class="icon-font icon-location"></span><span>find a store</span></a></li>
               <li class="bottom-links hidden-md hidden-lg"><a href="#" class="text-uppercase"><span class="icon-font icon-wishlist_outline"></span><span>my wishlist</span></a></li>
               <li class="bottom-links hidden-md hidden-lg popin-handler" data-target="login-box" data-role="open"><a href="#" class="text-uppercase"><span class="icon-font icon-user"></span><span>login</span></a></li>
@@ -118,9 +1001,15 @@
       </nav>
       <div class="login-box popin-box animated" id="login-box">
         <h1>Welcome</h1>
-        <form class="login-form">
-          <input type="email" name="login-email" value="" placeholder="Enter your email address">
-          <input type="password" name="login-password" value="" placeholder="Enter your password">
+        <form class="login-form" data-toggle="validator" data-role="form">
+          <div class="form-group has-feedback">
+            <input type="email" name="login-email" value="" placeholder="Enter your email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" name="login-password" value="" placeholder="Enter your password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+            <div class="help-block with-errors"></div>
+          </div>
           <div class="text-right"><a href="#">Forgot Your password?</a></div>
           <button type="submit" name="button" class="login-button text-uppercase">login</button>
           <button type="button" name="button" class="login-button text-uppercase">connect with facebook</button>
@@ -133,6 +1022,35 @@
           <span class="cart-number text-center">0</span>
           <span>Items in your bag</span>
         </p>
+        <p class="empty-cart">You have no items in your shopping cart.</p>
+        <button type="button" name="" class="login-button empty-cart text-uppercase">continue shopping</button>
+        <article class="cart-box-article">
+          <div class="row">
+            <div class="col-xs-3">
+              <img src="img/cart-box-01.jpg" alt="">
+            </div>
+            <div class="col-xs-9">
+              <div class="row">
+                <div class="col-xs-8">
+                  <article class="cart-item-info">
+                    <p>Polo with logo</p>
+                    <p><span>Size (italian): </span><span class="cart-size text-uppercase">L</span></p>
+                    <p><span>Colour: </span><span class="cart-color">red</span></p>
+                    <p><span>Qty</span>
+                      <input type="text" name="cart-qty" value="1" class="cart-qty">
+                      <a href="#" class="cart-update"><span class="icon-font icon-update"></span></a></p>
+                  </article>
+                </div>
+                <div class="col-xs-4">
+                  <article class="text-right">
+                    <p class="cart-price">£25.95</p>
+                    <a href="#" class="cart-remove"><span class="icon-font icon-trash"></span></a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>   <!-- cart-box-article -->
         <article class="cart-box-article">
           <div class="row">
             <div class="col-xs-3">
@@ -197,15 +1115,385 @@
         <span class="icon-font icon-close menu-close popin-handler" data-role="close" data-target="cart-box"></span>
       </div>   <!-- cart-box -->
     </header>
-    <section class="banner">
-      <img src="img/slider.jpg" alt="">
-    </section>   <!-- banner -->
-
+    <main>
+      <section class="banner">
+        <ul class="bxslider banner-slider">
+          <li>
+            <img src="img/banner-01.jpg"/>
+            <div class="banner-content banner-content-left text-center">
+              <h4><span>weekend</span><span>collection</span></h4>
+              <a href="#" class="button-shop-lg text-uppercase">shop now</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/banner-01.jpg"/>
+            <div class="banner-content banner-content-right text-center">
+              <h4><span>weekend</span><span>collection</span></h4>
+              <a href="#" class="button-shop-lg text-uppercase">shop now</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/banner-01.jpg"/>
+            <div class="banner-content banner-content-left text-center">
+              <h4><span>weekend</span><span>collection</span></h4>
+              <a href="#" class="button-shop-lg text-uppercase">shop now</a>
+            </div>
+          </li>
+        </ul>
+        <div class="slider-buttons">
+          <a href="#" id="banner-slider-prev"></a>
+          <a href="#" id="banner-slider-next"></a>
+        </div>
+        <div id="banner-slider-pager" class="slider-pager">
+          <a href="#" class="slider-dot" data-slide-index="0"></a>
+          <a href="#" class="slider-dot" data-slide-index="1"></a>
+          <a href="#" class="slider-dot" data-slide-index="2"></a>
+        </div>
+      </section>   <!-- banner -->
+      <section class="categories">
+        <div class="container">
+          <div class="categories-container">
+            <div class="row">
+              <div class="col-sm-3">
+                <article>
+                  <div class="category-collapse text-uppercase">top <span class="icon-font icon-light-bottom hidden-sm hidden-md hidden-lg"></span></div>
+                  <ul class="list-unstyled category-list">
+                    <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    <li><a href="#" class="text-capitalize">polos</a></li>
+                    <li><a href="#" class="text-capitalize">shirts</a></li>
+                  </ul>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-3">
+                <article>
+                  <div class="category-collapse text-uppercase">top <span class="icon-font icon-light-bottom hidden-sm hidden-md hidden-lg"></span></div>
+                  <ul class="list-unstyled category-list">
+                    <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    <li><a href="#" class="text-capitalize">polos</a></li>
+                    <li><a href="#" class="text-capitalize">shirts</a></li>
+                  </ul>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-3">
+                <article>
+                  <div class="category-collapse text-uppercase">jackets and cop <span class="icon-font icon-light-bottom hidden-sm hidden-md hidden-lg"></span></div>
+                  <ul class="list-unstyled category-list">
+                    <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    <li><a href="#" class="text-capitalize">polos</a></li>
+                    <li><a href="#" class="text-capitalize">shirts</a></li>
+                  </ul>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-3">
+                <article>
+                  <div class="category-collapse text-uppercase">top <span class="icon-font icon-light-bottom hidden-sm hidden-md hidden-lg"></span></div>
+                  <ul class="list-unstyled category-list">
+                    <li><a href="#" class="text-capitalize">t-shirts</a></li>
+                    <li><a href="#" class="text-capitalize">polos</a></li>
+                    <li><a href="#" class="text-capitalize">shirts</a></li>
+                  </ul>
+                </article>
+              </div>   <!-- col -->
+            </div>   <!-- row -->
+          </div>   <!-- categories-container -->
+        </div>   <!-- container -->
+      </section>   <!-- categories -->
+      <section class="most-wanted">
+        <div class="headline">
+          <h2 class="text-center text-uppercase">most wanted</h2>
+        </div>
+        <div class="carousel-container">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#"><img src="img/carousel-01.jpg" alt=""></a>
+                </div>   <!-- col -->
+                <div class="col-md-6">
+                  <article class="carousel-item-info text-center">
+                    <p class="name">Polo with logo</p>
+                    <p class="price">£25.95</p>
+                    <a href="#" class="button-shop text-uppercase">shop now</a>
+                  </article>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+            </div>   <!-- item -->
+          </div>   <!-- owl carousel -->
+        </div>   <!-- carousel container -->
+      </section>   <!-- most wanted -->
+      <section class="wear-collection">
+        <div class="container">
+          <h2 class="text-center">wear collection</h2>
+          <article class="collection-card">
+            <div class="row">
+              <div class="col-sm-6">
+                <article class="photo-card">
+                  <a href="#"><img src="img/collection-card.jpg" alt=""></a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-6">
+                <div class="collection-slider-container">
+                  <ul class="bxslider collection-slider">
+                    <li>
+                      <a href="#"><img src="img/collection-01.jpg"/></a>
+                      <div class="collection-content text-center">
+                        <p class="name text-uppercase">color block jacket</p>
+                        <p class="price">£25.95</p>
+                        <a href="#" class="button-shop text-uppercase">shop now</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="img/collection-01.jpg"/></a>
+                      <div class="collection-content  text-center">
+                        <p class="name text-uppercase">color block jacket</p>
+                        <p class="price">£25.95</p>
+                        <a href="#" class="button-shop text-uppercase">shop now</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="img/collection-01.jpg"/></a>
+                      <div class="collection-content text-center">
+                        <p class="name text-uppercase">color block jacket</p>
+                        <p class="price">£25.95</p>
+                        <a href="#" class="button-shop text-uppercase">shop now</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"><img src="img/collection-01.jpg"/></a>
+                      <div class="collection-content text-center">
+                        <p class="name text-uppercase">color block jacket</p>
+                        <p class="price">£25.95</p>
+                        <a href="#" class="button-shop text-uppercase">shop now</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="slider-buttons">
+                    <a href="#" id="collection-slider-prev"></a>
+                    <a href="#" id="collection-slider-next"></a>
+                  </div>
+                  <div id="collection-slider-pager" class="slider-pager">
+                    <a href="#" class="slider-dot" data-slide-index="0"></a>
+                    <a href="#" class="slider-dot" data-slide-index="1"></a>
+                    <a href="#" class="slider-dot" data-slide-index="2"></a>
+                    <a href="#" class="slider-dot" data-slide-index="3"></a>
+                  </div>
+                </div>
+              </div>   <!-- col -->
+            </div>   <!-- row -->
+          </article>
+        </div>   <!-- container-->
+      </section>   <!-- wear collection -->
+      <section class="share-bar text-center">
+        <h4 class="text-uppercase">share this page</h4>
+        <ul class="list-inline">
+          <li><a href="#" class="text-uppercase">facebook</a></li>
+          <li><a href="#" class="text-uppercase">twitter</a></li>
+          <li><a href="#" class="text-uppercase">pinterest</a></li>
+          <li><a href="#" class="text-uppercase">google+</a></li>
+        </ul>
+      </section>   <!-- share bar -->
+    </main>
+    <footer>
+      <div class="upper-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <article class="footer-category">
+                <p class="headline text-uppercase hidden-xs">categories</p>
+                <ul class="footer-category-list list-unstyled">
+                  <li><a href="#">women</a></li>
+                  <li><a href="#">men</a></li>
+                  <li><a href="#">girls</a></li>
+                  <li><a href="#">boys</a></li>
+                </ul>
+              </article>
+            </div>   <!-- col -->
+            <div class="col-sm-3">
+              <article class="follow-us">
+                <p class="headline text-uppercase">follow us</p>
+                <ul class="footer-category list-unstyled list-inline">
+                  <li><a href="#"><span class="icon-font icon-instagram"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-facebook"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-pinterest"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-twitter"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-youtube"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-google-plus"></span></a></li>
+                  <li><a href="#"><span class="icon-font icon-vkontakte"></span></a></li>
+                </ul>
+              </article>
+            </div>   <!-- col -->
+            <div class="col-sm-6">
+              <article>
+                <form class="newsletter-form" data-toggle="validator" role="form">
+                  <p class=" headline text-uppercase">subscribe to our newletter</p>
+                  <div class="form-group has-feedback">
+                    <input type="email" name="" value="" placeholder="Enter you email address" minlength="4" maxlength="35" data-error="Please enter your email address" required>
+                    <button type="submit" class="button-newsletter text-uppercase">send</button>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <p>You'll immediately receive a 15% welcome discount</p>
+                  <div class="form-group has-feedback">
+                    <input type="checkbox" name="" value="" id="newsletter-checkbox" class="newsletter-checkbox" data-validate="true" data-focus="true" data-error="Please consent to the Privacy Policy" required>
+                    <label for="newsletter-checkbox">
+                      Privacy consent: I consent to the processing of my personal information
+                      for the marketing and profiling purposesindicated in the
+                      <a href="#">privacy statement</a>
+                    </label>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </form>
+              </article>
+            </div>   <!-- col -->
+          </div>   <!-- row -->
+          <div class="row">
+            <div class="col-sm-3">
+              <article class="footer-list">
+                <p class="headline text-uppercase accordion-handler">benetton world <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></p>
+                <ul class="list-unstyled accordion-content">
+                  <li><a href="#">Benetton Group</a></li>
+                  <li><a href="#">Media &amp; Press</a></li>
+                  <li><a href="#">Work with us</a></li>
+                  <li><a href="#">News and events</a></li>
+                </ul>
+              </article>
+            </div>   <!-- col -->
+            <div class="col-sm-3">
+              <article class="footer-list">
+                <p class="headline text-uppercase accordion-handler">help &amp; customer service <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></p>
+                <ul class="list-unstyled accordion-content">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Payments</a></li>
+                  <li><a href="#">Delivery</a></li>
+                  <li><a href="#">Returns and Refunds</a></li>
+                  <li><a href="#">Shops</a></li>
+                </ul>
+              </article>
+            </div>   <!-- col -->
+            <div class="col-sm-3">
+              <article class="footer-list">
+                <p class="headline text-uppercase accordion-handler">product guide <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></p>
+                <ul class="list-unstyled accordion-content">
+                  <li><a href="#">Product Guide</a></li>
+                  <li><a href="#">Clothing Care</a></li>
+                  <li><a href="#">Smart Washing</a></li>
+                  <li><a href="#">Fabric Glossary</a></li>
+                  <li><a href="#">Size Guide</a></li>
+                </ul>
+              </article>
+            </div>   <!-- col -->
+            <div class="col-sm-3">
+              <article class="country-payment">
+                <div class="country-selector">
+                  <p class="headline text-uppercase">country selector</p>
+                  <a href="#" class="text-uppercase">united kingdom</a>
+                  <span class="text-uppercase">gb</span>
+                </div>
+                <div class="payment-methods">
+                  <p class="headline text-uppercase">accepted payment methods</p>
+                  <figure>
+                    <img src="img/payment-card-01.svg" alt="">
+                    <img src="img/payment-card-02.svg" alt="">
+                    <img src="img/payment-card-03.svg" alt="">
+                    <img src="img/payment-card-04.svg" alt="">
+                  </figure>
+                </div>
+              </article>
+            </div>   <!-- col -->
+          </div>   <!-- row -->
+        </div>   <!-- container -->
+      </div>   <!-- upper footer -->
+      <div class="lower-footer">
+        <div class="container">
+          <ul class="list-inline text-center">
+            <li>Copyright © 2017 Benetton Group</li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Conditions of Sale</a></li>
+            <li><a href="#">Corporate and legal info</a></li>
+            <li><a href="#">Managed by Triboo s.r.l.</a></li>
+            <li>VAT N. 03490770264</li>
+          </ul>
+        </div>   <!-- container -->
+      </div>
+    </footer>
     <div class="overlay"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/validator.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>

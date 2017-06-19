@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+  .categories {
+    padding: 90px 0;
+    text-align: left;
+
+    .categories-container {
+
+      article {
+        .category-collapse {
+          padding-bottom: 0;
+          border-top: 1px solid $color-secondary;
+          border-bottom: none;
+
+        }
+
+        .category-list {
+          display: block;
+          
+          li {
+            padding: 5px 0;
+            border-bottom: none;
+
+          }
+        }
+      }
+    }
+  }
+}

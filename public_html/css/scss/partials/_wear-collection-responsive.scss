@@ -1,0 +1,81 @@
+@media (min-width: 768px) {
+  .wear-collection {
+
+    h2 {
+      font-size: 44px;
+    }
+
+    .collection-card {
+
+      .row {
+        .col-sm-6:nth-of-type(1) {
+          padding-right: 0;
+        }
+        .col-sm-6:nth-of-type(2) {
+          padding-left: 0;
+        }
+      }
+
+      .collection-slider-container {
+        padding-top: 20px;
+
+          .collection-slider {
+
+            img {
+              width: 170px;
+              margin: 0 auto 30px;
+            }
+          }
+
+        #collection-slider-next {
+          display: block;
+        }
+
+        #collection-slider-prev {
+          display: block;
+        }
+
+        #collection-slider-pager {
+          bottom: -30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .wear-collection {
+
+    .collection-card {
+
+      .collection-slider-container {
+
+          .collection-slider {
+
+            img {
+              width: 277px;
+            }
+          }
+
+        #collection-slider-pager {
+          bottom: -25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .wear-collection {
+
+    .collection-card {
+
+      .collection-slider-container {
+
+        #collection-slider-pager {
+          bottom: -50px;
+        }
+      }
+    }
+  }
+}

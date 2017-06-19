@@ -17,3 +17,76 @@
   text-align: center;
   font-size: 15px;
 }
+
+// slider buttons
+.slider-buttons {
+
+  a {
+    display: inline-block;
+    z-index: 99;
+
+    &, span {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      font-size: 45px;
+      color: #fff;
+    }
+  }
+
+}
+
+.slider-pager, .slider-dots {
+  a, .slider-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin: 0 8px;
+    z-index: 99;
+    cursor: pointer;
+
+    &.active {
+      background-color: transparent;
+      border-color: #fff;
+    }
+  }
+}
+
+// shop buttons
+.button-shop {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #000;
+  font-size: 14px;
+  background-color: transparent;
+
+  &:hover, &:focus {
+    color: $color-text-primary;
+  }
+}
+
+.button-shop-lg {
+  display: inline-block;
+  padding: 16px 20px;
+  border: 2px solid #000;
+  font-size: 16px;
+  background-color: transparent;
+
+  &:hover, &:focus {
+    color: $color-text-primary;
+  }
+}
+
+// newsletter button
+.button-newsletter {
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+  // font-family: $font-primary-light;
+}

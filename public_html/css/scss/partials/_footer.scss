@@ -1,0 +1,216 @@
+footer {
+
+  .upper-footer {
+    padding: 0 0 5px;
+    background-color: $color-footer-upper;
+
+    article {
+      margin-bottom: 50px;
+    }
+
+    .headline {
+      font-family: $font-tertiary;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: $color-footer-headline;
+      margin-bottom: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+
+      a {
+        color: $color-footer-text;
+        font-size: 14px;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          color: $color-footer-text-hover;
+        }
+      }
+    }
+
+    .footer-category {
+      ul {
+        text-align: center;
+        background-color: #272727;
+        padding: 50px 0 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        li {
+          display: inline-block;
+          margin: 0 10px 20px;
+
+          a {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .follow-us {
+      li {
+        margin: 0 25px 30px 0;
+
+          .icon-font {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 36px;
+          }
+      }
+    }
+
+    .newsletter-form {
+      .form-group {
+        width: 100%;
+        position: relative;
+        margin-bottom: 0;
+
+        input[type=email] {
+          // padding: 15px 0;
+          border-color: $color-footer-text;
+          color: #fff;
+
+          &.email-invalid {
+            padding-bottom: 20px;
+
+            &+.button-newsletter {
+              bottom: 26px;
+            }
+          }
+
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #585858;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #585858;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #585858;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #585858;
+          }
+        }
+
+        .button-newsletter {
+          position: absolute;
+          bottom: 18px;
+          right: 10px;
+
+          &+.help-block {
+            bottom: 0;
+            left: 0;
+            height: 1em;
+          }
+        }
+
+        &+p {
+          margin-top: 15px;
+          color: $color-footer-text;
+          font-size: 14px;
+        }
+
+        .help-block {
+          color: #fff;
+          font-size: 12px;
+          position: absolute;
+        }
+      }
+    }
+
+    .country-selector {
+      margin-bottom: 30px;
+      margin-top: 50px;
+
+      a {
+        color: #4d4d4d;
+        text-decoration: underline;
+        margin-right: 5px;
+
+        &:hover, &:focus {
+          color: $color-footer-text-hover;
+        }
+      }
+
+      span {
+        color: #4d4d4d;
+      }
+    }
+
+    .payment-methods {
+      img {
+        height: 29px;
+        margin: 0 15px 20px 0;
+      }
+
+      img:nth-of-type(3), img:nth-of-type(4) {
+        height: 17px;
+      }
+
+      img:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .footer-list {
+      margin: 0;
+
+      .accordion-handler {
+        margin: 0;
+        position: relative;
+        padding: 30px 0;
+        border-top: 1px solid #0c0c0c;
+        cursor: pointer;
+
+        &.show {
+          .icon-font:before {
+            content: "\e910" !important;
+          }
+        }
+
+        .icon-font {
+          width: 34px;
+          height: 78px;
+          line-height: 78px;
+          font-size: 32px;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .lower-footer {
+    padding: 20px 0;
+    background-color: $color-footer-lower;
+
+    ul {
+      li {
+        color: $color-footer-text-lower;
+        margin: 0 5px 20px;
+
+        &:first-of-type, &:last-of-type {
+          display: block;
+        }
+        a {
+          font-size: 14px;
+          color: $color-footer-text-lower;
+
+          &:hover, &:focus {
+            color: $color-footer-text-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

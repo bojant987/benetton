@@ -53,3 +53,21 @@
 
   }
 }
+
+@media (min-width: 1200px) {
+  header {
+    .navigation {
+      @include nav-left-lg;
+    }
+
+  }
+}
+
+@media (min-width: 1600px) {
+  header {
+    .navigation {
+      @include nav-left-xlg;
+    }
+
+  }
+}

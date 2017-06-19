@@ -1,0 +1,36 @@
+// newsletter checkbox
+.newsletter-checkbox {
+  position: absolute;
+  overflow: hidden;
+  // display: none;
+  // right: -2000px;
+  z-index: -1;
+
+
+  &+label {
+    margin-top: 15px;
+    height: 17px;
+    padding-left: 25px;
+    overflow: visible;
+    color: $color-footer-text;
+    font-size: 14px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+    background: url(assets/check-radio-small.png) no-repeat 0 0;
+
+    a {
+      text-decoration: underline;
+      color: $color-footer-text;
+
+      &:hover, &:focus {
+        color: $color-footer-text-hover;
+      }
+    }
+  }
+
+  &:checked+label{
+    background: url(assets/check-radio-small.png) no-repeat 0 -25px;
+  }
+}

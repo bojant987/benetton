@@ -1,0 +1,99 @@
+.wear-collection {
+  padding: 30px 0 75px;
+
+  h2 {
+    font-size: 40px;
+    font-family: $font-primary-bold;
+    margin-bottom: 30px;
+  }
+
+  .collection-card {
+    border: solid 1px #cdcdcd;
+    max-width: 998px;
+    margin: 0 auto;
+
+    .photo-card {
+      overflow: hidden;
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      img {
+        max-width: 100%;
+        transition: 0.6s;
+      }
+    }
+
+    .collection-slider-container {
+      padding-top: 10px;
+      position: relative;
+
+        .collection-slider {
+
+          img {
+            width: 230px;
+            max-width: 100%;
+            margin: 0 auto 10px;
+          }
+
+          .collection-content {
+
+            .name {
+              font-size: 14px;
+              margin-bottom: 12px;
+            }
+
+            .price {
+              font-size: 18px;
+              color: $color-primary;
+              margin-bottom: 12px;
+            }
+
+            .button-shop {
+              margin-bottom: 20px;
+            }
+          }
+        }
+
+      #collection-slider-next {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: none;
+
+        span {
+          color: #000;
+        }
+      }
+
+      #collection-slider-prev {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: #000;
+        display: none;
+
+        span {
+          color: #000;
+        }
+      }
+
+      #collection-slider-pager {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        a {
+          &.active {
+            border-color: $color-primary;
+          }
+        }
+
+      }
+    }
+  }
+}

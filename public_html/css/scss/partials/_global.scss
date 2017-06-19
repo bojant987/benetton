@@ -4,6 +4,11 @@ body {
   color: $color-text-primary;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
 h1 {
   font-size: $h1-font-size;
 }
@@ -17,9 +22,10 @@ a {
   color: $color-text-primary;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: none;
   outline: none;
+  color: $color-text-primary;
 }
 
 button {
@@ -29,7 +35,29 @@ button {
 .accordion-content {
   display: none;
 }
+.empty-cart {
+  display: none !important;
+  text-align: center;
+}
+p.empty-cart {
+  font-size: 18px;
+  margin: 45px 0 30px;
+}
+
+button.empty-cart {
+  max-width: 200px;
+  height: 36px;
+  margin: 0 auto;
+  background-color: $color-primary;
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  margin: 0;
+}
 @import "../components/buttons";
 @import "../components/overlay";
 @import "../components/popin-box";
 @import "../components/input";
+@import "../components/checkboxes";

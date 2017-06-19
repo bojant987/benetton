@@ -1,0 +1,52 @@
+.categories {
+  padding: 45px 0;
+  text-align: center;
+
+  .categories-container {
+    max-width: 960px;
+    margin: 0 auto;
+
+    article {
+      .category-collapse {
+        font-family: $font-primary-bold;
+        font-size: 16px;
+        color: $color-secondary;
+        padding: 10px 0;
+        border-bottom: 1px solid $color-secondary;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        span {
+          width: 40px;
+          height: 28px;
+          line-height: 28px;
+          font-size: 40px;
+          color: $color-text-primary;
+          vertical-align: bottom;
+        }
+      }
+
+      .category-list {
+        display: none;
+
+        li {
+          padding: 10px 0;
+          border-bottom: 1px solid #ebebeb;
+
+          a {
+            // font-family: $font-primary-light;
+            font-size: 14px;
+
+            &:hover, &:focus {
+              color: $color-text-primary;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

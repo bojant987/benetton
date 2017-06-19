@@ -1,0 +1,75 @@
+.most-wanted {
+  .headline {
+    padding: 35px 10px;
+    position: relative;
+    background: #fff;
+
+    &:after {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-top-color: #fff;
+      border-width: 15px;
+      margin-left: -15px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .carousel-container {
+    background-color: #f2f2f2;
+    padding: 35px 0 10px;
+
+    .owl-carousel {
+      .item {
+        background-color: #fff;
+        border-right: 1px solid #d3d3d3;
+
+        img {
+          max-width: 100%;
+        }
+        .col-md-6 {
+          position: static;
+        }
+
+        .carousel-item-info {
+          margin: 20px 0 30px;
+
+          .name {
+            font-family: $font-secondary-semibold;
+            font-size: 28px;
+            margin-bottom: 15px;
+            letter-spacing: 2.8px;
+            line-height: 1.2em;
+          }
+
+          .price {
+            font-size: 18px;
+            color: $color-primary;
+            margin-bottom: 15px;
+          }
+        }
+
+      }
+
+      .slider-dots {
+        text-align: center;
+        margin-top: 15px;
+
+        .slider-dot {
+          &.active {
+            border-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

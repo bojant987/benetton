@@ -1,14 +1,35 @@
 
 // fonts
 $font-size-primary: 13px;
-$font-primary: "Benetton-Regular";
+
+$font-primary: "benetton-regular";
+$font-primary-light: "benetton-light";
+$font-primary-bold: "benetton-heavy";
+
+$font-secondary: "london-regular";
+$font-secondary-semibold: "london-semibold";
+$font-secondary-bold: "london-bold";
+
+$font-tertiary: "Open Sans";
+
 $h1-font-size: 40px;
 
 // colors
 $color-primary: #009933;
 $color-secondary: #0091e3;
+
 $color-text-primary: #000;
+
 $color-popin-box: #e7e7e7;
+
+$color-share-bar: #f5f5f5;
+
+$color-footer-upper: #1e1e1e;
+$color-footer-lower: #000000;
+$color-footer-headline: #fff;
+$color-footer-text: #888888;
+$color-footer-text-lower: #585858;
+$color-footer-text-hover: #ffffff;
 
 // navigation
 $nav-main-height: 64px;
