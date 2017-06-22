@@ -1,0 +1,323 @@
+@mixin products-filter-sm {}
+@mixin products-filter-md {
+  .products-filter-top-level {
+    padding: 10px 0;
+    font-family: $font-primary-light;
+    position: relative;
+
+    > .container > .row > .col-xs-6:first-of-type {
+      border-right: none;
+    }
+
+    .filters {
+      ul {
+        padding: 10px 0;
+        height: 50px;
+
+        li {
+          height: 30px;
+          line-height: 30px;
+          margin-right: 5px;
+          border-left: 1px solid #e7e7e7;
+          padding-left: 10px;
+          cursor: pointer;
+          float: left;
+          position: relative;
+
+          &:first-of-type {
+            padding-left: 0;
+            border-left: none;
+          }
+
+          &.show-mode:after,
+          &.show-mode:before {
+            bottom: -21px;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            z-index: 1000000;
+          }
+
+          &.show-mode:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #fff;
+            border-width: 10px;
+            margin-left: -10px;
+            z-index: 1000000;
+          }
+
+          &.show-mode:before {
+            border-color: rgba(231, 231, 231, 0);
+            border-bottom-color: #e7e7e7;
+            border-width: 11px;
+            margin-left: -11px;
+            z-index: 1000000;
+          }
+
+          .icon-font {
+            height: auto;
+            transform: translateY(5px);
+            float: none;
+          }
+        }
+      }
+    }
+
+    .sort {
+      float: right;
+      position: relative;
+
+      > .text {
+        display: inline-block;
+        margin-right: 20px;
+        height: 20px;
+        line-height: 20px;
+      }
+
+      .accordion-handler-filter {
+        display: inline-block !important;
+        padding: 15px 25px;
+        background-color: $color-product-list;
+        height: 50px;
+        cursor: pointer;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          height: 20px;
+          line-height: 20px;
+          margin: 0;
+          float: none;
+
+          &.icon-font {
+            float: none;
+          }
+        }
+      }
+
+      .accordion-filter {
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        display: none;
+
+        li {
+          border-top: 1px solid #e7e7e7;
+
+          &:first-of-type {
+            border-top: none;
+          }
+
+          a {
+            display: block;
+            padding: 15px 40px 15px 25px;
+            font-family: $font-primary;
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            &:focus,
+            &:hover {
+              background-color: $color-secondary;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .icon-font {
+      width: 22px;
+      height: 20px;
+      font-size: 22px;
+    }
+  }
+
+  .accordion-content-filters {
+    padding: 40px 0;
+    border-top: 1px solid #e7e7e7;
+    background-color: #fff;
+    position: absolute;
+    top: 134px;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    display: none;
+
+    .colour-filter {
+      .color {
+        display: inline-block;
+        width: 22px;
+        height: 10px;
+        background-color: #E0D2BD;
+        float: left;
+        transform: translateY(5px);
+      }
+    }
+
+    .accordion-filter {
+      display: none;
+      background-color: #fff;
+
+      label {
+        margin-bottom: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-weight: normal;
+
+        input {
+          display: none;
+        }
+
+        .filter-checkbox {
+          display: block;
+          margin-right: 8px;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #000;
+          float: left;
+          cursor: pointer;
+          position: relative;
+
+          &.checked {
+            border-color: $color-secondary;
+
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 2px;
+              left: 2px;
+              bottom: 2px;
+              right: 2px;
+              background: $color-secondary;
+            }
+          }
+        }
+
+        .label {
+          display: inline-block;
+          height: 20px;
+          line-height: 20px;
+          color: $color-text-primary;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-weight: normal;
+          float: left;
+          transform: translateY(-1px);
+        }
+      }
+    }
+
+    button {
+      padding: 0 15px;
+      height: 36px;
+      line-height: 32px;
+      font-family: $font-primary;
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      background-color: transparent;
+      letter-spacing: 2px;
+      display: none;
+
+      &.close-btn {
+        display: block;
+      }
+    }
+
+    .accordion-filter-sort {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      font-family: $font-primary;
+      z-index: 100;
+
+      li {
+        border-top: 1px #eee solid;
+
+        &:first-of-type {
+          // border-top: none;
+        }
+
+        a {
+          display: block;
+          padding: 15px 25px;
+
+          &:focus,
+          &:hover {
+            color: #fff;
+            background-color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .filters-applied {
+    background-color: #f4f4f4;
+    padding: 10px 0 0;
+
+    .current-filters {
+      .single-filter {
+        display: inline-block;
+        font-size: 14px;
+        font-family: $font-primary-light;
+        color: #fff;
+        background-color: $color-secondary;
+        margin: 0 5px 10px;
+        padding: 0 13px 0 5px;
+
+        span {
+          display: inline-block;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: top;
+        }
+
+        .filter-category {
+          margin-right: 5px;
+        }
+
+        .icon-font {
+          width: 22px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .clear-filters {
+      padding-left: 10px;
+      border-left: 1px solid #e7e7e7;
+
+      .clear {
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        .icon-font {
+          width: 22px;
+          font-size: 22px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+@mixin products-filter-lg {}

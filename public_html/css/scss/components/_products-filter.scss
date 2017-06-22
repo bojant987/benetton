@@ -1,0 +1,222 @@
+.products-filter-top-level {
+  padding: 5px 0;
+  font-family: $font-primary-light;
+  position: relative;
+  background-color: #fff;
+  z-index: 51;
+
+  > .container > .row > .col-xs-6:first-of-type {
+    border-right: 1px solid #e7e7e7;
+  }
+
+  .filters {
+    position: relative;
+
+    .show-filters {
+      padding: 15px 25px;
+      cursor: pointer;
+
+      .icon-font {
+        float: right;
+        transform: translateY(-1px);
+      }
+
+      &.show-mode {
+        color: $color-secondary;
+
+        .icon-font:before {
+          content: "\e91a";
+        }
+      }
+    }
+  }
+
+  .sort {
+    > .text {
+      display: inline-block;
+      margin-right: 20px;
+      height: 20px;
+      line-height: 20px;
+    }
+
+    .accordion-handler-filter {
+      display: block;
+      padding: 15px 25px;
+      background-color: transparent;
+      height: 50px;
+      // overflow: visible;
+      cursor: pointer;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 20px;
+        line-height: 20px;
+        margin: 0;
+        float: left;
+
+        &.icon-font {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .icon-font {
+    width: 22px;
+    height: 20px;
+    font-size: 22px;
+  }
+}
+
+.accordion-content-filters {
+  // border-top: 1px solid #e7e7e7;
+  background-color: #fff;
+  position: absolute;
+  top: 118px;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: none;
+
+  .accordion-handler-filter {
+    display: none;
+    padding: 0 15px 0 25px;
+    height: 58px;
+    line-height: 58px;
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 11px;
+    cursor: pointer;
+
+    &.show-mode {
+      color: $color-text-primary;
+
+      .icon-font:before {
+        content: "\e910";
+      }
+    }
+
+    .icon-font {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 30px;
+      position: absolute;
+      right: 25px;
+      top: 14px;
+    }
+  }
+
+  .colour-filter {
+    .color {
+      display: inline-block;
+      width: 22px;
+      height: 10px;
+      background-color: #E0D2BD;
+      float: left;
+      transform: translateY(5px);
+    }
+  }
+
+  .accordion-filter {
+    display: none;
+    background-color: $color-product-list;
+    padding-top: 20px;
+
+    label {
+      margin-bottom: 20px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-weight: normal;
+
+      input {
+        display: none;
+      }
+
+      .filter-checkbox {
+        display: block;
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000;
+        float: left;
+        cursor: pointer;
+        position: relative;
+
+        &.checked {
+          border-color: $color-secondary;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            bottom: 2px;
+            right: 2px;
+            background: $color-secondary;
+          }
+        }
+      }
+
+      .label {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        color: $color-text-primary;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: normal;
+        float: left;
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  button {
+    padding: 0 15px;
+    height: 36px;
+    line-height: 32px;
+    font-family: $font-primary;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    background-color: transparent;
+    letter-spacing: 2px;
+    display: none;
+    margin: 20px 0;
+
+    &.close-btn {
+      display: block;
+    }
+  }
+
+  .accordion-filter-sort {
+    display: none;
+    background-color: #fff;
+    font-family: $font-primary;
+    z-index: 100;
+    padding: 0;
+
+    li {
+      border-top: 1px #eee solid;
+
+      &:first-of-type {
+        border-top: none;
+      }
+
+      a {
+        display: block;
+        padding: 15px 25px;
+
+        &:focus,
+        &:hover {
+          color: #fff;
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+}

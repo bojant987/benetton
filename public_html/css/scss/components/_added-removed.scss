@@ -1,0 +1,12 @@
+.added-removed {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10000000000;
+  display: none;
+}

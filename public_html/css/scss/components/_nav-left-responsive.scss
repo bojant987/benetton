@@ -1,11 +1,8 @@
 @mixin nav-left-sm {
   .navigation-left {
-
     ul {
-
       li {
-
-        >a {
+        > a {
           display: block;
           padding: 10px 15px;
           color: $color-text-primary;
@@ -18,16 +15,15 @@
           }
 
           span:first-of-type {
-            padding-bottom: 10px;
+            // padding-bottom: 10px;
             border-bottom: 2px solid transparent;
           }
-
         }
 
         &.active {
           color: $color-primary;
 
-          >a {
+          > a {
             background-color: transparent;
             color: $color-primary;
 
@@ -43,9 +39,7 @@
       }
     }
   }
-
 }
-
 @mixin nav-left-md {
   .navigation-left {
     float: left;
@@ -58,7 +52,6 @@
     opacity: 1;
     overflow: visible;
     // overflow-x: hidden;
-
     ul {
       height: 100%;
 
@@ -66,7 +59,7 @@
         float: left;
         height: 100%;
 
-        >a {
+        > a {
           display: block;
           padding: 10px 15px;
           color: $color-text-primary;
@@ -80,51 +73,54 @@
             color: #fa4242;
           }
 
-          &.has-arrow, &.has-arrow-colored {
+          &.has-arrow,
+          &.has-arrow-colored {
             z-index: 2000;
             overflow: visible;
           }
 
-          &.has-arrow:after, &.has-arrow:before {
-            bottom: -8px;
+          &.has-arrow:after,
+          &.has-arrow:before {
+            bottom: -1px;
             left: 50%;
-          	border: solid transparent;
-          	content: " ";
-          	height: 0;
-          	width: 0;
-          	position: absolute;
-          	pointer-events: none;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
             z-index: 1000000;
           }
 
           &.has-arrow:after {
             border-color: rgba(255, 255, 255, 0);
-          	border-bottom-color: #fff;
-          	border-width: 15px;
-          	margin-left: -15px;
+            border-bottom-color: #fff;
+            border-width: 10px;
+            margin-left: -10px;
             z-index: 1000000;
           }
+
           &.has-arrow:before {
             border-color: rgba(231, 231, 231, 0);
-          	border-bottom-color: #e7e7e7;
-          	border-width: 16px;
-          	margin-left: -16px;
+            border-bottom-color: #e7e7e7;
+            border-width: 11px;
+            margin-left: -11px;
             z-index: 1000000;
           }
 
           &.has-arrow-colored:after {
-          	bottom: -5px;
-          	left: 50%;
-          	border: solid transparent;
-          	content: " ";
-          	height: 0;
-          	width: 0;
-          	position: absolute;
-          	pointer-events: none;
-          	border-color: rgba(0, 145, 227, 0);
-          	border-bottom-color: #0091e3;
-          	border-width: 12px;
-          	margin-left: -12px;
+            bottom: -1px;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(0, 145, 227, 0);
+            border-bottom-color: #0091e3;
+            border-width: 11px;
+            margin-left: -11px;
           }
 
           &:hover {
@@ -135,13 +131,12 @@
             padding-bottom: 10px;
             border-bottom: 2px solid transparent;
           }
-
         }
 
         &.active {
           color: $color-primary;
 
-          >a {
+          > a {
             background-color: transparent;
             color: $color-primary;
 
@@ -168,34 +163,7 @@
         border-top: 1px solid #e7e7e7;
         overflow: visible;
         z-index: 1000;
-        box-shadow: 0px 30px 35px 0px rgba(0,0,0,0.1);
-
-        // .arrow, .arrow {
-        //   bottom: 100%;
-        //   left: 50%;
-        //   border: solid transparent;
-        //   content: " ";
-        //   height: 0;
-        //   width: 0;
-        //   position: absolute;
-        //   pointer-events: none;
-        //   display: block;
-        // }
-        //
-        // .arrow-1 {
-        //   border-color: rgba(255, 255, 255, 0);
-        //   border-bottom-color: #fff;
-        //   border-width: 12px;
-        //   margin-left: -12px;
-        // }
-        // .arrow-2 {
-        //   border-color: rgba(231, 231, 231, 0);
-        //   border-bottom-color: #e7e7e7;
-        //   border-width: 13px;
-        //   margin-left: -13px;
-        // }
-
-
+        box-shadow: 0 30px 35px 0 rgba(0,0,0,0.1);
 
         &.three-leveled {
           padding: 5px 0;
@@ -203,12 +171,12 @@
           text-align: center;
           overflow: visible;
 
-          >li {
+          > li {
             display: inline-block;
             float: none;
             position: static;
 
-            >a {
+            > a {
               border-right: 1px solid #fff;
 
               &.has-arrow-down {
@@ -216,27 +184,27 @@
                 z-index: 1000;
 
                 &.has-arrow-down:after {
-                	top: 100%;
-                	left: 50%;
-                	border: solid transparent;
-                	content: " ";
-                	height: 0;
-                	width: 0;
-                	position: absolute;
-                	pointer-events: none;
-                	border-color: rgba(0, 145, 227, 0);
-                	border-top-color: $color-secondary;
-                	border-width: 15px;
-                	margin-left: -15px;
+                  top: 100%;
+                  left: 50%;
+                  border: solid transparent;
+                  content: " ";
+                  height: 0;
+                  width: 0;
+                  position: absolute;
+                  pointer-events: none;
+                  border-color: rgba(0, 145, 227, 0);
+                  border-top-color: $color-secondary;
+                  border-width: 15px;
+                  margin-left: -15px;
                 }
               }
-
             }
+
             &:last-of-type > a {
               border-right: none;
             }
 
-            >.accordion-content {
+            > .accordion-content {
               padding-top: 30px;
               height: 400px;
               background-color: #fff;
@@ -252,7 +220,7 @@
                 text-align: center;
               }
 
-              >li {
+              > li {
                 height: auto;
 
                 .accordion-wrapper {
@@ -265,31 +233,28 @@
             &:nth-of-type(1) {
               text-align: right;
 
-
-
               .accordion-content {
                 display: block;
               }
-
             }
 
             &:nth-of-type(2) {
               text-align: left;
             }
 
-            >a {
+            > a {
               color: #fff;
               font-family: $font-primary-light;
               height: 30px;
               line-height: 10px;
 
-              &:hover, &:focus {
+              &:focus,
+              &:hover {
                 text-decoration: underline;
               }
             }
           }
         }
-
 
         &.article-dropdown {
           text-align: center;
@@ -304,25 +269,26 @@
               display: inline-block;
 
               li.accordion-wrapper {
-                  width: 260px;
-                  padding: 0 15px;
-                  border-right: 1px solid #e7e7e7;
+                width: 260px;
+                padding: 0 15px;
+                border-right: 1px solid #e7e7e7;
 
-                  &:last-of-type {
-                    border-right: none;
-                  }
+                &:last-of-type {
+                  border-right: none;
+                }
 
-                  a {
-                    padding: 0;
-                  }
+                a {
+                  padding: 0;
+                }
 
-                  a:nth-of-type(2) {
-                    margin-top: 40px;
-                    text-decoration: underline;
-                  }
+                a:nth-of-type(2) {
+                  margin-top: 40px;
+                  text-decoration: underline;
+                }
               }
             }
           }
+
           img {
             display: block;
             margin-bottom: 15px;
@@ -338,7 +304,6 @@
 
           ul.accordion-outer {
             width: auto;
-
 
             li.accordion-wrapper {
               float: none;
@@ -375,7 +340,6 @@
                     text-decoration: underline;
                   }
                 }
-
               }
             }
           }
@@ -388,9 +352,7 @@
       }
     }
   }
-
 }
-
 @mixin nav-left-lg {
   .navigation-left {
     ul {
@@ -399,9 +361,7 @@
       }
     }
   }
-
 }
-
 @mixin nav-left-xlg {
   .navigation-left {
     ul {

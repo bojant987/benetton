@@ -2,9 +2,15 @@ body {
   font-family: $font-primary;
   font-size: $font-size-primary;
   color: $color-text-primary;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
 }
@@ -13,7 +19,8 @@ h1 {
   font-size: $h1-font-size;
 }
 
-p, ul {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -22,7 +29,8 @@ a {
   color: $color-text-primary;
 }
 
-a:hover, a:focus {
+a:focus,
+a:hover {
   text-decoration: none;
   outline: none;
   color: $color-text-primary;
@@ -32,13 +40,16 @@ button {
   padding: 0;
   border: 0;
 }
+
 .accordion-content {
   display: none;
 }
+
 .empty-cart {
   display: none !important;
   text-align: center;
 }
+
 p.empty-cart {
   font-size: 18px;
   margin: 45px 0 30px;
@@ -56,8 +67,22 @@ button.empty-cart {
   border: none;
   margin: 0;
 }
+
+input[type=checkbox],
+input[type=radio] {
+  display: inline-block;
+  width: auto;
+}
+
+.add-border {
+  border-bottom: 1px solid #e7e7e7;
+}
 @import "../components/buttons";
 @import "../components/overlay";
 @import "../components/popin-box";
 @import "../components/input";
 @import "../components/checkboxes";
+@import "../components/breadcrumb";
+@import "../components/pop-over";
+@import "../components/added-removed";
+@import "../components/cookies-bar";

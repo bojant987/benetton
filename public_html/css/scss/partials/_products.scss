@@ -1,15 +1,33 @@
 .products {
+  @import "../components/filters-applied";
+
   .products-header {
-    .breadcrumb {
-
-    }
-
-    .products-filter {
-
-    }
+    position: relative;
+    @import "../components/products-filter";
   }
 
   .products-list {
-    
+    padding: 40px 0;
+    background-color: $color-product-list;
+    @import "../components/product-card";
+
+    .products-list-footer {
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .show-mode {
+    color: $color-secondary;
+
+    .icon-font:before {
+      content: "\e91a";
+    }
   }
 }

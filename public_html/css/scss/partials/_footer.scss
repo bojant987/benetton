@@ -1,5 +1,4 @@
 footer {
-
   .upper-footer {
     padding: 0 0 5px;
     background-color: $color-footer-upper;
@@ -24,7 +23,8 @@ footer {
         color: $color-footer-text;
         font-size: 14px;
 
-        &:hover, &:focus {
+        &:focus,
+        &:hover {
           text-decoration: underline;
           color: $color-footer-text-hover;
         }
@@ -54,12 +54,12 @@ footer {
       li {
         margin: 0 25px 30px 0;
 
-          .icon-font {
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-            font-size: 36px;
-          }
+        .icon-font {
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+          font-size: 36px;
+        }
       }
     }
 
@@ -82,16 +82,23 @@ footer {
             }
           }
 
-          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
             color: #585858;
           }
-          &::-moz-placeholder { /* Firefox 19+ */
+
+          &::-moz-placeholder {
+            /* Firefox 19+ */
             color: #585858;
           }
-          &:-ms-input-placeholder { /* IE 10+ */
+
+          &:-ms-input-placeholder {
+            /* IE 10+ */
             color: #585858;
           }
-          &:-moz-placeholder { /* Firefox 18- */
+
+          &:-moz-placeholder {
+            /* Firefox 18- */
             color: #585858;
           }
         }
@@ -131,7 +138,8 @@ footer {
         text-decoration: underline;
         margin-right: 5px;
 
-        &:hover, &:focus {
+        &:focus,
+        &:hover {
           color: $color-footer-text-hover;
         }
       }
@@ -147,7 +155,8 @@ footer {
         margin: 0 15px 20px 0;
       }
 
-      img:nth-of-type(3), img:nth-of-type(4) {
+      img:nth-of-type(3),
+      img:nth-of-type(4) {
         height: 17px;
       }
 
@@ -166,7 +175,7 @@ footer {
         border-top: 1px solid #0c0c0c;
         cursor: pointer;
 
-        &.show {
+        &.show-mode {
           .icon-font:before {
             content: "\e910" !important;
           }
@@ -198,14 +207,17 @@ footer {
         color: $color-footer-text-lower;
         margin: 0 5px 20px;
 
-        &:first-of-type, &:last-of-type {
+        &:first-of-type,
+        &:last-of-type {
           display: block;
         }
+
         a {
           font-size: 14px;
           color: $color-footer-text-lower;
 
-          &:hover, &:focus {
+          &:focus,
+          &:hover {
             color: $color-footer-text-hover;
             text-decoration: underline;
           }

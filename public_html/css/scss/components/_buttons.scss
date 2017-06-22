@@ -1,4 +1,5 @@
 // .navigation-toggle
+
 .navigation-toggle {
   display: block;
   width: $nav-main-height;
@@ -7,8 +8,8 @@
   font-size: $nav-main-height;
   background-color: #fff;
 }
-
 // login buttons
+
 .login-button {
   display: block;
   width: 100%;
@@ -17,15 +18,15 @@
   text-align: center;
   font-size: 15px;
 }
-
 // slider buttons
-.slider-buttons {
 
+.slider-buttons {
   a {
     display: inline-block;
     z-index: 99;
 
-    &, span {
+    &,
+    span {
       display: inline-block;
       width: 45px;
       height: 45px;
@@ -35,11 +36,12 @@
       color: #fff;
     }
   }
-
 }
 
-.slider-pager, .slider-dots {
-  a, .slider-dot {
+.slider-dots,
+.slider-pager {
+  .slider-dot,
+  a {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -56,16 +58,18 @@
     }
   }
 }
-
 // shop buttons
+
 .button-shop {
   display: inline-block;
   padding: 10px 25px;
   border: 1px solid #000;
   font-size: 14px;
   background-color: transparent;
+  letter-spacing: 2px;
 
-  &:hover, &:focus {
+  &:focus,
+  &:hover {
     color: $color-text-primary;
   }
 }
@@ -76,17 +80,52 @@
   border: 2px solid #000;
   font-size: 16px;
   background-color: transparent;
+  letter-spacing: 2px;
 
-  &:hover, &:focus {
+  &:focus,
+  &:hover {
     color: $color-text-primary;
   }
 }
-
 // newsletter button
+
 .button-newsletter {
   padding: 10px 15px;
   background-color: #fff;
   color: #000;
   font-size: 12px;
   // font-family: $font-primary-light;
+}
+// back to top button
+
+.back-to-top {
+  background-color: $color-primary;
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+  z-index: 100;
+
+  span {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 40px;
+    color: #fff;
+  }
+}
+// cookies button
+
+.button-cookies {
+  display: inline-block;
+  padding: 17.5px 32.5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: $color-primary;
+  background-color: #fff;
+
+  &:focus,
+  &:hover {
+    color: $color-primary;
+  }
 }

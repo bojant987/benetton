@@ -1,0 +1,200 @@
+<!-- <article class="filters">
+  <p class="clearfix text-uppercase hidden-md hidden-lg show-filters">filters <span class="icon-font icon-caret-down"></span></p>
+  <ul class="accordion-filters clearfix list-unstyled">
+    <li class="accordion-handler-filter text-uppercase" data-target="category">category
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+    <li class="accordion-handler-filter text-uppercase" data-target="colour">colour
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+    <li class="accordion-handler-filter text-uppercase" data-target="size">size (italian)
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+    <li class="accordion-handler-filter text-uppercase" data-target="pattern">pattern
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+    <li class="accordion-handler-filter text-uppercase" data-target="price">price
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+    <li class="accordion-handler-filter text-uppercase" data-target="sales">sales
+      <span class="icon-font icon-caret-down"></span>
+      <span class="icon-font icon-plus hidden-md hidden-lg"></span>
+    </li>
+  </ul>
+</article> -->
+
+
+<!-- <article class="sort">
+  <div class="wrapper">
+    <div>
+      <span class="text-uppercase hidden-xs hidden-sm text">sort by</span>
+      <span class="text-uppercase accordion-handler clearfix" data-anim="no-animation">
+        <span class="sort-by">select</span> <span class="icon-font icon-caret-down"></span>
+      </span>
+    </div>
+    <ul class="list-unstyled accordion-content">
+      <li><a href="#" class="text-uppercase">price high first</a></li>
+      <li><a href="#" class="text-uppercase">price low first</a></li>
+      <li><a href="#" class="text-uppercase">order by date</a></li>
+    </ul>
+  </div>
+</article> -->
+
+
+<div class="accordion-content-filter" data-opened="">
+  <div class="container">
+    <div class="category-filter accordion-filter" data-filter="category">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="short-sleeve" class="text-uppercase clearfix">
+            <input type="checkbox" name="short-sleeve" value="" id="short-sleeve">
+            <span class="filter-checkbox"></span>
+            <span class="label">short sleeve</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="long-sleeve" class="text-uppercase clearfix">
+            <input type="checkbox" name="long-sleeve" value="" id="long-sleeve">
+            <span class="filter-checkbox"></span>
+            <span class="label">long sleeve</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- category-filter -->
+    <div class="colour-filter accordion-filter" data-filter="colour">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="beige" class="text-uppercase clearfix">
+            <input type="checkbox" name="beige" value="" id="beige">
+            <span class="filter-checkbox"></span>
+            <span class="color"></span>
+            <span class="label">beige</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="red" class="text-uppercase clearfix">
+            <input type="checkbox" name="red" value="" id="red">
+            <span class="filter-checkbox"></span>
+            <span class="color"></span>
+            <span class="label">red</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="green" class="text-uppercase clearfix">
+            <input type="checkbox" name="green" value="" id="green">
+            <span class="filter-checkbox"></span>
+            <span class="color"></span>
+            <span class="label">green</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- colour-filter -->
+    <div class="size-filter accordion-filter" data-filter="size">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="xs" class="text-uppercase clearfix">
+            <input type="checkbox" name="xs" value="" id="xs">
+            <span class="filter-checkbox"></span>
+            <span class="label">xs</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="s" class="text-uppercase clearfix">
+            <input type="checkbox" name="s" value="" id="s">
+            <span class="filter-checkbox"></span>
+            <span class="label">s</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="m" class="text-uppercase clearfix">
+            <input type="checkbox" name="m" value="" id="m">
+            <span class="filter-checkbox"></span>
+            <span class="label">m</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="l" class="text-uppercase clearfix">
+            <input type="checkbox" name="l" value="" id="l">
+            <span class="filter-checkbox"></span>
+            <span class="label">l</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="xl" class="text-uppercase clearfix">
+            <input type="checkbox" name="xl" value="" id="xl">
+            <span class="filter-checkbox"></span>
+            <span class="label">xl</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- size-filter -->
+    <div class="pattern-filter accordion-filter" data-filter="pattern">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="embroidery" class="text-uppercase clearfix">
+            <input type="checkbox" name="embroidery" value="" id="embroidery">
+            <span class="filter-checkbox"></span>
+            <span class="label">embroidery</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="multicolor" class="text-uppercase clearfix">
+            <input type="checkbox" name="multicolor" value="" id="multicolor">
+            <span class="filter-checkbox"></span>
+            <span class="label">multicolor</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="print" class="text-uppercase clearfix">
+            <input type="checkbox" name="print" value="" id="print">
+            <span class="filter-checkbox"></span>
+            <span class="label">print</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- pattern-filter -->
+    <div class="price-filter accordion-filter" data-filter="price">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="0-9.99" class="text-uppercase clearfix">
+            <input type="checkbox" name="0-9.99" value="" id="0-9.99">
+            <span class="filter-checkbox"></span>
+            <span class="label">£0.00 - £9.99</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="10-19.99" class="text-uppercase clearfix">
+            <input type="checkbox" name="10-19.99" value="" id="10-19.99">
+            <span class="filter-checkbox"></span>
+            <span class="label">£10.00 - £19.99</span>
+          </label>
+        </div>   <!-- col -->
+        <div class="col-md-3">
+          <label for="20-above" class="text-uppercase clearfix">
+            <input type="checkbox" name="20-above" value="" id="20-above">
+            <span class="filter-checkbox"></span>
+            <span class="label">£20.00 and above</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- price-filter -->
+    <div class="sales-filter accordion-filter" data-filter="sales">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="sales" class="text-uppercase clearfix">
+            <input type="checkbox" name="sales" value="" id="sales">
+            <span class="filter-checkbox"></span>
+            <span class="label">sales</span>
+          </label>
+        </div>   <!-- col -->
+      </div>   <!-- row -->
+    </div>   <!-- sales-filter -->
+    <button type="button" name="close" class="close-btn text-uppercase">close</button>
+    <button type="button" name="apply" class="apply-btn text-uppercase">apply filter</button>
+  </div>
+</div>   <!-- accordion-content-filter -->

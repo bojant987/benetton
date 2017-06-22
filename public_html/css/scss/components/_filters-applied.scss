@@ -1,0 +1,57 @@
+.filters-applied {
+  background-color: #f4f4f4;
+  padding: 10px 0 0;
+
+  .current-filters {
+    .single-filter {
+      display: inline-block;
+      font-size: 14px;
+      font-family: $font-primary-light;
+      color: #fff;
+      background-color: $color-secondary;
+      margin: 0 5px 10px;
+      padding: 0 13px 0 5px;
+
+      span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: top;
+      }
+
+      .filter-category {
+        margin-right: 5px;
+      }
+
+      .icon-font {
+        width: 22px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .clear-filters {
+    padding-left: 10px;
+    border-left: 1px solid #e7e7e7;
+
+    .clear {
+      cursor: pointer;
+      display: inline-block;
+      height: 30px;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .icon-font {
+        width: 22px;
+        font-size: 22px;
+        margin-right: 2px;
+      }
+    }
+  }
+}

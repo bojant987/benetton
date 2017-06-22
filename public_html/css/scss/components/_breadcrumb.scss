@@ -1,0 +1,27 @@
+.breadcrumb {
+  background-color: transparent;
+  padding: 22px 0;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0;
+  height: 64px;
+  line-height: 20px;
+
+  li {
+    font-size: 12px;
+    font-family: $font-primary;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    a {
+      font-size: 12px;
+      font-family: $font-primary-light;
+      font-weight: normal;
+      letter-spacing: 1px;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
