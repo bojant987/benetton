@@ -91,13 +91,11 @@ $(document).ready(function() {
     $(".search-box").fadeToggle();
   });
 
-  // nav accordion
+  // classic accordion
   $(".accordion-handler").click(function(e) {
-    var accordionLevel = $(this).next().attr("data-accordion");
     var target = $(this).attr("data-target");
     var currentTarget = $(this);
     var location = $(this).next().attr("data-location");
-    console.log(location);
 
     $(this).toggleClass("show-mode");
 
@@ -125,12 +123,7 @@ $(document).ready(function() {
 
       $(location + " .accordion-content").each(function() {
 
-        if ($(this).prev().attr("data-anim") === "no-animation") {
-          // (BUG) hide wont work, like the element does not exist in the DOM at the time or something but it does
-          $(this).fadeOut(100);
-        } else {
-          $(this).slideUp();
-        }
+        $(this).slideUp();
 
       });
 
@@ -143,13 +136,7 @@ $(document).ready(function() {
     }
 
     if ($(this).next().is(":hidden")) {
-
-      if ($(this).attr("data-anim") === "no-animation") {
-        $(this).next().show();
-      } else {
-        $(this).next().slideDown();
-      }
-
+      $(this).next().slideDown();
     }
 
   });
@@ -262,6 +249,20 @@ $(document).ready(function() {
     nextText: '<span class="icon-font icon-right"></span>',
     prevText: '<span class="icon-font icon-left"></span>',
     pagerCustom: "#collection-slider-pager"
+  });
+
+  function getProperPager() {
+    return $(window).width() > 768 ? "#bx-pager" : "#product-slider-pager";
+  }
+
+  console.log(getProperPager());
+  $(".single-product-slider").bxSlider({
+    controls: true,
+    nextSelector: "#single-product-slider-next",
+    prevSelector: "#single-product-slider-prev",
+    nextText: '<span class="icon-font icon-right"></span>',
+    prevText: '<span class="icon-font icon-left"></span>',
+    pagerCustom: getProperPager()
   });
 
   // category collapse
@@ -401,7 +402,7 @@ $(document).ready(function() {
   }
 
   // cross product original price if discount exists
-  $(".product").each(function() {
+  $(".prices").each(function() {
     if ($(this).find(".price-discount").html() !== "" && $(this).find(".price-discount").html() !== undefined) {
       $(this).find(".price-original").css("text-decoration", "line-through");
     }
@@ -636,11 +637,12 @@ $(document).ready(function() {
 
   // apply button for filters
   $(".accordion-content-filters .apply-btn").click(function() {
-    var counter = 0;
-    $(".accordion-content-filters input[type=checkbox]").each(function() {
 
-      if ($(this).is(":checked")) {
-        counter++;
+    $(".accordion-content-filters input[type=checkbox]").each(function() {
+      var id = $(this).attr("id");
+
+      if ($(this).is(":checked") && $("." + id + "-applied").length === 0) {
+
         var text = $(this).siblings(".label").text();
         var category = $(this).closest(".accordion-filter").attr("data-filter");
 
@@ -651,6 +653,7 @@ $(document).ready(function() {
         var textHere = $("<span></span>");
 
         singleFilter.addClass("single-filter");
+        singleFilter.addClass(text + "-applied");
         removeFilter.addClass("icon-font icon-close remove-filter");
         filterCategory.addClass("filter-category text-capitalize");
         textHere.addClass("text-capitalize");
@@ -668,8 +671,7 @@ $(document).ready(function() {
         checkIfFiltersExist();
 
       }
-      // $(this).prop("checked", false);
-      // $(this).next().removeClass("checked");
+
 
     });
 
@@ -725,6 +727,32 @@ $(document).ready(function() {
   $(".cookies-bar .button-cookies").click(function(e) {
     e.preventDefault();
     $(this).parent().hide();
+  });
+
+  // fake radio
+  $(".fake-radio").click(function() {
+    var target = $(this);
+
+    $(this).prev().prop("checked", true);
+    $(".single-product-form .submit-btn").addClass("something-picked");
+
+    $(this).siblings(".fake-radio").each(function() {
+      if (!$(this).is(target)) {
+        $(this).removeClass("picked");
+      }
+    });
+    $(".single-product-form").validator("validate");
+    $(this).addClass("picked");
+  });
+
+  // open share links
+  $(".open-share").click(function(e) {
+    e.preventDefault();
+
+    $(".share-links").show();
+    setTimeout(function() {
+      $(".share-links").hide();
+    }, 5000);
   });
 
 });

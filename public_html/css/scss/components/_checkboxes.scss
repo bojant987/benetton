@@ -34,3 +34,27 @@
     background: url(assets/check-radio-small.png) no-repeat 0 -25px;
   }
 }
+
+// fake radio for size picker
+.fake-radio {
+  display: inline-block;
+  width: 58px;
+  height: 26px;
+  line-height: 26px;
+  border: 1px solid $color-text-primary;
+  color: $color-text-primary;
+  margin-right: 4px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: transparent;
+  }
+
+  &.picked {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: transparent;
+  }
+}

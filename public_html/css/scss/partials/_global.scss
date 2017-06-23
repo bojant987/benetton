@@ -77,6 +77,24 @@ input[type=radio] {
 .add-border {
   border-bottom: 1px solid #e7e7e7;
 }
+
+.prices {
+  margin-bottom: 25px;
+
+  .price-original {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .price-discount {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .price-final {
+    font-size: 25px;
+  }
+}
 @import "../components/buttons";
 @import "../components/overlay";
 @import "../components/popin-box";

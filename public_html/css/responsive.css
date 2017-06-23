@@ -592,8 +592,6 @@
 @media (min-width: 992px) {
   .products .products-header .products-filter-top-level {
     padding: 10px 0;
-    font-family: "benetton-light";
-    position: relative;
   }
   .products .products-header .products-filter-top-level > .container > .row > .col-xs-6:first-of-type {
     border-right: none;
@@ -650,25 +648,11 @@
     float: right;
     position: relative;
   }
-  .products .products-header .products-filter-top-level .sort > .text {
-    display: inline-block;
-    margin-right: 20px;
-    height: 20px;
-    line-height: 20px;
-  }
   .products .products-header .products-filter-top-level .sort .accordion-handler-filter {
     display: inline-block !important;
-    padding: 15px 25px;
     background-color: #E8E8E8;
-    height: 50px;
-    cursor: pointer;
   }
   .products .products-header .products-filter-top-level .sort .accordion-handler-filter span {
-    display: inline-block;
-    vertical-align: top;
-    height: 20px;
-    line-height: 20px;
-    margin: 0;
     float: none;
   }
   .products .products-header .products-filter-top-level .sort .accordion-handler-filter span.icon-font {
@@ -707,13 +691,7 @@
   .products .products-header .accordion-content-filters {
     padding: 40px 0;
     border-top: 1px solid #e7e7e7;
-    background-color: #fff;
-    position: absolute;
     top: 134px;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-    display: none;
   }
   .products .products-header .accordion-content-filters .colour-filter .color {
     display: inline-block;
@@ -724,134 +702,59 @@
     transform: translateY(5px);
   }
   .products .products-header .accordion-content-filters .accordion-filter {
-    display: none;
     background-color: #fff;
   }
-  .products .products-header .accordion-content-filters .accordion-filter label {
-    margin-bottom: 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-weight: normal;
-  }
-  .products .products-header .accordion-content-filters .accordion-filter label input {
-    display: none;
-  }
-  .products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox {
-    display: block;
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #000;
-    float: left;
-    cursor: pointer;
-    position: relative;
-  }
-  .products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox.checked {
-    border-color: #0091e3;
-  }
-  .products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox.checked:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    right: 2px;
-    background: #0091e3;
-  }
-  .products .products-header .accordion-content-filters .accordion-filter label .label {
-    display: inline-block;
-    height: 20px;
-    line-height: 20px;
-    color: #000;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: normal;
-    float: left;
-    transform: translateY(-1px);
-  }
   .products .products-header .accordion-content-filters button {
-    padding: 0 15px;
-    height: 36px;
-    line-height: 32px;
-    font-family: "benetton-regular";
-    border: 2px solid #009933;
-    color: #009933;
-    background-color: transparent;
-    letter-spacing: 2px;
-    display: none;
-  }
-  .products .products-header .accordion-content-filters button.close-btn {
-    display: block;
+    margin: 0;
   }
   .products .products-header .accordion-content-filters .accordion-filter-sort {
-    display: block;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fff;
-    font-family: "benetton-regular";
     z-index: 100;
   }
-  .products .products-header .accordion-content-filters .accordion-filter-sort li {
-    border-top: 1px #eee solid;
+}
+/* ---- single-product styles ---- */
+@media (min-width: 768px) {
+  .single-product .product-showcase .bx-wrapper {
+    max-width: 760px !important;
+    margin-left: 130px;
+    overflow: hidden;
   }
-  .products .products-header .accordion-content-filters .accordion-filter-sort li a {
+  .single-product .product-showcase #bx-pager {
+    width: 116px;
+    position: absolute;
+    left: 14px;
+    top: 25px;
+  }
+  .single-product .product-showcase #bx-pager a {
+    width: 81px;
     display: block;
-    padding: 15px 25px;
+    border-bottom: 2px solid #f9f9f9;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
   }
-  .products .products-header .accordion-content-filters .accordion-filter-sort li a:focus, .products .products-header .accordion-content-filters .accordion-filter-sort li a:hover {
-    color: #fff;
-    background-color: #0091e3;
+  .single-product .product-showcase #bx-pager a.active {
+    border-color: #0091e3;
   }
-  .products .products-header .filters-applied {
-    background-color: #f4f4f4;
-    padding: 10px 0 0;
+  .single-product .product-showcase #bx-pager a img {
+    max-width: 100%;
   }
-  .products .products-header .filters-applied .current-filters .single-filter {
-    display: inline-block;
-    font-size: 14px;
-    font-family: "benetton-light";
-    color: #fff;
-    background-color: #0091e3;
-    margin: 0 5px 10px;
-    padding: 0 13px 0 5px;
+  .single-product .product-showcase .slider-buttons #single-product-slider-prev {
+    left: 150px;
   }
-  .products .products-header .filters-applied .current-filters .single-filter span {
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    vertical-align: top;
+  .single-product .product-showcase .slider-buttons #single-product-slider-next {
+    right: 20px;
   }
-  .products .products-header .filters-applied .current-filters .single-filter .filter-category {
-    margin-right: 5px;
+  .single-product .single-product-info {
+    padding: 0 25px;
+    margin-top: 30px;
   }
-  .products .products-header .filters-applied .current-filters .single-filter .icon-font {
-    width: 22px;
-    font-size: 22px;
-    cursor: pointer;
-  }
-  .products .products-header .filters-applied .clear-filters {
-    padding-left: 10px;
-    border-left: 1px solid #e7e7e7;
-  }
-  .products .products-header .filters-applied .clear-filters .clear {
-    cursor: pointer;
-    display: inline-block;
-    height: 30px;
-  }
-  .products .products-header .filters-applied .clear-filters .clear span {
-    display: inline-block;
-    vertical-align: top;
-    height: 30px;
-    line-height: 30px;
-  }
-  .products .products-header .filters-applied .clear-filters .clear .icon-font {
-    width: 22px;
-    font-size: 22px;
-    margin-right: 2px;
+}
+@media (min-width: 992px) {
+  .single-product .single-product-info {
+    padding: 0;
+    margin: 0;
   }
 }
 
