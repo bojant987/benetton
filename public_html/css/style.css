@@ -153,6 +153,7 @@ input[type=radio] {
   color: #fff;
   text-align: center;
   font-size: 15px;
+  letter-spacing: 2px;
 }
 
 .slider-buttons a {
@@ -288,44 +289,64 @@ input[type=radio] {
   z-index: 10;
 }
 
-input {
+input, select {
   border: none;
   border-bottom: 1px solid #dcdcdc;
   background-color: transparent;
   width: 100%;
   font-size: 15px;
-  padding: 12px;
+  padding: 8px 10px;
 }
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 15px;
   font-style: normal;
   color: #000;
   letter-spacing: 0.03em;
 }
-input::-moz-placeholder {
+input::-moz-placeholder, select::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 15px;
   font-style: normal;
   color: #000;
   letter-spacing: 0.03em;
 }
-input:-ms-input-placeholder {
+input:-ms-input-placeholder, select:-ms-input-placeholder {
   /* IE 10+ */
   font-size: 15px;
   font-style: normal;
   color: #000;
   letter-spacing: 0.03em;
 }
-input:-moz-placeholder {
+input:-moz-placeholder, select:-moz-placeholder {
   /* Firefox 18- */
   font-size: 15px;
   font-style: normal;
   color: #000;
   letter-spacing: 0.03em;
 }
-input:focus {
+input:focus, select:focus {
   outline: none;
+}
+
+.select-box {
+  position: relative;
+  overflow: hidden;
+}
+.select-box select {
+  position: relative;
+  z-index: 2;
+  width: 110%;
+}
+.select-box .icon-font {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
 }
 
 .newsletter-checkbox {
@@ -358,6 +379,30 @@ input:focus {
 }
 .newsletter-checkbox:checked + label {
   background: url(assets/check-radio-small.png) no-repeat 0 -25px;
+}
+
+.fake-checkbox {
+  display: block;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.fake-checkbox.checked {
+  border-color: #0091e3;
+}
+.fake-checkbox.checked:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background: #0091e3;
 }
 
 .fake-radio {
@@ -1447,29 +1492,6 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
 .products .products-header .accordion-content-filters .accordion-filter label input {
   display: none;
 }
-.products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox {
-  display: block;
-  margin-right: 8px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000;
-  float: left;
-  cursor: pointer;
-  position: relative;
-}
-.products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox.checked {
-  border-color: #0091e3;
-}
-.products .products-header .accordion-content-filters .accordion-filter label .filter-checkbox.checked:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  right: 2px;
-  background: #0091e3;
-}
 .products .products-header .accordion-content-filters .accordion-filter label .label {
   display: inline-block;
   height: 20px;
@@ -1855,6 +1877,91 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
 }
 .single-product .single-product-info .info-wrapper .more-info .accordion-info .accordion-content a:hover, .single-product .single-product-info .info-wrapper .more-info .accordion-info .accordion-content a:focus {
   text-decoration-style: none;
+}
+
+/* ---- register styles ---- */
+.register {
+  padding: 20px 10px;
+  background-color: #f9f9f9;
+}
+.register .register-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.register .register-form h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.register .register-form h2 + p {
+  font-size: 14px;
+}
+.register .register-form h4 {
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 40px 0;
+}
+.register .register-form .form-group, .register .register-form .date-picker, .register .register-form .select-box {
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+.register .register-form .input-info {
+  color: #868383;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.register .register-form input[type=checkbox] {
+  display: none;
+}
+.register .register-form .fake-checkbox {
+  border-color: #009933;
+}
+.register .register-form .fake-checkbox:before {
+  background-color: #009933;
+}
+.register .register-form .date-picker input {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+.register .register-form .date-picker input:last-of-type {
+  margin-right: 0;
+}
+.register .register-form label {
+  width: 100%;
+}
+.register .register-form .captcha label {
+  width: 100%;
+  margin-top: 10px;
+}
+.register .register-form .captcha .captcha-img {
+  vertical-align: top;
+  margin-top: 10px;
+}
+.register .register-form .info-panel {
+  padding: 15px;
+  border: 1px solid #e7e7e7;
+  margin: 30px 0 15px;
+}
+.register .register-form .info-panel + .form-group {
+  margin: 0;
+  width: 100%;
+}
+.register .register-form label.for-privacy a {
+  color: #b6b6b6;
+  text-decoration: underline;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: block;
+  vertical-align: top;
+  margin-left: 28px;
+}
+.register .register-form .login-button {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #009933;
 }
 
 /*# sourceMappingURL=style.css.map */

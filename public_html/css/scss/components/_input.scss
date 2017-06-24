@@ -1,10 +1,10 @@
-input {
+input, select {
   border: none;
   border-bottom: 1px solid #dcdcdc;
   background-color: transparent;
   width: 100%;
   font-size: 15px;
-  padding: 12px;
+  padding: 8px 10px;
 
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 15px;
@@ -33,5 +33,27 @@ input {
 
   &:focus {
     outline: none;
+  }
+}
+
+.select-box {
+  position: relative;
+  overflow: hidden;
+
+  select {
+   position: relative;
+   z-index: 2;
+   width: 110%;
+  }
+
+  .icon-font {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
   }
 }

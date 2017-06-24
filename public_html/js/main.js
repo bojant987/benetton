@@ -429,7 +429,7 @@ $(document).ready(function() {
   });
 
   // filter fake checkboxes
-  $(".accordion-content-filters").on("change", "input", function() {
+  $(".accordion-content-filters, .register-form").on("change", "input[type=checkbox]", function() {
 
     if ($(this).is(":checked")) {
       $(this).next().addClass("checked");
@@ -745,6 +745,9 @@ $(document).ready(function() {
     $(this).addClass("picked");
   });
 
+  $(".single-product-form input[type=radio]").each(function() {
+    $(this).prop("checked", false);
+  });
   // open share links
   $(".open-share").click(function(e) {
     e.preventDefault();

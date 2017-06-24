@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+  .register {
+    padding: 30px 15px;
+
+    .register-form {
+
+      .form-group, .date-picker, .select-box {
+        display: inline-block;
+        width: 49%;
+      }
+
+      .left-side {
+        margin-right: 1.5%;
+      }
+
+      .captcha {
+        label {
+          width: 49%;
+          margin-right: 1.5%;
+        }
+
+        .captcha-img {
+          display: inline-block;
+          width: 49%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .register {
+    padding: 45px;
+  }
+
+}

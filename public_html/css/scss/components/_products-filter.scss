@@ -135,32 +135,6 @@
         display: none;
       }
 
-      .filter-checkbox {
-        display: block;
-        margin-right: 8px;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #000;
-        float: left;
-        cursor: pointer;
-        position: relative;
-
-        &.checked {
-          border-color: $color-secondary;
-
-          &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            bottom: 2px;
-            right: 2px;
-            background: $color-secondary;
-          }
-        }
-      }
-
       .label {
         display: inline-block;
         height: 20px;

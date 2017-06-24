@@ -953,11 +953,11 @@
           <form class="login-form" data-toggle="validator" data-role="form">
             <div class="form-group has-feedback">
               <input type="email" name="login-email" value="" placeholder="Enter your email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-              <div class="help-block with-errors"></div>
+              <div class="help-block with-errorss"></div>
             </div>
             <div class="form-group has-feedback">
               <input type="password" name="login-password" value="" placeholder="Enter your password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-              <div class="help-block with-errors"></div>
+              <div class="help-block with-errorss"></div>
             </div>
             <div class="text-right"><a href="#">Forgot Your password?</a></div>
             <button type="submit" name="button" class="login-button text-uppercase">login</button>
@@ -1066,462 +1066,93 @@
       </div>
     </header>
     <main>
-      <section class="banner">
-        <img src="img/banner-02.png" alt="">
-        <div class="banner-content banner-content-center">
-          <p class="text-uppercase">women</p>
-          <h1>t-shirts</h1>
-          <p>Women's t-shirts and tops, white or colorful</p>
+      <section class="register">
+        <div class="container">
+          <form class="register-form" data-toggle="validator" role="form">
+            <h2>Register</h2>
+            <p>
+              If you create an account with our store, you can move through the
+              checkout process faster, store multiple shipping addresses, view and
+              track the status of your orders and more.
+            </p>
+            <h4 class="text-center text-uppercase">Personal Information</h4>
+            <div class="select-box left-side">
+              <select class="select-gender" name="gender">
+                <option value="">Select gender</option>
+                <option value="">Mr.</option>
+                <option value="">Ms.</option>
+              </select>
+              <span class="icon-font icon-select"></span>
+            </div>
+            <div class="form-group has-feedback left-side">
+              <input type="text" name="name" value="" placeholder="First name" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feeback">
+              <input type="text" name="surname" value="" placeholder="Surname" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback left-side">
+              <label class="text-uppercase">CITY*
+                <input type="text" name="city" value="" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              </label>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="email" name="email" value="" placeholder="Email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <div class="help-block with-errors"></div>
+              <p class="input-info">We'll send you order confirmation here</p>
+            </div>
+            <div class="date-picker left-side clearfix">
+              <input type="text" name="day" value="" placeholder="DD" maxlength="2" pattern="^[0-9]+$">
+              <input type="text" name="month" value="" placeholder="MM" maxlength="2" pattern="^[0-9]+$">
+              <input type="text" name="year" value="" placeholder="YYYY" maxlength="4" pattern="^[0-9]+$">
+            </div>
+            <h4 class="text-center text-uppercase">login information</h4>
+            <div class="form-group has-feedback left-side">
+              <input type="password" id="password" name="password" value="" placeholder="Password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="password" name="confirm-password" value="" placeholder="Confirm Password" minlength="4" maxlength="35" data-match="#password" data-match-error="DOESN'T MATCH THE PASSWORD" data-error="THIS IS A REQUIRED FIELD." required>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="captcha">
+              <label class="text-uppercase">please type the letters below*
+                <input type="text" name="captcha" value="" data-error="THIS IS A REQUIRED FIELD." required>
+                <div class="help-block with-errors"></div>
+              </label>
+              <div class="captcha-img">
+                <a href="#"><img src="img/captcha-reload.png" alt=""></a>
+                <img src="img/captcha.png" alt="">
+              </div>
+            </div>
+            <p class="info-panel">
+              If you wish to register on the website, click on create an account
+              and enter a username and password; your personal data will be used
+              by Triboo Digitale and Benetton Group S.r.l. to facilitate your
+              browsing experience and the product purchase process, to grant you
+              access to the reserved areas, to improve the level of services offered
+              and, when consent is granted, to allow Benetton Group S.r.l. to conduct
+              marketing activities. Please read the Privacy Code Information Note
+              for further information. If you make a purchase without registering,
+              your personal data will be used to process your purchase only.
+            </p>
+            <div class="form-group has-feedback">
+              <label class="for-privacy clearfix">
+                <input type="checkbox" name="privacy-consent" value="" data-validate="true" data-error="THIS IS A REQUIRED FIELD." required>
+                <span class="fake-checkbox"></span>
+                <a href="#">
+                  Privacy consent: I consent to the processing of my personal information
+                  for the marketing and profiling purposesindicated in the privacy statement
+                </a>
+              </label>
+              <div class="help-block with-errors"></div>
+            </div>
+            <button type="submit" class="login-button text-uppercase">submit</button>
+          </form>
         </div>
-      </section>   <!-- banner -->
-      <section class="products">
-        <div class="products-header">
-          <div class="breadcrumb-wrapper">
-            <div class="container">
-              <ol class="breadcrumb">
-                <li><a href="#" class="text-uppercase">home</a></li>
-                <li><a href="#" class="text-uppercase">women</a></li>
-                <li><a href="#" class="text-uppercase">tops</a></li>
-                <li class="active text-uppercase">t-shirts</li>
-              </ol>
-            </div>
-          </div>
-          <div class="products-filter-top-level">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-6 col-md-8">
-                  <article class="filters">
-                    <p class="clearfix text-uppercase hidden-md hidden-lg show-filters" data-target="all">filters <span class="icon-font icon-caret-down"></span></p>
-                    <ul class="accordion-filters clearfix list-unstyled hidden-xs hidden-sm">
-                      <li class="accordion-handler-filter text-uppercase" data-target="category">category
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                      <li class="accordion-handler-filter text-uppercase" data-target="colour">colour
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                      <li class="accordion-handler-filter text-uppercase" data-target="size">size (italian)
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                      <li class="accordion-handler-filter text-uppercase" data-target="pattern">pattern
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                      <li class="accordion-handler-filter text-uppercase" data-target="price">price
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                      <li class="accordion-handler-filter text-uppercase" data-target="sales">sales
-                        <span class="icon-font icon-caret-down"></span>
-                        <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-                      </li>
-                    </ul>
-                  </article>
-                </div>   <!-- col -->
-                <div class="col-xs-6 col-md-4">
-                  <article class="sort">
-                    <span class="text-uppercase hidden-xs hidden-sm text">sort by</span>
-                    <span class="text-uppercase accordion-handler-filter clearfix" data-target="sort">
-                      <span class="sort-by">select</span> <span class="icon-font icon-caret-down"></span>
-                    </span>
-                    <ul class="list-unstyled accordion-filter-sort accordion-filter hidden-xs hidden-sm" data-filter="sort">
-                      <li><a href="#" class="text-uppercase">price high first</a></li>
-                      <li><a href="#" class="text-uppercase">price low first</a></li>
-                      <li><a href="#" class="text-uppercase">order by date</a></li>
-                    </ul>
-                  </article>
-                </div>   <!-- col -->
-              </div>   <!-- row -->
-            </div>   <!-- container -->
-          </div>   <!-- product-filter-top-level -->
-          <div class="accordion-content-filters" data-opened="">
-              <ul class="list-unstyled accordion-filter-sort hidden-md hidden-lg" data-filter="sort">
-                <li><a href="#" class="text-uppercase">price high first</a></li>
-                <li><a href="#" class="text-uppercase">price low first</a></li>
-                <li><a href="#" class="text-uppercase">order by date</a></li>
-              </ul>
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="category">category
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="category-filter accordion-filter" data-filter="category">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="short-sleeve" class="text-uppercase clearfix">
-                        <input type="checkbox" name="short-sleeve" value="" id="short-sleeve">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">short sleeve</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="long-sleeve" class="text-uppercase clearfix">
-                        <input type="checkbox" name="long-sleeve" value="" id="long-sleeve">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">long sleeve</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- category-filter -->
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="colour">colour
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="colour-filter accordion-filter" data-filter="colour">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="beige" class="text-uppercase clearfix">
-                        <input type="checkbox" name="beige" value="" id="beige">
-                        <span class="fake-checkbox"></span>
-                        <span class="color"></span>
-                        <span class="label">beige</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="red" class="text-uppercase clearfix">
-                        <input type="checkbox" name="red" value="" id="red">
-                        <span class="fake-checkbox"></span>
-                        <span class="color"></span>
-                        <span class="label">red</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="green" class="text-uppercase clearfix">
-                        <input type="checkbox" name="green" value="" id="green">
-                        <span class="fake-checkbox"></span>
-                        <span class="color"></span>
-                        <span class="label">green</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- colour-filter -->
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="size">size (italian)
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="size-filter accordion-filter" data-filter="size">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="xs" class="text-uppercase clearfix">
-                        <input type="checkbox" name="xs" value="" id="xs">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">XS</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="s" class="text-uppercase clearfix">
-                        <input type="checkbox" name="s" value="" id="s">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">S</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="m" class="text-uppercase clearfix">
-                        <input type="checkbox" name="m" value="" id="m">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">M</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="l" class="text-uppercase clearfix">
-                        <input type="checkbox" name="l" value="" id="l">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">L</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="xl" class="text-uppercase clearfix">
-                        <input type="checkbox" name="xl" value="" id="xl">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">xl</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- size-filter -->
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="pattern">pattern
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="pattern-filter accordion-filter" data-filter="pattern">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="embroidery" class="text-uppercase clearfix">
-                        <input type="checkbox" name="embroidery" value="" id="embroidery">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">embroidery</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="multicolor" class="text-uppercase clearfix">
-                        <input type="checkbox" name="multicolor" value="" id="multicolor">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">multicolor</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="print" class="text-uppercase clearfix">
-                        <input type="checkbox" name="print" value="" id="print">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">print</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- pattern-filter -->
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="price">price
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="price-filter accordion-filter" data-filter="price">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="0-9.99" class="text-uppercase clearfix">
-                        <input type="checkbox" name="0-9.99" value="" id="0-9.99">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">£0.00 - £9.99</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="10-19.99" class="text-uppercase clearfix">
-                        <input type="checkbox" name="10-19.99" value="" id="10-19.99">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">£10.00 - £19.99</span>
-                      </label>
-                    </div>   <!-- col -->
-                    <div class="col-sm-3">
-                      <label for="20-above" class="text-uppercase clearfix">
-                        <input type="checkbox" name="20-above" value="" id="20-above">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">£20.00 and above</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- price-filter -->
-              <div class="accordion-handler-filter text-uppercase hidden-md hidden-lg" data-target="sales">sales
-                <span class="icon-font icon-plus hidden-md hidden-lg"></span>
-              </div>
-              <div class="sales-filter accordion-filter" data-filter="sales">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <label for="sales" class="text-uppercase clearfix">
-                        <input type="checkbox" name="sales" value="" id="sales">
-                        <span class="fake-checkbox"></span>
-                        <span class="label">sales</span>
-                      </label>
-                    </div>   <!-- col -->
-                  </div>   <!-- row -->
-                </div>
-              </div>   <!-- sales-filter -->
-              <div class="container">
-                <button type="button" name="close" class="close-btn text-uppercase">close</button>
-                <button type="button" name="apply" class="apply-btn text-uppercase">apply filter</button>
-              </div>
-          </div>   <!-- accordion-content-filters -->
-        </div>   <!-- product-header -->
-        <div class="filters-applied">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-10">
-                <div class="current-filters">
-                  <article class="single-filter">
-                    <span class="icon-font icon-close remove-filter"></span>
-                    <span><span class="filter-category text-capitalize">Category:</span><span class="text-capitalize">short sleeve</span></span>
-                  </article>   <!-- single-filter -->
-                  <article class="single-filter">
-                    <span class="icon-font icon-close remove-filter"></span>
-                    <span><span class="filter-category text-capitalize">Category:</span><span class="text-capitalize">short sleeve</span></span>
-                  </article>   <!-- single-filter -->
-                  <article class="single-filter">
-                    <span class="icon-font icon-close remove-filter"></span>
-                    <span><span class="filter-category text-capitalize">Category:</span><span class="text-capitalize">short sleeve</span></span>
-                  </article>   <!-- single-filter -->
-                  <article class="single-filter">
-                    <span class="icon-font icon-close remove-filter"></span>
-                    <span><span class="filter-category text-capitalize">Category:</span><span class="text-capitalize">short sleeve</span></span>
-                  </article>   <!-- single-filter -->
-                </div>   <!-- current-filters -->
-              </div>   <!-- col -->
-              <div class="col-sm-2">
-                <div class="clear-filters">
-                  <p class="clear text-uppercase"><span class="icon-font icon-close"></span> <span>clear all</span></p>
-                </div>   <!-- clear-filters -->
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-          </div>   <!-- container -->
-        </div>   <!-- filters-applied -->
-        <div class="products-list">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-              <div class="col-sm-4">
-                <article class="product">
-                  <div class="upper">
-                    <div class="addto-wishlist">
-                      <a href="#" class="wishlist-handler" data-role="add">
-                        <span class="icon-font icon-wishlist_outline pull-right"></span>
-                        <span class="icon-font icon-wishlist pull-right"></span>
-                        <span class="pop-over add text-uppercase">add to wishlist</span>
-                        <span class="pop-over remove text-uppercase">remove from wishlist</span>
-                      </a>
-                    </div>
-                    <a href="#"><img src="img/product-01.jpg" alt=""></a>
-                  </div>
-                  <div class="lower text-center">
-                    <p class="name">T-shirt with pocket</p>
-                    <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                    <div class="colors text-center">
-                      <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
-                      </div>
-                    </div>
-                  </div>
-                </article>   <!-- product -->
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <div class="products-list-footer text-center">
-              <p>You are viewing 34 out of 12334234 items</p>
-              <a href="#" class="button-shop-lg text-uppercase">load more products</a>
-            </div>
-          </div>   <!-- container -->
-        </div>   <!-- product-list -->
-      </section>   <!-- products -->
+      </section>
     </main>
     <footer>
       <div class="upper-footer">
@@ -1559,7 +1190,7 @@
                   <div class="form-group has-feedback">
                     <input type="email" name="" value="" placeholder="Enter you email address" minlength="4" maxlength="35" data-error="Please enter your email address" required>
                     <button type="submit" class="button-newsletter text-uppercase">send</button>
-                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errorss"></div>
                   </div>
                   <p>You'll immediately receive a 15% welcome discount</p>
                   <div class="form-group has-feedback">
@@ -1569,7 +1200,7 @@
                       for the marketing and profiling purposesindicated in the
                       <a href="#">privacy statement</a>
                     </label>
-                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errorss"></div>
                   </div>
                 </form>
               </article>
