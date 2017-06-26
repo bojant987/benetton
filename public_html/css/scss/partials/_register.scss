@@ -23,9 +23,8 @@
     }
 
     .form-group, .date-picker, .select-box {
-      width: 100%;
       vertical-align: top;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .input-info {
@@ -63,15 +62,8 @@
     }
 
     .captcha {
-      label {
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      .captcha-img {
-        vertical-align: top;
-        margin-top: 10px;
-      }
+      vertical-align: top;
+      margin-top: 10px;
     }
 
     .info-panel {

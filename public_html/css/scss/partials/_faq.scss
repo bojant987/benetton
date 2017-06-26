@@ -1,0 +1,54 @@
+.faq {
+  .faq-page-content {
+    h2 {
+      font-size: 24px;
+      line-height: 1.4em;
+
+      &+p {
+        margin: 20px 0;
+      }
+    }
+    .single-question {
+      padding: 15px 30px 15px 0;
+      border-top: 1px solid #e6e4e4;
+
+      .accordion-handler {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover, &:focus {
+          color: $color-primary;
+        }
+
+        .icon-font {
+          width: 28px;
+          height: 28px;
+          font-size: 28px;
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          right: -28px;
+          transform: translateY(-50%);
+        }
+
+        &.show-mode {
+          color: $color-primary;
+
+          .icon-font:before {
+            content: "\e910";
+          }
+        }
+      }
+
+      .accordion-content {
+        padding: 15px 10px;
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

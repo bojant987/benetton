@@ -762,26 +762,140 @@
   .register {
     padding: 30px 15px;
   }
-  .register .register-form .form-group, .register .register-form .date-picker, .register .register-form .select-box {
-    display: inline-block;
-    width: 49%;
-  }
-  .register .register-form .left-side {
-    margin-right: 1.5%;
-  }
-  .register .register-form .captcha label {
-    width: 49%;
-    margin-right: 1.5%;
-  }
-  .register .register-form .captcha .captcha-img {
-    display: inline-block;
-    width: 49%;
+  .register .register-form .captcha {
     margin-top: 0;
   }
 }
 @media (min-width: 992px) {
   .register {
     padding: 45px;
+  }
+}
+/* ---- contact us styles ---- */
+@media (min-width: 768px) {
+  .contact-us .contact-us-form h2 {
+    font-size: 24px;
+  }
+  .contact-us .contact-us-form h2 + p {
+    margin: 20px 0;
+  }
+  .contact-us .contact-us-form select {
+    height: 38px;
+  }
+  .contact-us .contact-us-form select option {
+    color: #0091e3;
+    font-size: 16px;
+    padding: 15px;
+  }
+  .contact-us .contact-us-form .form-group {
+    margin-bottom: 30px;
+  }
+  .contact-us .contact-us-form input::-webkit-input-placeholder, .contact-us .contact-us-form select::-webkit-input-placeholder, .contact-us .contact-us-form textarea::-webkit-input-placeholder {
+    color: #a3a3a3;
+  }
+  .contact-us .contact-us-form input::-moz-placeholder, .contact-us .contact-us-form select::-moz-placeholder, .contact-us .contact-us-form textarea::-moz-placeholder {
+    color: #a3a3a3;
+  }
+  .contact-us .contact-us-form input:-ms-input-placeholder, .contact-us .contact-us-form select:-ms-input-placeholder, .contact-us .contact-us-form textarea:-ms-input-placeholder {
+    color: #a3a3a3;
+  }
+  .contact-us .contact-us-form input:-moz-placeholder, .contact-us .contact-us-form select:-moz-placeholder, .contact-us .contact-us-form textarea:-moz-placeholder {
+    color: #a3a3a3;
+  }
+  .contact-us .contact-us-form .info {
+    margin: 40px 0;
+  }
+  .contact-us .contact-us-form .info p {
+    font-size: 14px;
+    color: #868383;
+  }
+  .contact-us .contact-us-form .info p:first-of-type {
+    margin-bottom: 15px;
+  }
+  .contact-us .contact-us-form input[type=checkbox] {
+    display: none;
+  }
+  .contact-us .contact-us-form label.for-privacy a {
+    text-decoration: underline;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: block;
+    vertical-align: top;
+    margin-left: 28px;
+  }
+  .contact-us .contact-us-form .fake-checkbox {
+    border-color: #009933;
+  }
+  .contact-us .contact-us-form .fake-checkbox:before {
+    background-color: #009933;
+  }
+  .contact-us .contact-us-form .login-button {
+    background-color: #009933;
+    width: 120px;
+  }
+}
+/* ---- customer-service styles ---- */
+@media (min-width: 768px) {
+  .page-wrapper {
+    background-color: #f9f9f9;
+  }
+
+  .page-content {
+    padding: 20px 30px;
+  }
+
+  .customer-service-page {
+    float: left;
+    width: calc(100% - 200px);
+  }
+  .customer-service-page .customer-service-page-container {
+    padding: 0;
+  }
+
+  .customer-service-nav {
+    background-color: #efefef;
+    width: 197px;
+    float: left;
+    border-right: 1px solid #c5c5c5;
+    border-bottom: none;
+    padding-top: 88px;
+  }
+  .customer-service-nav ul li {
+    width: 100%;
+    padding: 20px 45px;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: none;
+    position: relative;
+  }
+  .customer-service-nav ul li a {
+    padding: 0;
+  }
+  .customer-service-nav ul li.active {
+    padding: 20px 45px;
+  }
+  .customer-service-nav ul li.active:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 15px solid #fff;
+    border-color: transparent #fff transparent transparent;
+    top: 50%;
+    right: -1px;
+    transform: translateY(-50%);
+  }
+}
+/* ---- faq styles ---- */
+@media (min-width: 768px) {
+  .faq .faq-page-content .single-question {
+    padding: 25px 30px 25px 0;
+  }
+  .faq .faq-page-content .single-question .accordion-content {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 992px) {
+  .faq .faq-page-content .single-question .accordion-handler {
+    font-size: 16px;
   }
 }
 

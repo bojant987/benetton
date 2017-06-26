@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+  .page-wrapper {
+    background-color: #f9f9f9;
+  }
+
+  .page-content {
+    padding: 20px 30px;
+  }
+
+  .customer-service-page {
+    float: left;
+    width: calc(100% - 200px);
+
+    .customer-service-page-container {
+      padding: 0;
+    }
+  }
+
+  .customer-service-nav {
+    background-color: #efefef;
+    width: 197px;
+    float: left;
+    border-right: 1px solid #c5c5c5;
+    border-bottom: none;
+    padding-top: 88px;
+
+    ul {
+
+      li {
+        width: 100%;
+        padding: 20px 45px;
+        border-bottom: 1px solid #e7e7e7;
+        border-top: none;
+        position: relative;
+
+        a {
+          padding: 0;
+        }
+
+        &.active {
+          padding: 20px 45px;
+        }
+
+        &.active:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border: 15px solid #fff;
+            border-color: transparent #fff transparent transparent;
+            top: 50%;
+            right: -1px;
+            transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

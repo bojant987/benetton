@@ -1066,119 +1066,106 @@
       </div>
     </header>
     <main>
-      <section class="register">
-        <div class="container">
-          <form class="register-form" data-toggle="validator" role="form">
-            <h2>Register</h2>
-            <p>
-              If you create an account with our store, you can move through the
-              checkout process faster, store multiple shipping addresses, view and
-              track the status of your orders and more.
-            </p>
-            <h4 class="text-center text-uppercase">Personal Information</h4>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="select-box">
-                  <select class="select-gender" name="gender">
-                    <option value="">Select gender</option>
-                    <option value="mr">Mr.</option>
-                    <option value="ms">Ms.</option>
-                  </select>
-                  <span class="icon-font icon-select"></span>
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="text" name="name" value="" placeholder="First name" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feeback">
-                  <input type="text" name="surname" value="" placeholder="Surname" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <label class="text-uppercase">CITY*
-                    <input type="text" name="city" value="" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  </label>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="email" name="email" value="" placeholder="Email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                  <p class="input-info">We'll send you order confirmation here</p>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="date-picker clearfix">
-                  <input type="text" name="day" value="" placeholder="DD" maxlength="2" pattern="^[0-9]+$">
-                  <input type="text" name="month" value="" placeholder="MM" maxlength="2" pattern="^[0-9]+$">
-                  <input type="text" name="year" value="" placeholder="YYYY" maxlength="4" pattern="^[0-9]+$">
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <h4 class="text-center text-uppercase">login information</h4>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="password" id="password" name="password" value="" placeholder="Password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="password" name="confirm-password" value="" placeholder="Confirm Password" minlength="4" maxlength="35" data-match="#password" data-match-error="DOESN'T MATCH THE PASSWORD" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback captcha-input">
-                  <label class="text-uppercase">please type the letters below*
-                    <input type="text" name="captcha" value="" data-error="THIS IS A REQUIRED FIELD." required>
-                  </label>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="captcha">
-                  <a href="#"><img src="img/captcha-reload.png" alt=""></a>
-                  <img src="img/captcha.png" alt="">
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <p class="info-panel">
-              If you wish to register on the website, click on create an account
-              and enter a username and password; your personal data will be used
-              by Triboo Digitale and Benetton Group S.r.l. to facilitate your
-              browsing experience and the product purchase process, to grant you
-              access to the reserved areas, to improve the level of services offered
-              and, when consent is granted, to allow Benetton Group S.r.l. to conduct
-              marketing activities. Please read the Privacy Code Information Note
-              for further information. If you make a purchase without registering,
-              your personal data will be used to process your purchase only.
-            </p>
-            <div class="form-group has-feedback">
-              <label class="for-privacy clearfix">
-                <input type="checkbox" name="privacy-consent" value="" data-validate="true" data-error="THIS IS A REQUIRED FIELD." required>
-                <span class="fake-checkbox"></span>
-                <a href="#">
-                  Privacy consent: I consent to the processing of my personal information
-                  for the marketing and profiling purposesindicated in the privacy statement
-                </a>
-              </label>
-              <div class="help-block with-errors"></div>
+      <div class="page-wrapper clearfix">
+        <aside class="customer-service-nav aside-nav">
+          <ul class="list-unstyled clearfix">
+            <li><a href="#">Contact us <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+            <li><a href="#">Faq <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+            <li class="active"><a href="#">Payments <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+          </ul>
+        </aside>
+        <section class="payments customer-service-page">
+          <div class="customer-service-page-container">
+            <h1 class="hidden-xs">Customer service</h1>
+            <div class="payments-page-content page-content">
+              <h2>Payment methods</h2>
+              <p>
+                The United Colors of Benetton online shop accepts multiple payment
+                methods to meet your needs. You can choose from: credit card
+                (Visa, Visa Electron, Mastercard, American Express, JCB), PayPal,
+                wire transfer and Sofort.
+              </p>
+              <p>
+                To ensure maximum security during the transaction, we use the most
+                advanced technological systems available. Your personal data and
+                information about your credit card is protected from unauthorised
+                access by means of encryption systems.
+              </p>
+              <p>
+                All transactions are processed by Global Collect, a very secure
+                online payment gateway, which transfers the payment information
+                using the highest safety standards. All sensitive data is protected
+                from unauthorised access through an SSL (Secure Socket Layer) encrypted
+                transfer method. These technologies ensure that your data is completely
+                unreadable to a third party during the exchange of information between
+                your device and our website.
+              </p>
+              <p>
+                After finishing your purchase, you will receive notification via
+                email confirmation containing your order number and summary of your
+                purchase.<br/>Remember that you can check the status of your order at
+                any time, accessing the specified section of your profile.
+              </p>
+              <h5>Credit, debit or prepaid cards</h5>
+              <p>
+                You can shop online and pay from the comfort of your home with Visa,
+                Visa Electron, Mastercard, American Express, and JCB cards. After
+                confirming your purchase and inserting your personal data for billing
+                and shipping, you will be directed to the Global Collect page,
+                where you can insert your credit card details with maximum security.
+                Once the payment is complete, you will be transferred to the
+                confirmation page for your order.
+              </p>
+              <h5>PayPal</h5>
+              <p>
+                With PayPal you can pay for your purchases in complete security
+                at no additional cost and without sharing your personal data.<br/>
+                The PayPal account works like a virtual wallet that links credit,
+                debit and prepaid cards and bank accounts. Once connected to your
+                PayPal account, bank accounts and cards can be used for your purchases
+                without the need to enter different numbers and contact details
+                each time: all you need to remember is your email address and
+                PayPal password.<br/>
+                Automatic encryption systems help to maintain high standards of
+                protection and each transaction is monitored 24 hours a day by
+                PayPal to prevent fraud, phishing emails, identity theft and
+                other unpleasant situations. To learn more about PayPal visit
+                the official website:
+                <a href="#">www.paypal.com</a>
+              </p>
+              <h5>Wire transfer</h5>
+              <p>
+                After confirming your purchase and inserting your personal data
+                for billing and shipping, you will receive an email confirmation
+                with the bank details to make the transfer.<br/>
+                Any transfer or bank fees will be charged to the customer. The
+                order will be sent only after the your payment has gone through
+                to our account, which may take up to 5 working days.
+              </p>
+              <h5>Sofort</h5>
+              <p>
+                Want to pay via online banking? You can do this by using SOFORT
+                Banking.<br/>
+                SOFORT Banking is the international system for direct, simple and
+                TÜV safety certified bank transfers. It works with your home banking
+                account data and offers extensive security standards with encrypted
+                data transmission and doesn't store of your home banking data.<br/>
+                Thanks to real-time transaction notification, it also allows for
+                immediate confirmation. To learn more about SOFORT Banking, as
+                well as the banks it works with, please visit the official site
+                <a href="#">www.sofort.com</a>
+              </p>
+            </div>   <!-- payments page content -->
+            <div class="mobile-nav hidden-sm hidden-md hidden-lg customer-service-nav">
+              <ul class="list-unstyled clearfix">
+                <li><a href="#">Contact us <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+                <li><a href="#">Faq <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+                <li class="active"><a href="#">Payments <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+              </ul>
             </div>
-            <button type="submit" class="login-button text-uppercase">submit</button>
-          </form>
-        </div>
-      </section>
+          </div>   <!-- container -->
+        </section>   <!-- contact-us -->
+      </div>
     </main>
     <footer>
       <div class="upper-footer">

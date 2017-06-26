@@ -1,4 +1,4 @@
-input, select {
+input, select, textarea {
   border: none;
   border-bottom: 1px solid #dcdcdc;
   background-color: transparent;
@@ -36,6 +36,7 @@ input, select {
   }
 }
 
+// select
 .select-box {
   position: relative;
   overflow: hidden;
@@ -44,6 +45,11 @@ input, select {
    position: relative;
    z-index: 2;
    width: 110%;
+   -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none; /* cant take off select border with border: none because reasons */
+    -ms-appearance: none;
+    appearance: none;
   }
 
   .icon-font {
@@ -56,4 +62,9 @@ input, select {
     right: 5px;
     transform: translateY(-50%);
   }
+}
+
+// textarea
+textarea {
+  resize: none;
 }

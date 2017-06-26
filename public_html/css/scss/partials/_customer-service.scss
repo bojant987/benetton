@@ -1,0 +1,90 @@
+.page-wrapper {
+  background-color: #fff;
+}
+
+.page-content {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.customer-service-page {
+  position: relative;
+  background-color: #f9f9f9;
+
+  h1 {
+    font-size: 30px;
+    padding: 25px 30px;
+  }
+
+  .customer-service-nav {
+    ul {
+
+      li {
+        &.active {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  .customer-service-form {
+    position: relative;
+  }
+
+  .customer-service-page-container {
+    max-width: 1230px;
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.customer-service-nav {
+  background-color: #fff;
+
+  ul {
+    background-color: transparent;
+
+    li {
+      width: 100%;
+      color: #898989;
+      font-size: 16px;
+      border-top: 2px solid #f9f9f9;
+      position: relative;
+
+      &:last-of-type {
+        border-right: none;
+      }
+
+      &.active {
+        padding: 24px 20px;
+
+        a {
+          display: inline-block;
+          padding: 0;
+        }
+
+        .icon-font {
+          display: none;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 24px 20px;
+
+        .icon-font {
+          width: 28px;
+          height: 28px;
+          font-size: 28px;
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          right: 25px;
+          transform: translateY(-50%);
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .faq {
+    .faq-page-content {
+      .single-question {
+        padding: 25px 30px 25px 0;
+
+        .accordion-content {
+          padding: 20px 30px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .faq {
+    .faq-page-content {
+
+      .single-question {
+
+        .accordion-handler {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}

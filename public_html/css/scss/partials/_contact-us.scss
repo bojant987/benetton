@@ -1,0 +1,84 @@
+.contact-us {
+
+  .contact-us-form {
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.4em;
+
+      &+p {
+        margin: 20px 0;
+      }
+    }
+
+    select {
+      height: 38px;
+
+      option {
+        color: $color-secondary;
+        font-size: 16px;
+        padding: 15px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+    }
+
+    input, select, textarea {
+      &::-webkit-input-placeholder {
+        color: #a3a3a3;
+      }
+      &::-moz-placeholder {
+        color: #a3a3a3;
+      }
+      &:-ms-input-placeholder {
+        color: #a3a3a3;
+      }
+      &:-moz-placeholder {
+        color: #a3a3a3;
+      }
+    }
+
+    .info {
+      margin: 40px 0;
+
+      p {
+        font-size: 14px;
+        color: #868383;
+
+        &:first-of-type {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    input[type=checkbox] {
+      display: none;
+    }
+
+    label.for-privacy {
+      a {
+        text-decoration: underline;
+        font-size: 12px;
+        letter-spacing: 1px;
+        display: block;
+        vertical-align: top;
+        margin-left: 28px;
+      }
+    }
+
+    .fake-checkbox {
+      border-color: $color-primary;
+
+      &:before {
+        background-color: $color-primary;
+      }
+    }
+
+    .login-button {
+      background-color: $color-primary;
+      width: 120px;
+    }
+  }
+}

@@ -1066,119 +1066,141 @@
       </div>
     </header>
     <main>
-      <section class="register">
-        <div class="container">
-          <form class="register-form" data-toggle="validator" role="form">
-            <h2>Register</h2>
-            <p>
-              If you create an account with our store, you can move through the
-              checkout process faster, store multiple shipping addresses, view and
-              track the status of your orders and more.
-            </p>
-            <h4 class="text-center text-uppercase">Personal Information</h4>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="select-box">
-                  <select class="select-gender" name="gender">
-                    <option value="">Select gender</option>
-                    <option value="mr">Mr.</option>
-                    <option value="ms">Ms.</option>
-                  </select>
-                  <span class="icon-font icon-select"></span>
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="text" name="name" value="" placeholder="First name" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feeback">
-                  <input type="text" name="surname" value="" placeholder="Surname" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <label class="text-uppercase">CITY*
-                    <input type="text" name="city" value="" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  </label>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="email" name="email" value="" placeholder="Email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                  <p class="input-info">We'll send you order confirmation here</p>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="date-picker clearfix">
-                  <input type="text" name="day" value="" placeholder="DD" maxlength="2" pattern="^[0-9]+$">
-                  <input type="text" name="month" value="" placeholder="MM" maxlength="2" pattern="^[0-9]+$">
-                  <input type="text" name="year" value="" placeholder="YYYY" maxlength="4" pattern="^[0-9]+$">
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <h4 class="text-center text-uppercase">login information</h4>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="password" id="password" name="password" value="" placeholder="Password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <input type="password" name="confirm-password" value="" placeholder="Confirm Password" minlength="4" maxlength="35" data-match="#password" data-match-error="DOESN'T MATCH THE PASSWORD" data-error="THIS IS A REQUIRED FIELD." required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="form-group has-feedback captcha-input">
-                  <label class="text-uppercase">please type the letters below*
-                    <input type="text" name="captcha" value="" data-error="THIS IS A REQUIRED FIELD." required>
-                  </label>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>   <!-- col -->
-              <div class="col-sm-6">
-                <div class="captcha">
-                  <a href="#"><img src="img/captcha-reload.png" alt=""></a>
-                  <img src="img/captcha.png" alt="">
-                </div>
-              </div>   <!-- col -->
-            </div>   <!-- row -->
-            <p class="info-panel">
-              If you wish to register on the website, click on create an account
-              and enter a username and password; your personal data will be used
-              by Triboo Digitale and Benetton Group S.r.l. to facilitate your
-              browsing experience and the product purchase process, to grant you
-              access to the reserved areas, to improve the level of services offered
-              and, when consent is granted, to allow Benetton Group S.r.l. to conduct
-              marketing activities. Please read the Privacy Code Information Note
-              for further information. If you make a purchase without registering,
-              your personal data will be used to process your purchase only.
-            </p>
-            <div class="form-group has-feedback">
-              <label class="for-privacy clearfix">
-                <input type="checkbox" name="privacy-consent" value="" data-validate="true" data-error="THIS IS A REQUIRED FIELD." required>
-                <span class="fake-checkbox"></span>
-                <a href="#">
-                  Privacy consent: I consent to the processing of my personal information
-                  for the marketing and profiling purposesindicated in the privacy statement
-                </a>
-              </label>
-              <div class="help-block with-errors"></div>
+      <div class="page-wrapper clearfix">
+        <aside class="customer-service-nav aside-nav">
+          <ul class="list-unstyled clearfix">
+            <li class="active"><a href="#">Contact us <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+            <li><a href="#">Faq <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+            <li><a href="#">Payments <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+          </ul>
+        </aside>
+        <section class="contact-us customer-service-page">
+          <div class="customer-service-page-container">
+            <h1 class="hidden-xs">Customer service</h1>
+            <form class="contact-us-form customer-service-form contact-us-page-content page-content" data-toggle="validator" role="form">
+              <h2 class="text-uppercase">COMPLETE THE FORM WITH YOUR PERSONAL DATA</h2>
+              <p>
+                If you wish to contact our Online Customer Care service, please fill
+                out the form below with your personal data. You'll receive a response
+                within 3 working days.
+              </p>
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <div class="select-box">
+                      <select class="contact-reason" name="contact-reason" data-error="THIS IS A REQUIRED FIELD." required>
+                        <option value="">Contact Reason*</option>
+                        <option value="1">Retail store purchase</option>
+                        <option value="2">Retail store purchase</option>
+                        <option value="3">Retail store purchase</option>
+                        <option value="4">Retail store purchase</option>
+                        <option value="5">Retail store purchase</option>
+                        <option value="6">Retail store purchase</option>
+                        <option value="7">Retail store purchase</option>
+                      </select>
+                      <span class="icon-font icon-select"></span>
+                    </div>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <input type="text" name="order-number" value="" placeholder="Order Number">
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <input type="text" name="first-name" value="" placeholder="First Name*" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <input type="text" name="surname" value="" placeholder="Surname*" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <input type="email" name="email" value="" placeholder="Email*" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <input type="text" name="city" value="" placeholder="City*" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-sm-6 col-md-4">
+                  <div class="form-group has-feedback">
+                    <div class="select-box">
+                      <select class="country" name="country" data-error="THIS IS A REQUIRED FIELD." required>
+                        <option value="">Country*</option>
+                        <option value="1">Retail store purchase</option>
+                        <option value="2">Serbia</option>
+                        <option value="3">Serbia</option>
+                        <option value="4">Serbia</option>
+                        <option value="5">Serbia</option>
+                        <option value="6">Serbia</option>
+                        <option value="7">Serbia</option>
+                      </select>
+                      <span class="icon-font icon-select"></span>
+                    </div>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>   <!-- col -->
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <textarea name="comment" placeholder="Comment" rows="1"></textarea>
+                  </div>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="attachment" class="text-uppercase">attachment</label>
+                    <input type="file" name="attachment" value="" id="attachment">
+                  </div>
+                </div>   <!-- col -->
+              </div>   <!-- row -->
+              <div class="info">
+                <p>
+                  The Online Customer Care service responds only to requests relating
+                  to the United Colors of Benetton online shop.
+                </p>
+                <p>
+                  The information submitted through this contact form is not secure.
+                  You should not include any sensitive information or details related
+                  to your credit card.
+                </p>
+              </div>
+              <div class="form-group has-feedback">
+                <label class="for-privacy clearfix">
+                  <input type="checkbox" name="privacy-consent" value="" data-validate="true" data-error="THIS IS A REQUIRED FIELD." required>
+                  <span class="fake-checkbox"></span>
+                  <a href="#">
+                    Read the privacy policy, I authorise the treatment of my personal
+                    data by Benetton Group Srl and Triboo Digitale in order to respond
+                    to my request
+                  </a>
+                </label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <button type="submit" class="login-button text-uppercase">submit</button>
+            </form>   <!-- contact us page content -->
+            <div class="mobile-nav hidden-sm hidden-md hidden-lg customer-service-nav">
+              <ul class="list-unstyled clearfix">
+                <li class="active"><a href="#">Contact us <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+                <li><a href="#">Faq <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+                <li><a href="#">Payments <span class="icon-font icon-plus hidden-sm hidden-md hidden-lg"></span></a></li>
+              </ul>
             </div>
-            <button type="submit" class="login-button text-uppercase">submit</button>
-          </form>
-        </div>
-      </section>
+          </div>   <!-- container -->
+        </section>   <!-- contact-us -->
+      </div>
     </main>
     <footer>
       <div class="upper-footer">

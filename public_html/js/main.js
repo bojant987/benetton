@@ -51,6 +51,9 @@ $(document).ready(function() {
 
     searchBoxPosition();
     navDropdownHover();
+    asideNavHeight();
+    hideAfterActive();
+    hideBeforeActive();
   });
 
   // on scroll position updates
@@ -93,6 +96,8 @@ $(document).ready(function() {
 
   // classic accordion
   $(".accordion-handler").click(function(e) {
+    e.preventDefault();
+
     var target = $(this).attr("data-target");
     var currentTarget = $(this);
     var location = $(this).next().attr("data-location");
@@ -429,7 +434,7 @@ $(document).ready(function() {
   });
 
   // filter fake checkboxes
-  $(".accordion-content-filters, .register-form").on("change", "input[type=checkbox]", function() {
+  $(".accordion-content-filters, .register-form, .contact-us-form").on("change", "input[type=checkbox]", function() {
 
     if ($(this).is(":checked")) {
       $(this).next().addClass("checked");
@@ -571,9 +576,6 @@ $(document).ready(function() {
       }
 
       renderButton();
-
-      // $(".products-filter-top-level > .container > .row > .col-xs-6:first").toggleClass("add-border");
-
 
     } else {
 
@@ -757,5 +759,52 @@ $(document).ready(function() {
       $(".share-links").hide();
     }, 5000);
   });
+
+  // aside nav height
+  function asideNavHeight() {
+
+    if ($(window).width() > 767) {
+      $(".customer-service-nav").each(function() {
+        var height = $(this).next().innerHeight();
+
+        $(this).innerHeight(height);
+      });
+    } else {
+      $(".customer-service-nav").css("height", "auto");
+    }
+  }
+  asideNavHeight();
+
+  // hide customer-service-nav links after active on aside
+  function hideAfterActive() {
+    if ($(window).width() < 768) {
+      var index;
+      $(".aside-nav ul li").each(function() {
+        if ($(this).hasClass("active")) {
+          index = $(this).index();
+        }
+      });
+
+      $(".aside-nav ul li:gt(" + index + ")").css("display", "none");
+    } else {
+      $(".aside-nav ul li").css("display", "block");
+    }
+  };
+  hideAfterActive();
+
+  // hide customer-service-nav links before active on bottom on mobile screens
+  function hideBeforeActive() {
+    if ($(window).width() < 768) {
+      var index;
+      $(".mobile-nav ul li").each(function() {
+        if ($(this).hasClass("active")) {
+          index = $(this).index();
+        }
+      });
+
+      $(".mobile-nav ul li:lt(" + index + ")").css("display", "none");
+    }
+  };
+  hideBeforeActive();
 
 });
