@@ -95,6 +95,16 @@ input[type=radio] {
     font-size: 25px;
   }
 }
+
+.line-under:after {
+  content: "";
+  width: 26px;
+  height: 6px;
+  margin-top: 30px;
+  display: block;
+  background-color: $color-primary;
+}
+
 @import "../components/buttons";
 @import "../components/overlay";
 @import "../components/popin-box";

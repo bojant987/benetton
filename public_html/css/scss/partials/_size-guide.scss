@@ -1,0 +1,79 @@
+.size-guide {
+  padding: 35px 0;
+
+  .wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      font-family: $font-primary-bold;
+      margin: 50px 0 20px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 600px;
+      margin: 0 auto;
+      // firefox has a bug with borders if this is collapse
+      border-collapse: separate;
+
+      tr {
+        font-size: 14px;
+
+        &:nth-of-type(2n +1) {
+          background-color: transparentize($color-primary, 0.8);
+        }
+
+        &:nth-of-type(2n) {
+          background-color: transparentize($color-primary, 0.9);
+        }
+
+        td {
+          width: 55px;
+          padding: 15px 0;
+
+          &:first-of-type {
+            width: 250px;
+            color: $color-primary;
+            padding-left: 30px;
+            border-right: 1px solid transparentize($color-primary, 0.87);
+          }
+        }
+      }
+
+
+
+      &.table-alternate {
+        thead {
+          tr {
+            background-color: transparentize($color-primary, 0.6);
+
+            td {
+              color: #fff;
+            }
+          }
+        }
+
+        tr {
+          td {
+            width: 250px;
+            border-right: 1px solid transparentize($color-primary, 0.87);
+            padding-left: 0;
+
+            &:last-of-type {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

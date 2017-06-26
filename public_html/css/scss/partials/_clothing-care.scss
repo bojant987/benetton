@@ -1,0 +1,42 @@
+.clothing-care {
+  padding: 35px 0;
+
+  .wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+
+    >.row {
+      margin-top: 60px;
+    }
+
+    article {
+      height: 300px;
+      border-bottom: 1px solid #bfbfbf;
+      margin-bottom: 25px;
+
+      figure {
+        .circle {
+          width: 154px;
+          height: 154px;
+          border-radius: 50%;
+          border: 6px solid #b4b4b4;
+          padding: 30px 15px;
+          text-align: center;
+          display: inline-block;
+          margin-bottom: 20px;
+
+          .icon-font {
+            font-size: 80px;
+          }
+        }
+      }
+
+      p {
+        max-width: 154px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+}

@@ -898,5 +898,26 @@
     font-size: 16px;
   }
 }
+/* ---- product-guide styles ---- */
+/* ---- size-guide styles ---- */
+@media (min-width: 768px) {
+  .size-guide .wrapper table {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* ---- smart-washing styles ---- */
+@media (min-width: 768px) {
+  .smart-washing .wrapper .item {
+    text-align: left;
+  }
+  .smart-washing .wrapper .item .info h2 {
+    font-size: 26px;
+  }
+  .smart-washing .wrapper .item .info p {
+    padding-left: 20px;
+  }
+}
+/* ---- clothing-care styles ---- */
 
 /*# sourceMappingURL=responsive.css.map */
