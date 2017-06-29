@@ -971,9 +971,11 @@
             <span class="cart-number text-center">0</span>
             <span>Items in your bag</span>
           </p>
-          <p class="empty-cart">You have no items in your shopping cart.</p>
-          <button type="button" name="" class="login-button empty-cart text-uppercase">continue shopping</button>
-          <article class="cart-box-article">
+          <div class="empty-cart text-center">
+            <p>You have no items in your shopping cart.</p>
+            <a href="#" class="text-uppercase">continue shopping</a>
+          </div>
+          <article class="cart-box-article" data-id="000">
             <div class="row">
               <div class="col-xs-3">
                 <img src="img/cart-box-01.jpg" alt="">
@@ -1000,7 +1002,7 @@
               </div>
             </div>
           </article>   <!-- cart-box-article -->
-          <article class="cart-box-article">
+          <article class="cart-box-article" data-id="001">
             <div class="row">
               <div class="col-xs-3">
                 <img src="img/cart-box-01.jpg" alt="">
@@ -1014,7 +1016,8 @@
                       <p><span>Colour: </span><span class="cart-color">red</span></p>
                       <p><span>Qty</span>
                         <input type="text" name="cart-qty" value="1" class="cart-qty">
-                        <a href="#" class="cart-update"><span class="icon-font icon-update"></span></a></p>
+                        <a href="#" class="cart-update"><span class="icon-font icon-update"></span></a>
+                      </p>
                     </article>
                   </div>
                   <div class="col-xs-4">
@@ -1027,7 +1030,7 @@
               </div>
             </div>
           </article>   <!-- cart-box-article -->
-          <form class="cart-box-form">
+          <form class="cart-box-form cart-box-footer" data-toggle="validator" role="form">
             <div class="row">
               <div class="col-xs-7">
                 <p class="text-uppercase text-right">subtotal</p>
@@ -1044,9 +1047,12 @@
                 <p class="text-right cart-price">£7.73</p>
               </div>
             </div>   <!-- row -->
-            <div class="input-group">
-              <input type="text" name="" value="" placeholder="Enter your code" class="cart-box-input">
-              <button type="button" name=""><span class="icon-font icon-right"></span></button>
+            <div class="form-group has-feedback">
+              <div class="input-group">
+                <input type="text" name="" value="" placeholder="Enter your code" class="cart-box-input" data-error="Enter a coupon code" required>
+                <button type="submit" class="text-uppercase"><span class="text">apply coupon</span> <span class="icon-font icon-right"></span></button>
+                <div class="help-block with-errors"></div>
+              </div>
             </div>
             <div class="row">
               <div class="col-xs-7">
@@ -1056,7 +1062,7 @@
                 <p class="text-right cart-price">£33.68</p>
               </div>
             </div>   <!-- row -->
-            <button type="submit" name="button" class="login-button text-uppercase">next</button>
+            <a href="#" class="login-button text-uppercase">next</a>
             <div class="text-center">
               <a href="#" class="text-uppercase">view cart</a>
             </div>
@@ -1328,6 +1334,8 @@
     <div class="overlay"></div>
     <div class="added-removed text-center text-uppercase"></div>
     <a href="#" class="back-to-top"><span class="icon-font icon-light-top"></span></a>
+    <div class="loader-spinner text-center"><span class="icon-font icon-loading"></span></div>
+    <div class="overlay-loader"></div>
     <div class="cookies-bar clearfix">
       <p>The benetton.com website uses Benetton's and third parties' cookies to
         offer you the best possible service. We use cookies to improve the navigation
@@ -1338,6 +1346,30 @@
       </p>
       <a href="#" class="button-cookies text-uppercase">ok</a>
     </div>
+    <div class="modal-popup" id="modal-subscribe">
+      <div class="content-wrapper modal-subscribe">
+        <form class="modal-form" data-toggle="validator" role="form" data-focus="false">
+          <h1 class="text-uppercase">SUBSCRIBE TO THE NEWSLETTER</h1>
+          <p>new subscribers get a <span>15%*</span> welcome discount valid on the first online purchase</p>
+          <p class="note">*Some articles may be excluded from the promotion.</p>
+          <div class="form-group has-feedback">
+            <label for="modal-email">Enter your email *</label>
+            <input type="email" name="email" value="" id="modal-email" data-error="THIS IS A REQUIRED FIELD" required>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="checkbox" name="email" value="" id="privacy" data-error="Please consent to the privacy policy" required>
+            <label class="privacy" for="privacy">
+              I accept the processing of my personal info for marketing purposes as per the
+              <a href="#">privacy terms and conditions</a>.
+            </label>
+            <div class="help-block with-errors"></div>
+          </div>
+          <button type="submit" class="text-uppercase">subscribe</button>
+        </form>
+        <a href="#" class="close-modal" data-closes="#modal-subscribe"><span class="icon-font icon-close"></span></a>
+      </div>
+    </div>   <!-- modal -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

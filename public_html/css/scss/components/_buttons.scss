@@ -1,5 +1,4 @@
 // .navigation-toggle
-
 .navigation-toggle {
   display: block;
   width: $nav-main-height;
@@ -8,8 +7,8 @@
   font-size: $nav-main-height;
   background-color: #fff;
 }
-// login buttons
 
+// login buttons
 .login-button {
   display: block;
   width: 100%;
@@ -19,8 +18,8 @@
   font-size: 15px;
   letter-spacing: 2px;
 }
-// slider buttons
 
+// slider buttons
 .slider-buttons {
   a {
     display: inline-block;
@@ -59,8 +58,8 @@
     }
   }
 }
-// shop buttons
 
+// shop buttons
 .button-shop {
   display: inline-block;
   padding: 10px 25px;
@@ -88,8 +87,8 @@
     color: $color-text-primary;
   }
 }
-// newsletter button
 
+// newsletter button
 .button-newsletter {
   padding: 10px 15px;
   background-color: #fff;
@@ -97,8 +96,8 @@
   font-size: 12px;
   // font-family: $font-primary-light;
 }
-// back to top button
 
+// back to top button
 .back-to-top {
   background-color: $color-primary;
   display: none;
@@ -115,8 +114,8 @@
     color: #fff;
   }
 }
-// cookies button
 
+// cookies button
 .button-cookies {
   display: inline-block;
   padding: 17.5px 32.5px;
@@ -128,5 +127,29 @@
   &:focus,
   &:hover {
     color: $color-primary;
+  }
+}
+
+// carousel nav
+.carousel-nav-container {
+
+  .icon-font {
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    font-size: 55px;
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+  }
+
+  .prev {
+    left: -140px;
+  }
+
+  .next {
+    right: -140px;
   }
 }

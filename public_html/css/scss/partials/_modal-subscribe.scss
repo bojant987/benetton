@@ -1,0 +1,90 @@
+.modal-popup {
+  background: url(assets/modal-bg.jpg) repeat-y;
+  background-size: cover;
+
+  .modal-subscribe {
+    padding: 30px;
+
+    .help-block {
+      margin: 0;
+    }
+
+    .modal-form {
+      max-width: 320px;
+
+      h1 {
+        color: #ea148c;
+        font-size: 37px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+
+        &:before {
+          display: block;
+          content: "";
+          width: 150px;
+          height: 5px;
+          background-color: $color-primary;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        color: #670f40;
+        font-size: 23px;
+        line-height: 26px;
+
+        span {
+          color: $color-primary;
+        }
+      }
+
+      .note {
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-text-primary;
+        margin-bottom: 7px;
+      }
+
+      label {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 0;
+
+        &.privacy {
+          color: #2d2d2d;
+          font-size: 12px;
+          display: inline;
+          // font-family: $font-primary-light;
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      input[type=email] {
+        background-color: #fff;
+        padding: 0 12px;
+        height: 40px;
+        border: 1px solid #a7d68b;
+        border-radius: 3px;
+      }
+
+      input[type=checkbox] {
+        width: auto;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        height: 42px;
+        line-height: 42px;
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: 1px;
+        background-color:  $color-primary;
+        border-radius: 3px;
+      }
+    }
+  }
+}

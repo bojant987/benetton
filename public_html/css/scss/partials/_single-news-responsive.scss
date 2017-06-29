@@ -1,0 +1,60 @@
+@media (min-width: 768px) {
+  .single-news {
+
+    .wrapper {
+      h1 {
+        font-size: 45px;
+        line-height: 67px;
+        letter-spacing: 4.5px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  .cycle-news {
+
+    .back {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+
+    .prev, .next {
+      margin: 0;
+    }
+
+    .prev {
+      float: left;
+
+      a {
+         float: none;
+      }
+    }
+
+    .next {
+      float: right;
+
+      a {
+        float: none;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .cycle-news {
+
+    .prev, .next {
+
+      a {
+        .text {
+          width: 168px;
+        }
+      }
+    }
+  }
+
+}

@@ -1,7 +1,8 @@
 .breadcrumb {
-  background-color: transparent;
+  background-color: $bg-breadcrumb;
   padding: 22px 0;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid $color-border-primary;
+  border-radius: 0;
   margin: 0;
   height: 64px;
   line-height: 20px;

@@ -25,7 +25,7 @@
   header {
 
     .navigation {
-      background-color: #fff;
+      background-color: $bg-nav;
 
       .navigation-main {
         height: $nav-main-height;
@@ -47,7 +47,12 @@
 
 @media (min-width: 992px) {
   header {
+
     .navigation {
+
+      .navigation-main {
+        position: relative;
+      }
       @include nav-left-md;
     }
 

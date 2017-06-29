@@ -41,25 +41,16 @@ button {
   border: 0;
 }
 
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
 .accordion-content {
   display: none;
-}
-
-.empty-cart {
-  display: none !important;
-  text-align: center;
-}
-
-p.empty-cart {
-  font-size: 18px;
-  margin: 45px 0 30px;
-}
-
-button.empty-cart {
-  max-width: 200px;
-  height: 36px;
-  margin: 0 auto;
-  background-color: $color-primary;
 }
 
 .bx-wrapper {
@@ -72,10 +63,6 @@ input[type=checkbox],
 input[type=radio] {
   display: inline-block;
   width: auto;
-}
-
-.add-border {
-  border-bottom: 1px solid #e7e7e7;
 }
 
 .prices {
@@ -114,3 +101,7 @@ input[type=radio] {
 @import "../components/pop-over";
 @import "../components/added-removed";
 @import "../components/cookies-bar";
+@import "../components/empty-cart";
+@import "../components/pagination";
+@import "../components/loader-spinner";
+@import "../components/modal-popup";

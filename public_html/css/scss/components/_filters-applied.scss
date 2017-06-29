@@ -1,5 +1,5 @@
 .filters-applied {
-  background-color: #f4f4f4;
+  background-color: $bg-filters-applied;
   padding: 10px 0 0;
 
   .current-filters {
@@ -33,7 +33,7 @@
 
   .clear-filters {
     padding-left: 10px;
-    border-left: 1px solid #e7e7e7;
+    border-left: 1px solid $color-border-primary;
 
     .clear {
       cursor: pointer;

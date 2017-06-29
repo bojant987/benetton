@@ -2,8 +2,6 @@
 .newsletter-checkbox {
   position: absolute;
   overflow: hidden;
-  // display: none;
-  // right: -2000px;
   z-index: -1;
 
 
@@ -38,7 +36,6 @@
 // fake checkbox
 .fake-checkbox {
   display: block;
-  margin-right: 8px;
   width: 20px;
   height: 20px;
   border: 2px solid #000;

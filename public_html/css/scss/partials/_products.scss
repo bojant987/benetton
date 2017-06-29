@@ -3,12 +3,29 @@
 
   .products-header {
     position: relative;
+    .add-border {
+      position: absolute;
+      bottom: 5px;
+      width: 50%;
+      height: 1px;
+      background-color: $color-border-primary;
+      z-index: 60;
+      display: none;
+
+      &.border-sort {
+        left: 0;
+      }
+
+      &.border-filters {
+        right: 0;
+      }
+    }
     @import "../components/products-filter";
   }
 
   .products-list {
     padding: 40px 0;
-    background-color: $color-product-list;
+    background-color: $bg-product-list;
     @import "../components/product-card";
 
     .products-list-footer {
@@ -17,7 +34,7 @@
         margin-bottom: 30px;
       }
 
-      a {
+      .more {
         font-size: 13px;
       }
     }

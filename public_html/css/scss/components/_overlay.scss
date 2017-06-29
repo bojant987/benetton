@@ -1,3 +1,4 @@
+// used for regular stuff
 .overlay {
   width: 100vw;
   height: 100vh;
@@ -7,4 +8,16 @@
   left: 0;
   z-index: 101;
   display: none;
+}
+
+// used for loader and modal, goes over everything in a page
+.overlay-loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  // display: none;
 }

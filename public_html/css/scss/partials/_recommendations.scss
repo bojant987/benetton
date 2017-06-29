@@ -1,0 +1,58 @@
+.recommendations {
+  padding: 60px 0 80px;
+  background-color: $color-secondary;
+
+  h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+
+  .wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+
+  .carousel-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .recommendations-carousel {
+      .item {
+        .photo {
+          display: block;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .title {
+          color: #fff;
+          font-size: 18px;
+          display: block;
+          margin: 20px 0 15px;
+        }
+
+        .prices {
+          color: #fff;
+        }
+      }
+
+      .slider-dots {
+        text-align: center;
+        margin-top: 0;
+
+        .slider-dot {
+          background-color: rgba(255,255,255,0.2);
+
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

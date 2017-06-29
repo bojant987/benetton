@@ -1,0 +1,100 @@
+.single-news {
+  background-color: $bg-single-news;
+  padding: 70px 0 10px;
+
+  .wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 4px;
+      font-family: $font-secondary-semibold;
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      margin-bottom: 60px;
+    }
+
+    .more {
+      display: inline-block;
+      padding: 17px 26px;
+      color: #fff;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.cycle-news {
+  background-color: #fff;
+  position: relative;
+
+  .back {
+    font-size: 12px;
+    margin: 20px 0 30px;
+
+    a {
+      display: block;
+      height: 100%;
+      text-decoration: underline;
+      font-family: $font-primary-light;
+    }
+
+    img {
+      width: 18px;
+      margin-right: 10px;
+    }
+  }
+
+  .prev, .next {
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 20px;
+
+    img  {
+      max-height: 80px;
+      display: block;
+      float: left;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+
+      .icon-font {
+        width: 48px;
+        height: 48px;
+        font-size: 48px;
+        position: relative;
+        top: 16px;
+        float: left;
+      }
+
+      .text {
+        display: block;
+        width: 140px;
+        font-size: 16px;
+        margin: 10px 15px 0;
+        float: left;
+      }
+    }
+
+  }
+
+  .prev {
+    a {
+      float: left;
+    }
+  }
+
+  .next {
+    a {
+      float: right;
+    }
+  }
+}

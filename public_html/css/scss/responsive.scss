@@ -1,4 +1,4 @@
-@import "partials/variables";
+@import "variables";
 /* ---- global styles ---- */
 @import "partials/global-responsive";
 /* ---- header styles ---- */
@@ -37,3 +37,11 @@
 @import "partials/smart-washing-responsive";
 /* ---- clothing-care styles ---- */
 @import "partials/clothing-care-responsive";
+/* ---- news styles ---- */
+@import "partials/news-responsive";
+/* ---- single-news styles ---- */
+@import "partials/single-news-responsive";
+/* ---- cart styles ---- */
+@import "partials/cart-responsive";
+/* ---- recommendations styles ---- */
+@import "partials/recommendations-responsive";

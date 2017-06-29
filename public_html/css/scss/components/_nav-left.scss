@@ -10,6 +10,11 @@
   overflow-y: auto;
   transition: 0.6s;
 
+  .accordion-content.show-mode {
+    border-top: 3px solid $color-border-primary;
+    border-bottom: 3px solid $color-border-primary;
+  }
+
   ul {
 
     li {
@@ -20,7 +25,7 @@
       }
 
       &.bottom-links {
-        border-top: 3px solid #e7e7e7;
+        border-top: 3px solid $color-border-primary;
 
         >a {
 
@@ -45,8 +50,7 @@
         height: 100%;
         line-height: $nav-main-height - 20;
         letter-spacing: 2px;
-        border-bottom: 1px solid #e7e7e7;
-        // float: left;
+        border-bottom: 1px solid $color-border-primary;
 
         &.sales-link {
           color: #fa4242;
@@ -112,6 +116,7 @@
 
     .nav-dropdown {
       background-color: #fff;
+
 
       &.three-leveled {
 

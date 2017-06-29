@@ -1,7 +1,7 @@
-@mixin products-filter-sm {}
 @mixin products-filter-md {
   .products-filter-top-level {
     padding: 10px 0;
+    z-index: 51;
 
     > .container > .row > .col-xs-6:first-of-type {
       border-right: none;
@@ -16,7 +16,7 @@
           height: 30px;
           line-height: 30px;
           margin-right: 5px;
-          border-left: 1px solid #e7e7e7;
+          border-left: 1px solid $color-border-primary;
           padding-left: 10px;
           cursor: pointer;
           float: left;
@@ -50,7 +50,7 @@
 
           &.show-mode:before {
             border-color: rgba(231, 231, 231, 0);
-            border-bottom-color: #e7e7e7;
+            border-bottom-color: $color-border-primary;
             border-width: 11px;
             margin-left: -11px;
             z-index: 1000000;
@@ -71,7 +71,7 @@
 
       .accordion-handler-filter {
         display: inline-block !important;
-        background-color: $color-product-list;
+        background-color: $bg-product-list;
 
         span {
           float: none;
@@ -91,7 +91,7 @@
         display: none;
 
         li {
-          border-top: 1px solid #e7e7e7;
+          border-top: 1px solid $color-border-primary;
 
           &:first-of-type {
             border-top: none;
@@ -123,11 +123,12 @@
 
   .accordion-content-filters {
     padding: 40px 0;
-    border-top: 1px solid #e7e7e7;
+    border-top: 1px solid $color-border-primary;
     top: 134px;
 
     .colour-filter {
       .color {
+        margin-left: 8px;
         display: inline-block;
         width: 22px;
         height: 10px;

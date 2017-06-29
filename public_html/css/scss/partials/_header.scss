@@ -1,5 +1,5 @@
 header {
-  
+
   .navigation {
     background-color: $color-primary;
 
@@ -16,6 +16,7 @@ header {
     }
     .navigation-main {
       height: $nav-main-height;
+      position: relative;
       // overflow-x: hidden;
       // overflow-y: hidden;
 

@@ -1,0 +1,23 @@
+.empty-cart {
+  display: none;
+  padding-top: 45px;
+  border-top: 1px solid #fff;
+
+  p {
+    font-size: 18px;
+    margin: 0 0 30px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 auto;
+    background-color: $color-primary;
+    color: #fff;
+    letter-spacing: 2px;
+
+    &:hover, &:focus {
+      color: #fff;
+    }
+  }
+}

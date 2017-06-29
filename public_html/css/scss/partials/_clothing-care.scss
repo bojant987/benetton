@@ -15,6 +15,10 @@
       margin-bottom: 25px;
 
       figure {
+        img {
+          max-width: 100%;
+        }
+        
         .circle {
           width: 154px;
           height: 154px;

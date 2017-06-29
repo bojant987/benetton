@@ -1,4 +1,4 @@
-@import "partials/variables";
+@import "variables";
 /* ---- font declarations ---- */
 @import "partials/fonts";
 /* ---- global styles ---- */
@@ -49,3 +49,13 @@
 @import "partials/smart-washing";
 /* ---- clothing-care styles ---- */
 @import "partials/clothing-care";
+/* ---- news styles ---- */
+@import "partials/news";
+/* ---- single-news styles ---- */
+@import "partials/single-news";
+/* ---- cart styles ---- */
+@import "partials/cart";
+/* ---- recommendations styles ---- */
+@import "partials/recommendations";
+/* ---- modal-subscribe styles ---- */
+@import "partials/modal-subscribe";
