@@ -485,38 +485,15 @@ $(document).ready(function() {
   });
 
 
-  // swap img on product hover (needs IE fix)
+  // swap img on product hover
   $(".product .upper, .recommendations .item").mouseenter(function() {
     var orgSrc = $(this).find("img").attr("src");
     var hoverSrc = orgSrc.replace(".", "-hov.");
 
-    // IE fix
-    var ms_ie = false;
-    var ua = window.navigator.userAgent;
-    var old_ie = ua.indexOf('MSIE ');
-    var new_ie = ua.indexOf('Trident/');
-
-    if ((old_ie > -1) || (new_ie > -1)) {
-      ms_ie = true;
-    }
-
-    if (ms_ie) {
-
-      $(this).find("img").attr("src", hoverSrc);
-
-    } else {
-      $(this).find("img").attr("src", hoverSrc);
-    }
-
-
+    $(this).find("img").attr("src", hoverSrc);
 
     $(this).mouseleave(function functionName() {
-      if (ms_ie) {
-
-        $(this).find("img").attr("src", orgSrc);
-      } else {
-        $(this).find("img").attr("src", orgSrc);
-      }
+      $(this).find("img").attr("src", orgSrc);
     });
 
   });

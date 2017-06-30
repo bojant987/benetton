@@ -33,5 +33,3 @@ Js:
 *Takodje, imate zakomentarisanu paginaciju na dnu sekcije 'product-list', ako vam bude potrebna.
 *Jquery.bxslider.js sam modifikovao jer je imao bag. Tako da minifikujte njega, da slucajno
 ne odete pa skinete minifikovanu verziju sa sajta.
-* U product-list stranici slike koje se menjaju na hover nece da se load-uju ako su
-jpg ekstenzije u IE i Edge-u. Oznacio sam u main.js gde bi trebao fix ali nisam uspeo da sredim nazalost.
