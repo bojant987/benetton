@@ -1,4 +1,4 @@
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   .products-list>.container>.row>.col-sm-4 {
     width: 50%;
     float: left;

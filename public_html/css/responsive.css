@@ -602,8 +602,8 @@
   }
 }
 /* ---- products styles ---- */
-@media (min-width: 360px) and (max-width: 767px) {
-  .products-list > .container > .row-custom > .col-small-4 {
+@media (min-width: 450px) and (max-width: 767px) {
+  .products-list > .container > .row > .col-sm-4 {
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;

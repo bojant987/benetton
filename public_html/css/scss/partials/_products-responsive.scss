@@ -1,9 +1,9 @@
 @import "../components/products-filter-responsive";
-@media (min-width: 360px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   .products-list {
     > .container {
-      > .row-custom {
-        > .col-small-4 {
+      > .row {
+        > .col-sm-4 {
           width: 50%;
           padding-left: 15px;
           padding-right: 15px;
