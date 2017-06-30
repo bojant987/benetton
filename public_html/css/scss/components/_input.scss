@@ -52,6 +52,10 @@ input, select, textarea {
     appearance: none;
   }
 
+  select::-ms-expand {
+    display: none;
+  }
+
   .icon-font {
     width: 18px;
     height: 18px;

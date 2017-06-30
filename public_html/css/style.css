@@ -372,6 +372,9 @@ input:focus, select:focus, textarea:focus {
   -ms-appearance: none;
   appearance: none;
 }
+.select-box select::-ms-expand {
+  display: none;
+}
 .select-box .icon-font {
   width: 18px;
   height: 18px;
