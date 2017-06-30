@@ -1,6 +1,7 @@
 .cart {
   padding: 60px 0 40px;
-  background-color: #f9f9f9;
+  background-color: $bg-cart;
+  overflow-x: hidden;
 
   .cart-wrapper {
     max-width: 1230px;

@@ -5,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Benetton</title>
 
-    <!-- Bootstrap -->
+    <!-- core css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/icon-fonts.css" rel="stylesheet" type="text/css"/>
-    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
-    <link href="css/owl.theme.default" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
@@ -26,6 +22,7 @@
   </head>
   <body>
     <header>
+      <div class="overlay-header"></div>
       <nav class="navigation">
         <div class="upper-header text-center">
           <p>FREE SHIPPING ON ORDERS OVER £ 66,00 AND FREE RETURNS</p>
@@ -950,7 +947,7 @@
       <div class="popins">
         <div class="login-box popin-box animated" id="login-box">
           <h1>Welcome</h1>
-          <form class="login-form" data-toggle="validator" data-role="form">
+          <form class="login-form" data-toggle="validator" data-role="form" data-focus="false">
             <div class="form-group has-feedback">
               <input type="email" name="login-email" value="" placeholder="Enter your email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
               <div class="help-block with-errors"></div>
@@ -1030,7 +1027,7 @@
               </div>
             </div>
           </article>   <!-- cart-box-article -->
-          <form class="cart-box-form cart-box-footer" data-toggle="validator" role="form">
+          <form class="cart-box-form cart-box-footer" data-toggle="validator" role="form" data-focus="false">
             <div class="row">
               <div class="col-xs-7">
                 <p class="text-uppercase text-right">subtotal</p>
@@ -1448,7 +1445,6 @@
     <div class="added-removed text-center text-uppercase"></div>
     <a href="#" class="back-to-top"><span class="icon-font icon-light-top"></span></a>
     <div class="loader-spinner text-center"><span class="icon-font icon-loading"></span></div>
-    <div class="overlay-loader"></div>
     <div class="cookies-bar clearfix">
       <p>The benetton.com website uses Benetton's and third parties' cookies to
         offer you the best possible service. We use cookies to improve the navigation
@@ -1484,13 +1480,9 @@
       </div>
     </div>   <!-- modal -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- core js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/validator.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

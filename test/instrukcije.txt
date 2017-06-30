@@ -1,0 +1,35 @@
+Sto se tice stilova:
+
+1. U variables.scss imate promenljive za vecinu boja, kao i za fontove i slicno.
+
+2. Da biste koristili sass fajlove treba vam Ruby instaliran.
+  Sass se instalira iz terminala komandom 'gem install sass'
+  Ako ne koristite neki task runner za kompajliranje sass-a, mozete jednostavno ovim komandama:
+  Otvorite dva taba u terminalu, u oba udjete u 'scss' folder.
+  'sass style.scss:../style.css --watch --style expanded' u jednom tabu
+  'sass responsive.scss:../responsive.css --watch --style expanded' u drugom tabu
+
+
+  3. Ako odlucite da zanemarite sass
+    Responsive.css nije iste strukture kao obicno, jer je tesko podesiti za kompajliranje.
+    Imate responsive-default.css koji je iste strukture kao i obicno i nije povezan sa sass-om, samo nije ucitan u html.
+    *Nemojte da editujete css fajlove pa onda da pokrenete sass kompajler, prebrisace sve sto nije
+    u sass fajlovima.
+    Moja preporuka u ovom slucaju je da podesite varijable u variables.scss kako vam treba, kompajlirate jednom i onda
+    predjete na cist css.
+
+
+Js:
+
+1. Na customer-service stranama(contact, faq, payments) imate dve navigacije specificne za te strane,
+  samo se postarajte da uvek u obe navigacije  odgovarajuci <li> ima 'active' klasu.
+  Potrebno je da bi navigacija izgledala kako treba.
+
+2. U filterima imate funkcije za dodavanje i brisanje filtera, slican je slucaj i za cart artikle.
+  To je sve dinamicki i mozda vam nece biti potrebno, ali one pozivaju f-je kao sto su checkIfFiltersExist,
+  renderButton, emptyCart koje ce vam biti korisne u tim situacijama.
+
+
+*Takodje, imate zakomentarisanu paginaciju na dnu sekcije 'product-list', ako vam bude potrebna.
+*Jquery.bxslider.js sam modifikovao jer je imao bag. Tako da minifikujte njega, da slucajno
+ne odete pa skinete minifikovanu verziju sa sajta.

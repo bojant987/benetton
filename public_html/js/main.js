@@ -4,13 +4,14 @@ $(document).ready(function() {
   // hide/show loader-spinner and overlay
   function showLoader() {
     $(".loader-spinner").show();
-    $(".overlay-loader").show();
+    $(".overlay").show();
   }
 
   function hideLoader() {
     $(".loader-spinner").hide();
-    $(".overlay-loader").hide();
+    $(".overlay").hide();
   }
+  // it's shown until document fully loads
   hideLoader();
 
   // custom modal(havent used any bootstrap.js so might as well write this too)
@@ -32,17 +33,16 @@ $(document).ready(function() {
 
   function openModal(whatDoIOpen) {
     $(".modal-popup" + whatDoIOpen).fadeIn();
-    $(".overlay-loader").show();
+    $(".overlay").show();
 
-    $("body").css("overflow", "hidden");
+    $("body").addClass("modal-open");
   };
 
   function closeModal(whatDoIClose) {
     $(".modal-popup" + whatDoIClose).fadeOut();
-    $(".overlay-loader").hide();
+    $(".overlay").hide();
 
-    $("body").css("overflow", "auto");
-    $("body").css("overflow-x", "hidden");
+    $("body").removeClass("modal-open");
   };
 
   $(".modal-popup").click(function(e) {
@@ -56,43 +56,46 @@ $(document).ready(function() {
   // open subscribe modal after a certain time
   setTimeout(function() {
     openModal("#modal-subscribe");
-  }, 2000);
+  }, 15000);
 
-  // popin handler
+  // popin handler(for nav on sm-screens and login/cart boxes)
   $("body").on("click", ".popin-handler", function(e) {
     var role = $(this).attr("data-role");
     var target = $(this).attr("data-target");
+
     e.preventDefault();
+
     if (role === "open") {
+      $("html").addClass("modal-open");
+
+      // first hide all
       $(".navigation-left").removeClass("navigation-show");
       $(".login-box").removeClass("login-box-show");
       $(".cart-box").removeClass("cart-box-show");
 
+      // show proper one
       $("#" + target).addClass(target + "-show");
 
+      // if it's nav, show the button for closing it
       if (target === "navigation") {
         $(".navigation-left .navigation-toggle").show();
       }
-      $("body").addClass("modal-open");
-      $(".overlay").show();
+
+      $(".overlay-header").show();
     } else if (role === "close") {
       $("#" + target).removeClass(target + "-show");
 
-
       $(".navigation-left .navigation-toggle").hide();
 
-      $("body").removeClass("modal-open");
-      $(".overlay").hide();
+      $("html").removeClass("modal-open");
+      $(".overlay-header").hide();
     }
   });
 
+
+
   // window resize changes
   $(window).resize(function() {
-
-    if ($(window).width() > 991) {
-      $(".navigation-left").removeClass("navigation-show");
-      $(".overlay").hide();
-    }
 
     if ($(window).width() > 768) {
       $(".categories .category-list").show();
@@ -101,13 +104,43 @@ $(document).ready(function() {
     }
 
     if ($(window).width() > 991) {
+      // switch to hoverable dropdown
       $(".navigation-left > ul > li").css("position", "static");
+      $(".navigation-left").removeClass("navigation-show");
+      $(".overlay-header").hide();
+
+      // close filter dropdown if no filter handlers are open
+      if ($(".accordion-content-filters").attr("data-opened") === "all") {
+        $(".accordion-content-filters").hide();
+        $(".accordion-content-filters").attr("data-opened", "");
+        $(".accordion-content-filters .accordion-handler-filter").hide();
+        $(".show-filters").removeClass("show-mode");
+        $(".filters .accordion-handler-filter").removeClass("show-mode");
+      }
+
+      $(".add-border").hide();
+
     } else {
       $(".navigation-left > ul > li").css("position", "relative");
+
+      // open filter dropdown if it opened on lg screens
+      if ($(".accordion-content-filters").attr("data-opened") !== "sort" && $(".accordion-content-filters").attr("data-opened") !== "") {
+        $(".accordion-content-filters .accordion-handler-filter").show();
+        $(".show-filters").addClass("show-mode");
+        $(".border-filters").show();
+        $(".border-sort").hide();
+      }
+
+      if ($(".accordion-filter-sort").is(":visible")) {
+        $(".border-sort").show();
+      }
+
     }
 
-    // searchBoxPosition();
+    // turn listener off on small screens
     navDropdownHover();
+
+    // for customer-service pages
     asideNavHeight();
     hideAfterActive();
     hideBeforeActive();
@@ -259,16 +292,7 @@ $(document).ready(function() {
     return $("header").height();
   }
 
-  // news fixed header on scroll
-  $(document).scroll(function() {
-    if ($(document).scrollTop() > 1) {
-
-    } else {
-
-    }
-  });
-
-  // empty cart-box rendering
+  // empty cart rendering
   function emptyCart(location) {
     var cartItems = $(location + " " + location + "-article");
     if (cartItems.length === 0) {
@@ -310,11 +334,13 @@ $(document).ready(function() {
 
     });
 
+    // update cart item number and check if cart is empty
     emptyCart(".cart-box");
     emptyCart(".cart");
     cartItemNumber();
   });
 
+  // remove cart items
   $(".cart .remove").click(function(e) {
     e.preventDefault();
 
@@ -337,37 +363,36 @@ $(document).ready(function() {
   });
 
   // sliders
-  $(".banner-slider").bxSlider({
-    controls: true,
-    nextSelector: "#banner-slider-next",
-    prevSelector: "#banner-slider-prev",
-    nextText: '<span class="icon-font icon-right"></span>',
-    prevText: '<span class="icon-font icon-left"></span>',
-    pagerCustom: "#banner-slider-pager"
-  });
 
-  $(".collection-slider").bxSlider({
-    controls: true,
-    nextSelector: "#collection-slider-next",
-    prevSelector: "#collection-slider-prev",
-    nextText: '<span class="icon-font icon-right"></span>',
-    prevText: '<span class="icon-font icon-left"></span>',
-    pagerCustom: "#collection-slider-pager"
-  });
+  if ($(".bxslider").length > 0) {
+    $(".banner-slider").bxSlider({
+      controls: true,
+      nextSelector: "#banner-slider-next",
+      prevSelector: "#banner-slider-prev",
+      nextText: '<span class="icon-font icon-right"></span>',
+      prevText: '<span class="icon-font icon-left"></span>',
+      pagerCustom: "#banner-slider-pager"
+    });
 
-  function getProperPager() {
-    return $(window).width() > 768 ? "#bx-pager" : "#product-slider-pager";
+    $(".collection-slider").bxSlider({
+      controls: true,
+      nextSelector: "#collection-slider-next",
+      prevSelector: "#collection-slider-prev",
+      nextText: '<span class="icon-font icon-right"></span>',
+      prevText: '<span class="icon-font icon-left"></span>',
+      pagerCustom: "#collection-slider-pager"
+    });
+
+    $(".single-product-slider").bxSlider({
+      controls: true,
+      nextSelector: "#single-product-slider-next",
+      prevSelector: "#single-product-slider-prev",
+      nextText: '<span class="icon-font icon-right"></span>',
+      prevText: '<span class="icon-font icon-left"></span>',
+      pagerCustom: $(window).width() > 768 ? "#bx-pager" : "#product-slider-pager",
+    });
+
   }
-
-
-  $(".single-product-slider").bxSlider({
-    controls: true,
-    nextSelector: "#single-product-slider-next",
-    prevSelector: "#single-product-slider-prev",
-    nextText: '<span class="icon-font icon-right"></span>',
-    prevText: '<span class="icon-font icon-left"></span>',
-    pagerCustom: getProperPager()
-  });
 
   // category collapse
   $(".categories").on("click", ".category-collapse", function() {
@@ -381,69 +406,73 @@ $(document).ready(function() {
   });
 
   // carousel
-  $(".most-wanted-carousel").owlCarousel({
-    loop: true,
-    margin: 1,
-    responsiveClass: true,
-    dots: true,
-    dotsClass: "slider-dots",
-    dotClass: "slider-dot",
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    responsive: {
-      0: {
-        items: 1,
-        dotsEach: 1
-      },
-      500: {
-        items: 3,
-        dotsEach: 3
-      },
-      1000: {
-        items: 3,
-        loop: true,
-        dotsEach: 3,
-        nav: true
-      }
-    }
-  });
+  if ($(".wol-carousel").length > 0) {
 
-  $(".recommendations-carousel").owlCarousel({
-    loop: true,
-    margin: 30,
-    responsiveClass: true,
-    dots: true,
-    dotsClass: "slider-dots",
-    dotClass: "slider-dot",
-    nav: true,
-    navContainerClass: "carousel-nav-container",
-    navClass: "carousel-nav",
-    navText: ['<span class="icon-font icon-light-left prev"></span>', '<span class="icon-font icon-light-right next"></span>'],
-    autoplay: true,
-    autoplayTimeout: 5000,
-    responsive: {
-      0: {
-        items: 1,
-        dotsEach: 1
-      },
-      600: {
-        items: 3,
-        dotsEach: 3,
-        margin: 10
-      },
-      1000: {
-        items: 3,
-        loop: true,
-        dotsEach: 3
-      },
-      1300: {
-        items: 3,
-        loop: true,
-        dotsEach: 3,
+    $(".most-wanted-carousel").owlCarousel({
+      loop: true,
+      margin: 1,
+      responsiveClass: true,
+      dots: true,
+      dotsClass: "slider-dots",
+      dotClass: "slider-dot",
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1,
+          dotsEach: 1
+        },
+        500: {
+          items: 3,
+          dotsEach: 3
+        },
+        1000: {
+          items: 3,
+          loop: true,
+          dotsEach: 3,
+          nav: true
+        }
       }
-    }
-  });
+    });
+
+    $(".recommendations-carousel").owlCarousel({
+      loop: true,
+      margin: 30,
+      responsiveClass: true,
+      dots: true,
+      dotsClass: "slider-dots",
+      dotClass: "slider-dot",
+      nav: true,
+      navContainerClass: "carousel-nav-container",
+      navClass: "carousel-nav",
+      navText: ['<span class="icon-font icon-light-left prev"></span>', '<span class="icon-font icon-light-right next"></span>'],
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1,
+          dotsEach: 1
+        },
+        600: {
+          items: 3,
+          dotsEach: 3,
+          margin: 10
+        },
+        1000: {
+          items: 3,
+          loop: true,
+          dotsEach: 3
+        },
+        1300: {
+          items: 3,
+          loop: true,
+          dotsEach: 3,
+        }
+      }
+    });
+
+  }
 
   // newsletter-form invalid email
   $(".newsletter-form input[type=email]").on("invalid.bs.validator", function() {
@@ -533,7 +562,7 @@ $(document).ready(function() {
 
   });
 
-  // show added-removed
+  // show added-removed( simple message that item has been added or removed )
   function showAddedRemoved() {
     $(".added-removed").fadeIn();
 
@@ -592,19 +621,12 @@ $(document).ready(function() {
       }
     });
 
-    if ($(".accordion-content-filters").attr("data-opened") === "sort" && $(window).width() < 992) {
+    if (counter === 0) {
       $(".accordion-content-filters .apply-btn").hide();
-      $(".accordion-content-filters .close-btn").hide();
+      $(".accordion-content-filters .close-btn").show();
     } else {
-
-      if (counter === 0) {
-        $(".accordion-content-filters .apply-btn").hide();
-        $(".accordion-content-filters .close-btn").show();
-      } else {
-        $(".accordion-content-filters .close-btn").hide();
-        $(".accordion-content-filters .apply-btn").show();
-      }
-
+      $(".accordion-content-filters .close-btn").hide();
+      $(".accordion-content-filters .apply-btn").show();
     }
 
   };
@@ -618,7 +640,7 @@ $(document).ready(function() {
     $(".border-sort").hide();
     $(".border-filters").toggle();
 
-    if ($(".accordion-content-filters").attr("data-opened") === target || $(".accordion-content-filters").attr("data-opened") === "") {
+    if ($(".accordion-content-filters").attr("data-opened") !== "sort") {
       $(".accordion-content-filters").toggle();
     }
 
@@ -640,6 +662,12 @@ $(document).ready(function() {
     var target = $(this).attr("data-target");
     var clicked = $(this);
 
+    if ($(this).next().is(":visible")) {
+      $(".accordion-content-filters").attr("data-opened", "all");
+    } else {
+      $(".accordion-content-filters").attr("data-opened", target);
+    }
+
     $(".accordion-content-filters .accordion-handler-filter").each(function() {
       if (!$(this).is(clicked)) {
         $(this).removeClass("show-mode");
@@ -648,6 +676,16 @@ $(document).ready(function() {
     });
     $(this).next().slideToggle();
     $(this).toggleClass("show-mode");
+
+
+    // if someone decides to resize the screen
+    $(".filters .accordion-handler-filter").each(function() {
+      if ($(this).attr("data-target") === target) {
+        $(this).toggleClass("show-mode");
+      } else {
+        $(this).removeClass("show-mode");
+      }
+    });
 
 
   });
@@ -684,6 +722,15 @@ $(document).ready(function() {
     $(".sort .accordion-handler-filter").removeClass("show-mode");
     $(".sort .accordion-handler-filter").next().hide();
 
+    // if someone decides to resize the screen
+    $(".accordion-content-filters .accordion-handler-filter").each(function() {
+      if ($(this).attr("data-target") === target) {
+        $(this).toggleClass("show-mode");
+      } else {
+        $(this).removeClass("show-mode");
+      }
+    });
+
   });
 
   // sort filter dropdown
@@ -691,46 +738,21 @@ $(document).ready(function() {
     var target = $(this).attr("data-target");
 
     if ($(window).width() < 992) {
-
       $(".border-filters").hide();
       $(".border-sort").toggle();
-
-      $(".accordion-content-filters .accordion-handler-filter").hide();
-      $(".accordion-content-filters .accordion-filter").hide();
-      $(".accordion-content-filters .accordion-handler-filter").removeClass("show-mode");
-      $(".filters .show-filters").removeClass("show-mode");
-
-      if ($(".accordion-content-filters").attr("data-opened") === target || $(".accordion-content-filters").attr("data-opened") === "") {
-        $(".accordion-content-filters").toggle();
-      }
-
-      $(".accordion-content-filters .accordion-filter-sort").toggle();
-
-      if ($(".accordion-content-filters").is(":hidden")) {
-        $(".accordion-content-filters").attr("data-opened", "");
-      } else {
-        $(".accordion-content-filters").attr("data-opened", target);
-      }
-
-      renderButton();
-
-    } else {
-
-      if ($(".accordion-content-filters").is(":hidden")) {
-        $(".accordion-content-filters").attr("data-opened", "");
-      } else {
-        $(".accordion-content-filters").attr("data-opened", target);
-      }
-
-
-
-      // close .filters
-      $(".accordion-content-filters").hide();
-      $(".accordion-content-filters .accordion-filter").hide();
-      $(".accordion-content-filters").attr("data-opened", "");
-      $(".filters .accordion-handler-filter").removeClass("show-mode");
-
     }
+
+    $(".accordion-content-filters .accordion-handler-filter").hide();
+    $(".accordion-content-filters .accordion-filter").hide();
+    $(".accordion-content-filters .accordion-handler-filter").removeClass("show-mode");
+    $(".filters .show-filters").removeClass("show-mode");
+
+
+    // close .filters
+    $(".accordion-content-filters").hide();
+    $(".accordion-content-filters .accordion-filter").hide();
+    $(".accordion-content-filters").attr("data-opened", "");
+    $(".filters .accordion-handler-filter").removeClass("show-mode");
 
     $(this).toggleClass("show-mode");
     $(this).next().toggle();
@@ -785,7 +807,7 @@ $(document).ready(function() {
         var text = $(this).siblings(".label").text();
         var category = $(this).closest(".accordion-filter").attr("data-filter");
 
-        var html = '<article class="single-filter ' + text + '-applied' + '">' +
+        var html = '<article class="single-filter ' + id + '-applied' + '">' +
           '<span class="icon-font icon-close remove-filter"></span>' +
           '<span><span class="filter-category text-capitalize">' + category +
           '</span><span class="text-capitalize">' + text +
@@ -793,10 +815,14 @@ $(document).ready(function() {
           '</article>';
 
         $(".filters-applied .current-filters").prepend(html);
+
+        // show filters-applied bar since now a filter is applied
         checkIfFiltersExist();
 
       }
-
+      // empty checkboxes after you apply filters
+      $(this).prop("checked", false);
+      $(this).next().removeClass("checked");
 
     });
 
@@ -815,16 +841,7 @@ $(document).ready(function() {
   // remove filter
   $(".filters-applied").on("click", ".remove-filter", function() {
     $(this).parent().remove();
-    var filter = $(this).next().find("span:last").text();
 
-    $(".accordion-content-filters input[type=checkbox]").each(function() {
-      if ($(this).siblings(".label").text() === filter) {
-        $(this).prop("checked", false);
-        $(this).next().removeClass("checked");
-      }
-    });
-
-    renderButton();
     checkIfFiltersExist();
   });
 
@@ -832,14 +849,10 @@ $(document).ready(function() {
   $(".filters-applied .clear").click(function() {
     $(".filters-applied .current-filters").html("");
 
-    $(".accordion-content-filters input[type=checkbox]").each(function() {
-      $(this).prop("checked", false);
-      $(this).next().removeClass("checked");
-    });
-
     checkIfFiltersExist();
   });
 
+  // show filters-applied bar if filter is applied or hide if it's not
   function checkIfFiltersExist() {
     if ($(".filters-applied .current-filters .single-filter").length === 0) {
       $(".filters-applied").hide();

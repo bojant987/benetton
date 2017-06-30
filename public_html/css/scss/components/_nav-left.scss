@@ -1,7 +1,7 @@
 .navigation-left {
   width: calc(100% - 64px);
   opacity: 0;
-  background-color: #fff;
+  background-color: $bg-nav;
   position: fixed;
   top: 0;
   left: -1000px;

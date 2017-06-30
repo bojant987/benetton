@@ -42,7 +42,7 @@
 
           &.show-mode:after {
             border-color: rgba(255, 255, 255, 0);
-            border-bottom-color: #fff;
+            border-bottom-color: $bg-product-filter-dropdown;
             border-width: 10px;
             margin-left: -10px;
             z-index: 1000000;
@@ -83,7 +83,7 @@
       }
 
       .accordion-filter {
-        background-color: #fff;
+        background-color: $bg-product-filter-dropdown;
         position: absolute;
         top: 100%;
         right: 0;
@@ -128,7 +128,6 @@
 
     .colour-filter {
       .color {
-        margin-left: 8px;
         display: inline-block;
         width: 22px;
         height: 10px;
@@ -139,7 +138,7 @@
     }
 
     .accordion-filter {
-      background-color: #fff;
+      background-color: $bg-product-filter-dropdown;
     }
 
     button {

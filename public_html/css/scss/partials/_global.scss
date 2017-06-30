@@ -2,7 +2,7 @@ body {
   font-family: $font-primary;
   font-size: $font-size-primary;
   color: $color-text-primary;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 h1,
@@ -46,7 +46,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 199;
 }
 
 .accordion-content {

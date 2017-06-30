@@ -34,6 +34,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "benetton-italic";
+    src: url("fonts/benetton/benetton-oblique-59564299224bf-webfont.eot");
+    src: url("fonts/benetton/benetton-oblique-59564299224bf-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/benetton/benetton-oblique-59564299224bf-webfont.woff2") format("woff2"),
+         url("fonts/benetton/benetton-oblique-59564299224bf-webfont.woff") format("woff"),
+         url("fonts/benetton/benetton-oblique-59564299224bf-webfont.ttf") format("truetype"),
+         url("fonts/benetton/benetton-oblique-59564299224bf-webfont.svg#benettonoblique") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 // london
 @font-face {
     font-family: "london-regular";
