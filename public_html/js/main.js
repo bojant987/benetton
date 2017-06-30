@@ -502,7 +502,7 @@ $(document).ready(function() {
 
     if (ms_ie) {
 
-      // $(this).attr("src", hoverSrc + "?" + new Date().getTime());
+      $(this).find("img").attr("src", hoverSrc);
 
     } else {
       $(this).find("img").attr("src", hoverSrc);
@@ -513,7 +513,7 @@ $(document).ready(function() {
     $(this).mouseleave(function functionName() {
       if (ms_ie) {
 
-        // $(this).find("img").attr("src", orgSrc + "?" + new Date().getTime());
+        $(this).find("img").attr("src", orgSrc);
       } else {
         $(this).find("img").attr("src", orgSrc);
       }

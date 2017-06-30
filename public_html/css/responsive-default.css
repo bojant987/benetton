@@ -1,10 +1,9 @@
-@media (min-width: 360px) and (max-width: 767px) {
-  /* ---- products styles ---- */
+/*@media (min-width: 360px) and (max-width: 767px) {
   .products-list>.container>.row>.col-sm-4 {
     width: 50%;
     float: left;
   }
-}
+}*/
 
 @media (min-width: 400px) {
   /* ---- header styles ---- */
