@@ -35,4 +35,3 @@ Js:
 ne odete pa skinete minifikovanu verziju sa sajta.
 * U product-list stranici slike koje se menjaju na hover nece da se load-uju ako su
 jpg ekstenzije u IE i Edge-u. Oznacio sam u main.js gde bi trebao fix ali nisam uspeo da sredim nazalost.
-* Takodje IE, isto product-list. Svaka tri artikla ce morati u svoj '.row'. U suprotnom se izlomi layout u nekim slucajevima.

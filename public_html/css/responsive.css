@@ -602,6 +602,14 @@
   }
 }
 /* ---- products styles ---- */
+@media (min-width: 360px) and (max-width: 767px) {
+  .products-list > .container > .row-custom > .col-small-4 {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+}
 @media (min-width: 992px) {
   .products .products-header .products-filter-top-level {
     padding: 10px 0;
