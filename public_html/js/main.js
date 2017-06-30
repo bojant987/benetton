@@ -406,7 +406,7 @@ $(document).ready(function() {
   });
 
   // carousel
-  if ($(".wol-carousel").length > 0) {
+  if ($(".owl-carousel").length > 0) {
 
     $(".most-wanted-carousel").owlCarousel({
       loop: true,
