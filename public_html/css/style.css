@@ -103,6 +103,10 @@ button {
   padding-top: 64px;
 }
 
+.two-navs-fixed {
+  padding-top: 134px !important;
+}
+
 .accordion-content {
   display: none;
 }

@@ -53,6 +53,10 @@ button {
   padding-top: $nav-main-height;
 }
 
+.two-navs-fixed {
+  padding-top: $nav-main-height + 70px !important;
+}
+
 .accordion-content {
   display: none;
 }

@@ -266,6 +266,7 @@ $(document).ready(function() {
 
   // nav fixed on scroll
   $(document).scroll(function() {
+    // main nav
     if ($(document).scrollTop() > $(".upper-header").height()) {
 
       $("header").addClass("fixed-header");
@@ -290,7 +291,29 @@ $(document).ready(function() {
       $(".news-header").css("position", "static");
       $(".news-header h1").show();
     }
+    // news nav
+    if ($(document).scrollTop() > $("header").height() + $(".news-header h1").outerHeight(true)) {
+
+      $(".news-header").css({
+        "position": "fixed",
+        "top": newsHeaderPosition(),
+        "left": "0",
+        "width": "100%",
+        "z-index": "100"
+      });
+      $(".news-header h1").hide();
+      $("body").addClass("two-navs-fixed");
+
+    } else {
+
+      $(".news-header").css("position", "static");
+      $(".news-header h1").show();
+      $("body").removeClass("two-navs-fixed");
+
+    }
+
   });
+
 
   function newsHeaderPosition() {
     return $("header").height();
