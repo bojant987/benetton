@@ -451,7 +451,7 @@
     font-size: 100px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .banner .banner-img {
     height: 450px;
   }
@@ -959,6 +959,9 @@
   }
   .news .news-header nav ul li {
     margin-bottom: 0;
+  }
+  .news .news-header nav ul li a {
+    font-size: 14px;
   }
   .news .news-content {
     position: relative;
