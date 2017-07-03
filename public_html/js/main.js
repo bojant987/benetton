@@ -986,4 +986,4 @@ $(".cart-box-form input").focus(function() {
 
 // input fields validation messages
 $("input:not([type=checkbox]):required").attr("data-error", "This is a required field.");
-$("input:required").attr("data-minlength-error", "This field should be at least 4 characters long.");
+$("input:not([type=checkbox]):required").attr("data-minlength-error", "This field should be at least 4 characters long.");
