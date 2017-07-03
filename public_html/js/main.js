@@ -36,14 +36,14 @@ $(document).ready(function() {
     $(".overlay").show();
 
     $("body").addClass("modal-open");
-  };
+  }
 
   function closeModal(whatDoIClose) {
     $(".modal-popup" + whatDoIClose).fadeOut();
     $(".overlay").hide();
 
     $("body").removeClass("modal-open");
-  };
+  }
 
   $(".modal-popup").click(function(e) {
     e.stopPropagation();
@@ -220,7 +220,7 @@ $(document).ready(function() {
         $(".has-arrow").removeClass("has-arrow");
         $(".has-arrow").removeClass("has-arrow-colored");
 
-        $(this).find(".nav-dropdown").show();
+        $(this).find(".nav-dropdown").fadeIn(300);
 
         if ($(this).find(".nav-dropdown").hasClass("three-leveled")) {
           $(this).find(">a").addClass("has-arrow-colored");
@@ -229,7 +229,7 @@ $(document).ready(function() {
         }
 
         $(this).mouseleave(function() {
-          $(this).find(".nav-dropdown").hide();
+          $(this).find(".nav-dropdown").fadeOut(300);
           $(this).find(">a").removeClass("has-arrow");
           $(this).find(">a").removeClass("has-arrow-colored");
         });
@@ -241,7 +241,7 @@ $(document).ready(function() {
     }
 
 
-  };
+  }
   navDropdownHover();
 
   // change position to static on large screen so we can position dropdown properly
@@ -255,18 +255,21 @@ $(document).ready(function() {
   $(".three-leveled > li > a").click(function(e) {
     e.preventDefault();
     $(this).parent().siblings().find(".accordion-content:first").hide();
+    $(this).parent().siblings().find(".has-arrow-down").removeClass("active");
     $(this).parent().siblings().find(".has-arrow-down").removeClass("has-arrow-down");
 
     $(this).next().next().show();
     $(this).addClass("has-arrow-down");
+    $(this).addClass("active");
 
   });
 
   // nav fixed on scroll
   $(document).scroll(function() {
-    if ($(document).scrollTop() > 1) {
+    if ($(document).scrollTop() > $(".upper-header").height()) {
 
       $("header").addClass("fixed-header");
+      $("body").addClass("header-is-fixed");
       $("header .upper-header").hide();
 
       $(".news-header").css({
@@ -281,6 +284,7 @@ $(document).ready(function() {
     } else {
 
       $("header").removeClass("fixed-header");
+      $("body").removeClass("header-is-fixed");
       $("header .upper-header").show();
 
       $(".news-header").css("position", "static");
@@ -305,7 +309,7 @@ $(document).ready(function() {
       $(".cart .cart-wrapper > h2").show();
     }
 
-  };
+  }
 
   emptyCart(".cart-box");
   emptyCart(".cart");
@@ -431,7 +435,7 @@ $(document).ready(function() {
           items: 3,
           loop: true,
           dotsEach: 3,
-          nav: true
+          nav: false
         }
       }
     });
@@ -468,6 +472,34 @@ $(document).ready(function() {
           items: 3,
           loop: true,
           dotsEach: 3,
+        }
+      }
+    });
+
+    $(".news-header-carousel").owlCarousel({
+      stagePadding: 0,
+      nav: true,
+      navContainerClass: "carousel-news-container",
+      navClass: "carousel-news",
+      navText: ['<span class="icon-font prev">&larr;</span>', '<span class="icon-font next">&rarr;</span>'],
+      loop: true,
+      margin: 20,
+      responsiveClass: true,
+      dots: false,
+      nav: false,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 2
+        },
+        682: {
+          items: 4,
+          stagePadding: 0
+        },
+        1000: {
+          items: 4,
+          stagePadding: 0
         }
       }
     });
@@ -629,7 +661,7 @@ $(document).ready(function() {
       $(".accordion-content-filters .apply-btn").show();
     }
 
-  };
+  }
 
   // show all filters on small screens
   $(".filters .show-filters").click(function() {
@@ -696,10 +728,10 @@ $(document).ready(function() {
     var target = $(this).attr("data-target");
 
     if ($(".accordion-content-filters").attr("data-opened") === target) {
-      $(".accordion-content-filters").hide();
+      $(".accordion-content-filters").slideUp();
       $(".accordion-content-filters").attr("data-opened", "");
     } else {
-      $(".accordion-content-filters").show();
+      $(".accordion-content-filters").slideDown();
       $(".accordion-content-filters").attr("data-opened", target);
     }
 
@@ -713,7 +745,7 @@ $(document).ready(function() {
 
     $(".accordion-content-filters .accordion-filter").each(function functionName() {
       if ($(this).attr("data-filter") === target) {
-        $(this).toggle();
+        $(this).slideToggle();
       } else {
         $(this).hide();
       }
@@ -927,7 +959,7 @@ $(document).ready(function() {
     } else {
       $(".aside-nav ul li").css("display", "block");
     }
-  };
+  }
   hideAfterActive();
 
   // hide customer-service-nav links before active on bottom on mobile screens
@@ -942,7 +974,7 @@ $(document).ready(function() {
 
       $(".mobile-nav ul li:lt(" + index + ")").css("display", "none");
     }
-  };
+  }
   hideBeforeActive();
 
 });
@@ -951,3 +983,7 @@ $(document).ready(function() {
 $(".cart-box-form input").focus(function() {
   $(".cart-box-form button .text").show();
 });
+
+// input fields validation messages
+$("input:not([type=checkbox]):required").attr("data-error", "This is a required field.");
+$("input:required").attr("data-minlength-error", "This field should be at least 4 characters long.");

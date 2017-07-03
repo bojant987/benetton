@@ -99,6 +99,10 @@ button {
   z-index: 199;
 }
 
+.header-is-fixed {
+  padding-top: 64px;
+}
+
 .accordion-content {
   display: none;
 }
@@ -137,6 +141,10 @@ input[type=radio] {
   margin-top: 30px;
   display: block;
   background-color: #009933;
+}
+
+.help-block {
+  text-transform: uppercase;
 }
 
 .navigation-toggle {
@@ -841,7 +849,7 @@ header .navigation .navigation-right ul li > a {
   height: 100%;
   font-size: 14px;
 }
-header .navigation .navigation-right ul li > a:hover {
+header .navigation .navigation-right ul li > a:hover, header .navigation .navigation-right ul li > a:focus, header .navigation .navigation-right ul li > a.active {
   color: #fff;
 }
 header .navigation .navigation-right ul li > a span {
@@ -1005,13 +1013,13 @@ header .navigation .navigation-right ul li > a .cart-number {
 .cart-box .cart-box-form .input-group {
   position: relative;
   width: 100%;
+  margin: 10px 0;
 }
 .cart-box .cart-box-form .input-group .cart-box-input {
   border: 1px solid #0091e3;
   width: 100%;
   height: 38px;
   border-radius: 0;
-  margin: 10px 0;
   padding-right: 152px;
 }
 .cart-box .cart-box-form .input-group button {
@@ -1020,7 +1028,7 @@ header .navigation .navigation-right ul li > a .cart-number {
   color: #fff;
   position: absolute;
   right: 3px;
-  top: 13px;
+  top: 3px;
 }
 .cart-box .cart-box-form .input-group button span:first-of-type {
   display: inline-block;
@@ -1051,8 +1059,10 @@ header .navigation .navigation-right ul li > a .cart-number {
   z-index: 20;
 }
 .search-box .search-box-form input {
+  font-size: 20px;
   margin: 0 auto 15px;
-  width: 60%;
+  width: 100%;
+  max-width: 500px;
   height: 58px;
   line-height: 34px;
 }
@@ -1068,6 +1078,12 @@ header .navigation .navigation-right ul li > a .cart-number {
 .banner {
   overflow: hidden;
   position: relative;
+}
+.banner .banner-img {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .banner .bx-wrapper img {
   width: auto !important;
@@ -1097,6 +1113,7 @@ header .navigation .navigation-right ul li > a .cart-number {
 .banner .banner-content {
   position: absolute;
   padding: 0 10px;
+  background-color: transparent;
 }
 .banner .banner-content h4 {
   font-family: "london-semibold";
@@ -1294,9 +1311,8 @@ header .navigation .navigation-right ul li > a .cart-number {
 .wear-collection .collection-card .collection-slider-container #collection-slider-next {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 0;
   transform: translateY(-50%);
-  display: none;
 }
 .wear-collection .collection-card .collection-slider-container #collection-slider-next span {
   color: #000;
@@ -1304,10 +1320,9 @@ header .navigation .navigation-right ul li > a .cart-number {
 .wear-collection .collection-card .collection-slider-container #collection-slider-prev {
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 0;
   transform: translateY(-50%);
   color: #000;
-  display: none;
 }
 .wear-collection .collection-card .collection-slider-container #collection-slider-prev span {
   color: #000;
@@ -1340,6 +1355,9 @@ header .navigation .navigation-right ul li > a .cart-number {
 }
 
 /* ---- footer styles ---- */
+footer .help-block {
+  text-transform: none;
+}
 footer .upper-footer {
   padding: 0 0 5px;
   background-color: #1e1e1e;
@@ -1393,6 +1411,10 @@ footer .upper-footer .newsletter-form .form-group {
   width: 100%;
   position: relative;
   margin-bottom: 0;
+}
+footer .upper-footer .newsletter-form .form-group .help-block li {
+  float: left;
+  margin-right: 7px;
 }
 footer .upper-footer .newsletter-form .form-group input[type=email] {
   border-color: #888888;
@@ -1702,7 +1724,6 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
   display: inline-block;
   width: 22px;
   height: 10px;
-  background-color: #E0D2BD;
   float: left;
   transform: translateY(5px);
 }
@@ -1798,17 +1819,13 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
 }
 .products .products-list .product .lower .colors .colors-wrapper .color {
   float: left;
-  width: 18px;
+  width: 20px;
   height: 10px;
+  overflow: hidden;
 }
-.products .products-list .product .lower .colors .colors-wrapper .color:nth-of-type(1) {
-  background-color: blue;
-}
-.products .products-list .product .lower .colors .colors-wrapper .color:nth-of-type(2) {
-  background-color: orange;
-}
-.products .products-list .product .lower .colors .colors-wrapper .color:nth-of-type(3) {
-  background-color: black;
+.products .products-list .product .lower .colors .colors-wrapper .color img {
+  width: 32px;
+  height: 32px;
 }
 .products .products-list .products-list-footer p {
   font-size: 16px;
@@ -1827,6 +1844,12 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
 /* ---- single-product styles ---- */
 .single-product {
   background-color: #fff;
+}
+.single-product > .row {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .single-product .product-showcase {
   position: relative;
@@ -2608,21 +2631,43 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
   font-size: 40px;
   letter-spacing: 4px;
   font-family: "london-bold";
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+.news .news-header nav {
+  padding: 0 25px;
+}
+.news .news-header nav .carousel-news-container div {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  position: absolute;
+  top: -45px;
+  z-index: 20;
+  cursor: pointer;
+}
+.news .news-header nav .carousel-news-container div:first-of-type {
+  left: 10px;
+}
+.news .news-header nav .carousel-news-container div:last-of-type {
+  right: 10px;
+}
+.news .news-header nav .carousel-news-container div span {
+  color: #000;
+  font-size: 40px;
 }
 .news .news-header nav ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 .news .news-header nav ul li a {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
   display: block;
-  margin: 0 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid transparent;
   position: relative;
+  white-space: nowrap;
 }
-.news .news-header nav ul li a:hover {
+.news .news-header nav ul li a:not(.active):hover {
   color: #009933;
   border-color: #009933;
 }

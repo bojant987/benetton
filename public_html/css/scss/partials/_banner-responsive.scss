@@ -46,8 +46,21 @@
   }
 }
 
+@media (min-width: 768px) {
+  .banner {
+
+    .banner-img {
+      height: 450px;
+    }
+  }
+}
+
 @media (min-width: 1500px) {
   .banner {
+
+    .banner-img {
+      height: 480px;
+    }
 
     .banner-content {
 

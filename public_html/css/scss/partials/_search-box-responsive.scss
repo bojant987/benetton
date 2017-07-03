@@ -2,7 +2,8 @@
   .search-box {
     .search-box-form {
       input {
-        font-size: 20px;
+        width: 60%;
+        max-width: none;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
           font-size: 20px;
         }

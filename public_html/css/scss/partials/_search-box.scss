@@ -10,11 +10,12 @@
 
   .search-box-form {
     input {
+      font-size: 20px;
       margin: 0 auto 15px;
-      width: 60%;
+      width: 100%;
+      max-width: 500px;
       height: 58px;
       line-height: 34px;
-
     }
 
     button {

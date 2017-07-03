@@ -318,7 +318,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">girls(1 - 14 years)</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">girls(1 - 14 years)</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content" data-accordion="level2" data-location="header">
                       <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
@@ -511,7 +511,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">boys(1 - 14 years)</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">boys(1 - 14 years)</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content" data-accordion="level2" data-location="header">
                       <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
@@ -700,7 +700,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">women</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">women</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content centered-content" data-accordion="level2" data-location="header">
                       <li class="col-wrapper">
@@ -931,8 +931,8 @@
                 <a href="#" class="search-handler"><span class="icon-font icon-search"></span></a>
                 <div class="search-box">
                   <form class="search-box-form text-center">
-                    <input type="search" name="" value="" placeholder="What are you looking for?">
-                    <button type="submit" name="button" class="login-button text-uppercase">search</button>
+                    <input type="search" name="search" value="" placeholder="What are you looking for?">
+                    <button type="submit" name="submit" class="login-button text-uppercase">search</button>
                   </form>
                 </div>
               </li>
@@ -949,16 +949,16 @@
           <h1>Welcome</h1>
           <form class="login-form" data-toggle="validator" data-role="form" data-focus="false">
             <div class="form-group has-feedback">
-              <input type="email" name="login-email" value="" placeholder="Enter your email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <input type="email" name="login-email" value="" placeholder="Enter your email address" data-minlength="4" maxlength="35" required>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group has-feedback">
-              <input type="password" name="login-password" value="" placeholder="Enter your password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <input type="password" name="login-password" value="" placeholder="Enter your password" data-minlength="4" maxlength="35" required>
               <div class="help-block with-errors"></div>
             </div>
             <div class="text-right"><a href="#">Forgot Your password?</a></div>
-            <button type="submit" name="button" class="login-button text-uppercase">login</button>
-            <button type="button" name="button" class="login-button text-uppercase">connect with facebook</button>
+            <button type="submit" name="login" class="login-button text-uppercase">login</button>
+            <button type="button" name="connect" class="login-button text-uppercase">connect with facebook</button>
             <p>Don't have an account? <a href="#">Sign up</a></p>
           </form>
           <span class="icon-font icon-close menu-close popin-handler" data-role="close" data-target="login-box"></span>
@@ -1046,7 +1046,7 @@
             </div>   <!-- row -->
             <div class="form-group has-feedback">
               <div class="input-group">
-                <input type="text" name="" value="" placeholder="Enter your code" class="cart-box-input" data-error="Enter a coupon code" required>
+                <input type="text" name="coupon" value="" placeholder="Enter your code" class="cart-box-input" required>
                 <button type="submit" class="text-uppercase"><span class="text">apply coupon</span> <span class="icon-font icon-right"></span></button>
                 <div class="help-block with-errors"></div>
               </div>
@@ -1070,7 +1070,7 @@
     </header>
     <main>
       <section class="banner">
-        <img src="img/banner-02.png" alt="">
+        <div class="banner-img" style="background-image: url(img/banner-02.png);"></div>
         <div class="banner-content banner-content-center">
           <p class="text-uppercase">women</p>
           <h1>t-shirts</h1>
@@ -1173,26 +1173,66 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <label for="beige" class="text-uppercase clearfix">
-                        <input type="checkbox" name="beige" value="" id="beige">
+                        <input type="checkbox" name="beige" value="beige" id="beige">
                         <span class="fake-checkbox"></span>
-                        <span class="color"></span>
+                        <span class="color" style="background-color:#E0D2BD;"></span>
                         <span class="label">beige</span>
                       </label>
                     </div>   <!-- col -->
                     <div class="col-sm-3">
-                      <label for="red" class="text-uppercase clearfix">
-                        <input type="checkbox" name="red" value="" id="red">
+                      <label for="black" class="text-uppercase clearfix">
+                        <input type="checkbox" name="black" value="black" id="black">
                         <span class="fake-checkbox"></span>
-                        <span class="color"></span>
-                        <span class="label">red</span>
+                        <span class="color" style="background-color:#000000;"></span>
+                        <span class="label">black</span>
                       </label>
                     </div>   <!-- col -->
                     <div class="col-sm-3">
-                      <label for="green" class="text-uppercase clearfix">
-                        <input type="checkbox" name="green" value="" id="green">
+                      <label for="blue" class="text-uppercase clearfix">
+                        <input type="checkbox" name="blue" value="blue" id="blue">
                         <span class="fake-checkbox"></span>
-                        <span class="color"></span>
-                        <span class="label">green</span>
+                        <span class="color" style="background-color:#336699;"></span>
+                        <span class="label">blue</span>
+                      </label>
+                    </div>   <!-- col -->
+                    <div class="col-sm-3">
+                      <label for="brown" class="text-uppercase clearfix">
+                        <input type="checkbox" name="brown" value="brown" id="brown">
+                        <span class="fake-checkbox"></span>
+                        <span class="color" style="background-color:#a38b6d;"></span>
+                        <span class="label">brown</span>
+                      </label>
+                    </div>   <!-- col -->
+                    <div class="col-sm-3">
+                      <label for="burgundy" class="text-uppercase clearfix">
+                        <input type="checkbox" name="burgundy" value="burgundy" id="burgundy">
+                        <span class="fake-checkbox"></span>
+                        <span class="color" style="background-color:#800000;"></span>
+                        <span class="label">burgundy</span>
+                      </label>
+                    </div>   <!-- col -->
+                    <div class="col-sm-3">
+                      <label for="dark-blue" class="text-uppercase clearfix">
+                        <input type="checkbox" name="dark-blue" value="dark-blue" id="dark-blue">
+                        <span class="fake-checkbox"></span>
+                        <span class="color" style="background-color:#003366;"></span>
+                        <span class="label">dark blue</span>
+                      </label>
+                    </div>   <!-- col -->
+                    <div class="col-sm-3">
+                      <label for="dark-green" class="text-uppercase clearfix">
+                        <input type="checkbox" name="dark-green" value="dark-green" id="dark-green">
+                        <span class="fake-checkbox"></span>
+                        <span class="color" style="background-color:#013220;"></span>
+                        <span class="label">dark green</span>
+                      </label>
+                    </div>   <!-- col -->
+                    <div class="col-sm-3">
+                      <label for="dark-grey" class="text-uppercase clearfix">
+                        <input type="checkbox" name="dark-grey" value="dark-grey" id="dark-grey">
+                        <span class="fake-checkbox"></span>
+                        <span class="color" style="background-color:#2F2F2F;"></span>
+                        <span class="label">dark grey</span>
                       </label>
                     </div>   <!-- col -->
                   </div>   <!-- row -->
@@ -1376,9 +1416,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1402,9 +1448,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1428,9 +1480,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1454,9 +1512,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1480,9 +1544,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1506,9 +1576,15 @@
                     <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
                     <div class="colors text-center">
                       <div class="colors-wrapper clearfix">
-                        <div class="color"></div>
-                        <div class="color"></div>
-                        <div class="color"></div>
+                        <div class="color">
+                          <img src="img/color-01.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-02.jpg" alt="">
+                        </div>
+                        <div class="color">
+                          <img src="img/color-03.jpg" alt="">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1576,13 +1652,13 @@
                 <form class="newsletter-form" data-toggle="validator" role="form">
                   <p class=" headline text-uppercase">subscribe to our newletter</p>
                   <div class="form-group has-feedback">
-                    <input type="email" name="" value="" placeholder="Enter you email address" minlength="4" maxlength="35" data-error="Please enter your email address" required>
+                    <input type="email" name="email" value="" placeholder="Enter you email address" data-minlength="4" maxlength="35" required>
                     <button type="submit" class="button-newsletter text-uppercase">send</button>
                     <div class="help-block with-errors"></div>
                   </div>
                   <p>You'll immediately receive a 15% welcome discount</p>
                   <div class="form-group has-feedback">
-                    <input type="checkbox" name="" value="" id="newsletter-checkbox" class="newsletter-checkbox" data-validate="true" data-focus="true" data-error="Please consent to the Privacy Policy" required>
+                    <input type="checkbox" name="privacy" value="" id="newsletter-checkbox" class="newsletter-checkbox" data-validate="true" data-focus="true" data-error="Please consent to the Privacy Policy" required>
                     <label for="newsletter-checkbox">
                       Privacy consent: I consent to the processing of my personal information
                       for the marketing and profiling purposesindicated in the
@@ -1687,11 +1763,11 @@
           <p class="note">*Some articles may be excluded from the promotion.</p>
           <div class="form-group has-feedback">
             <label for="modal-email">Enter your email *</label>
-            <input type="email" name="email" value="" id="modal-email" data-error="THIS IS A REQUIRED FIELD" required>
+            <input type="email" name="email" value="" id="modal-email" data-minlngth="3" maxlength="35" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group has-feedback">
-            <input type="checkbox" name="email" value="" id="privacy" data-error="Please consent to the privacy policy" required>
+            <input type="checkbox" name="privacy" value="" id="privacy" data-error="Please consent to the privacy policy" required>
             <label class="privacy" for="privacy">
               I accept the processing of my personal info for marketing purposes as per the
               <a href="#">privacy terms and conditions</a>.

@@ -2,6 +2,13 @@
   overflow: hidden;
   position: relative;
 
+  .banner-img {
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
   .bx-wrapper {
 
     img {
@@ -37,6 +44,7 @@
   .banner-content {
     position: absolute;
     padding: 0 10px;
+    background-color: transparent;
 
     h4 {
       font-family: "london-semibold";

@@ -250,7 +250,7 @@
               line-height: 10px;
 
               &:focus,
-              &:hover {
+              &:hover, &.active {
                 text-decoration: underline;
               }
             }

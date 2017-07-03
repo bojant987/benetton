@@ -1,4 +1,9 @@
 footer {
+
+  .help-block {
+    text-transform: none;
+  }
+
   .upper-footer {
     padding: 0 0 5px;
     background-color: $bg-footer-upper;
@@ -68,6 +73,13 @@ footer {
         width: 100%;
         position: relative;
         margin-bottom: 0;
+
+        .help-block {
+          li {
+            float: left;
+            margin-right: 7px;
+          }
+        }
 
         input[type=email] {
           border-color: $color-footer-text;

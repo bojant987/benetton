@@ -126,17 +126,6 @@
     border-top: 1px solid $color-border-primary;
     top: 134px;
 
-    .colour-filter {
-      .color {
-        display: inline-block;
-        width: 22px;
-        height: 10px;
-        background-color: #E0D2BD;
-        float: left;
-        transform: translateY(5px);
-      }
-    }
-
     .accordion-filter {
       background-color: $bg-product-filter-dropdown;
     }

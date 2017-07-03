@@ -49,6 +49,10 @@ button {
   z-index: 199;
 }
 
+.header-is-fixed {
+  padding-top: $nav-main-height;
+}
+
 .accordion-content {
   display: none;
 }
@@ -90,6 +94,10 @@ input[type=radio] {
   margin-top: 30px;
   display: block;
   background-color: $color-primary;
+}
+
+.help-block {
+  text-transform: uppercase;
 }
 
 @import "../components/buttons";

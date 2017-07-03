@@ -1,3 +1,18 @@
+@media (min-width: 682px) {
+  .news {
+
+    .news-header {
+
+      nav {
+
+        .carousel-news-container {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .news {
 
@@ -6,11 +21,11 @@
       h1 {
         font-size: 50px;
         letter-spacing: 5px;
-        font-family: $font-secondary-bold;
         margin-bottom: 40px;
       }
 
       nav {
+
         ul {
           li {
             margin-bottom: 0;
@@ -98,6 +113,11 @@
 @media (min-width: 992px) {
   .news {
 
+    .owl-carousel {
+      width: 80% !important;
+      margin: 0 auto;
+    }
+
     .news-content {
 
       .timeline-month {
@@ -140,6 +160,10 @@
 
 @media (min-width: 1400px) {
   .news {
+
+    .owl-carousel {
+      width: 60% !important;
+    }
 
     .news-content {
 

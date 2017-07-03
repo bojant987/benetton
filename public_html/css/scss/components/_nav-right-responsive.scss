@@ -11,7 +11,7 @@
           color: $color-text-primary;
           padding: 10px 5px;
 
-          &:hover {
+          &:hover, &:focus, &.active {
             color: $color-primary;
           }
 

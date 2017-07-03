@@ -7,6 +7,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Benetton</title>
 
+    <!-- custom css -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/owl.theme.default" rel="stylesheet" type="text/css"/>
     <!-- core css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/icon-fonts.css" rel="stylesheet" type="text/css"/>
@@ -318,7 +321,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">girls(1 - 14 years)</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">girls(1 - 14 years)</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content" data-accordion="level2" data-location="header">
                       <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
@@ -511,7 +514,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">boys(1 - 14 years)</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">boys(1 - 14 years)</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content" data-accordion="level2" data-location="header">
                       <li><img src="img/nav-dropdown.jpg" alt="" class="hidden-xs hidden-sm hidden-md"></li>
@@ -700,7 +703,7 @@
                 <span class="accordion-handler hidden-md hidden-lg text-center"></span>
                 <ul class="nav-dropdown list-unstyled accordion-content clearfix three-leveled" data-accordion="level1" data-location="header">
                   <li>
-                    <a href="#" class="text-uppercase has-arrow-down">women</a>
+                    <a href="#" class="text-uppercase has-arrow-down active">women</a>
                     <span class="accordion-handler hidden-md hidden-lg text-center" data-target="level2"></span>
                     <ul class="list-unstyled accordion-content centered-content" data-accordion="level2" data-location="header">
                       <li class="col-wrapper">
@@ -931,8 +934,8 @@
                 <a href="#" class="search-handler"><span class="icon-font icon-search"></span></a>
                 <div class="search-box">
                   <form class="search-box-form text-center">
-                    <input type="search" name="" value="" placeholder="What are you looking for?">
-                    <button type="submit" name="button" class="login-button text-uppercase">search</button>
+                    <input type="search" name="search" value="" placeholder="What are you looking for?">
+                    <button type="submit" name="submit" class="login-button text-uppercase">search</button>
                   </form>
                 </div>
               </li>
@@ -949,16 +952,16 @@
           <h1>Welcome</h1>
           <form class="login-form" data-toggle="validator" data-role="form" data-focus="false">
             <div class="form-group has-feedback">
-              <input type="email" name="login-email" value="" placeholder="Enter your email address" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <input type="email" name="login-email" value="" placeholder="Enter your email address" data-minlength="4" maxlength="35" required>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group has-feedback">
-              <input type="password" name="login-password" value="" placeholder="Enter your password" minlength="4" maxlength="35" data-error="THIS IS A REQUIRED FIELD." required>
+              <input type="password" name="login-password" value="" placeholder="Enter your password" data-minlength="4" maxlength="35" required>
               <div class="help-block with-errors"></div>
             </div>
             <div class="text-right"><a href="#">Forgot Your password?</a></div>
-            <button type="submit" name="button" class="login-button text-uppercase">login</button>
-            <button type="button" name="button" class="login-button text-uppercase">connect with facebook</button>
+            <button type="submit" name="login" class="login-button text-uppercase">login</button>
+            <button type="button" name="connect" class="login-button text-uppercase">connect with facebook</button>
             <p>Don't have an account? <a href="#">Sign up</a></p>
           </form>
           <span class="icon-font icon-close menu-close popin-handler" data-role="close" data-target="login-box"></span>
@@ -1046,7 +1049,7 @@
             </div>   <!-- row -->
             <div class="form-group has-feedback">
               <div class="input-group">
-                <input type="text" name="" value="" placeholder="Enter your code" class="cart-box-input" data-error="Enter a coupon code" required>
+                <input type="text" name="coupon" value="" placeholder="Enter your code" class="cart-box-input" required>
                 <button type="submit" class="text-uppercase"><span class="text">apply coupon</span> <span class="icon-font icon-right"></span></button>
                 <div class="help-block with-errors"></div>
               </div>
@@ -1073,12 +1076,26 @@
         <div class="news-header text-center">
           <h1>news and events</h1>
           <nav>
-            <ul class="list-inline">
-              <li><a href="#" class="text-uppercase">all</a></li>
-              <li><a href="#" class="text-uppercase">events</a></li>
-              <li><a href="#" class="text-uppercase">news</a></li>
-              <li><a href="#" class="active text-uppercase">store opening</a></li>
+            <ul class="list-inline owl-carousel owl-theme news-header-carousel">
+              <li class="item"><a href="#" class="text-uppercase">all</a></li>
+              <li class="item"><a href="#" class="text-uppercase">events</a></li>
+              <li class="item"><a href="#" class="text-uppercase">news</a></li>
+              <li class="item"><a href="#" class="active text-uppercase">store opening</a></li>
             </ul>
+            <!-- <div class="owl-carousel owl-theme news-header-carousel">
+              <div class="item">
+                <a href="#" class="text-uppercase">all</a>
+              </div>
+              <div class="item">
+                <a href="#" class="text-uppercase">events</a>
+              </div>
+              <div class="item">
+                <a href="#" class="text-uppercase">news</a>
+              </div>
+              <div class="item">
+                <a href="#" class="active text-uppercase">store opening</a>
+              </div>
+            </div> -->
           </nav>
         </div>   <!-- news-header -->
         <div class="news-content clearfix">
@@ -1194,13 +1211,13 @@
                 <form class="newsletter-form" data-toggle="validator" role="form">
                   <p class=" headline text-uppercase">subscribe to our newletter</p>
                   <div class="form-group has-feedback">
-                    <input type="email" name="" value="" placeholder="Enter you email address" minlength="4" maxlength="35" data-error="Please enter your email address" required>
+                    <input type="email" name="email" value="" placeholder="Enter you email address" data-minlength="4" maxlength="35" required>
                     <button type="submit" class="button-newsletter text-uppercase">send</button>
                     <div class="help-block with-errors"></div>
                   </div>
                   <p>You'll immediately receive a 15% welcome discount</p>
                   <div class="form-group has-feedback">
-                    <input type="checkbox" name="" value="" id="newsletter-checkbox" class="newsletter-checkbox" data-validate="true" data-focus="true" data-error="Please consent to the Privacy Policy" required>
+                    <input type="checkbox" name="privacy" value="" id="newsletter-checkbox" class="newsletter-checkbox" data-validate="true" data-focus="true" data-error="Please consent to the Privacy Policy" required>
                     <label for="newsletter-checkbox">
                       Privacy consent: I consent to the processing of my personal information
                       for the marketing and profiling purposesindicated in the
@@ -1305,11 +1322,11 @@
           <p class="note">*Some articles may be excluded from the promotion.</p>
           <div class="form-group has-feedback">
             <label for="modal-email">Enter your email *</label>
-            <input type="email" name="email" value="" id="modal-email" data-error="THIS IS A REQUIRED FIELD" required>
+            <input type="email" name="email" value="" id="modal-email" required>
             <div class="help-block with-errors"></div>
           </div>
           <div class="form-group has-feedback">
-            <input type="checkbox" name="email" value="" id="privacy" data-error="Please consent to the privacy policy" required>
+            <input type="checkbox" name="privacy" value="" id="privacy" data-error="Please consent to the privacy policy" required>
             <label class="privacy" for="privacy">
               I accept the processing of my personal info for marketing purposes as per the
               <a href="#">privacy terms and conditions</a>.
@@ -1324,6 +1341,9 @@
 
     <!-- core js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- custom js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- core js -->
     <script src="js/validator.min.js"></script>
     <script src="js/main.js"></script>
   </body>

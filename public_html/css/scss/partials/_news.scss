@@ -10,25 +10,53 @@
       font-size: 40px;
       letter-spacing: 4px;
       font-family: $font-secondary-bold;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     nav {
+      padding: 0 25px;
+
+      .carousel-news-container {
+        div {
+          width: 28px;
+          height: 28px;
+          background-color: transparent;
+          position: absolute;
+          top: -45px;
+          z-index: 20;
+          cursor: pointer;
+
+          &:first-of-type {
+            left: 10px;
+          }
+
+          &:last-of-type {
+            right: 10px;
+          }
+
+          span {
+            color: #000;
+            // height: 30px;
+            font-size: 40px;
+          }
+        }
+      }
 
       ul {
+
         li {
-          margin-bottom: 10px;
+          margin-bottom: 0;
 
           a {
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: 2px;
             display: block;
-            margin: 0 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid transparent;
             position: relative;
+            white-space: nowrap;
 
-            &:hover {
+            &:not(.active):hover {
               color: $color-primary;
               border-color: $color-primary;
             }

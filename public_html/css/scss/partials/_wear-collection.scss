@@ -60,9 +60,8 @@
       #collection-slider-next {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 0;
         transform: translateY(-50%);
-        display: none;
 
         span {
           color: #000;
@@ -72,10 +71,9 @@
       #collection-slider-prev {
         position: absolute;
         top: 50%;
-        left: 20px;
+        left: 0;
         transform: translateY(-50%);
         color: #000;
-        display: none;
 
         span {
           color: #000;
