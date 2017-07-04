@@ -57,6 +57,10 @@ button {
   padding-top: $nav-main-height + 70px !important;
 }
 
+.remove-padding {
+  padding-bottom: 0 !important;
+}
+
 .accordion-content {
   display: none;
 }

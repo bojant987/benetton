@@ -273,23 +273,12 @@ $(document).ready(function() {
       $("body").addClass("header-is-fixed");
       $("header .upper-header").hide();
 
-      $(".news-header").css({
-        "position": "fixed",
-        "top": newsHeaderPosition(),
-        "left": "0",
-        "width": "100%",
-        "z-index": "100"
-      });
-      $(".news-header h1").hide();
-
     } else {
 
       $("header").removeClass("fixed-header");
       $("body").removeClass("header-is-fixed");
       $("header .upper-header").show();
 
-      $(".news-header").css("position", "static");
-      $(".news-header h1").show();
     }
     // news nav
     if ($(document).scrollTop() > $("header").height()) {

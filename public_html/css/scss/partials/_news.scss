@@ -2,21 +2,20 @@
   background-color: $bg-news;
 
   .news-header {
-    padding-top: 40px;
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #dfdfdf;
     background-color: $bg-news-header;
 
     h1 {
-      padding-top: 6px;
+      padding-top: 46px;
+      padding-bottom: 5px;
       font-size: 40px;
       letter-spacing: 4px;
       font-family: $font-secondary-bold;
-      margin-bottom: 45px;
     }
 
     nav {
-      padding: 0 25px;
+      padding: 40px 25px 0;
 
       .carousel-news-container {
         div {

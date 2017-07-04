@@ -947,12 +947,12 @@
 /* ---- clothing-care styles ---- */
 /* ---- news styles ---- */
 @media (min-width: 682px) {
-  .news .news-header {
-    padding-top: 12px;
-  }
   .news .news-header h1 {
-    padding-top: 24px;
-    margin-bottom: 35px;
+    padding-top: 36px;
+    padding-bottom: 23px;
+  }
+  .news .news-header nav {
+    padding: 12px 25px 0;
   }
   .news .news-header nav .carousel-news-container {
     display: none;
@@ -962,7 +962,6 @@
   .news .news-header h1 {
     font-size: 50px;
     letter-spacing: 5px;
-    margin-bottom: 35px;
   }
   .news .news-header nav ul li {
     margin-bottom: 0;

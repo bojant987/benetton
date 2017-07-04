@@ -2,14 +2,14 @@
   .news {
 
     .news-header {
-      padding-top: 12px;
 
       h1 {
-        padding-top: 24px;
-        margin-bottom: 35px;
+        padding-top: 36px;
+        padding-bottom: 23px;
       }
 
       nav {
+        padding: 12px 25px 0;
 
         .carousel-news-container {
           display: none;
@@ -27,7 +27,6 @@
       h1 {
         font-size: 50px;
         letter-spacing: 5px;
-        margin-bottom: 35px;
       }
 
       nav {
