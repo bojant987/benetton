@@ -292,7 +292,7 @@ $(document).ready(function() {
       $(".news-header h1").show();
     }
     // news nav
-    if ($(document).scrollTop() > $("header").height() + $(".news-header h1").outerHeight(true)) {
+    if ($(document).scrollTop() > $("header").height()) {
 
       $(".news-header").css({
         "position": "fixed",
@@ -313,7 +313,6 @@ $(document).ready(function() {
     }
 
   });
-
 
   function newsHeaderPosition() {
     return $("header").height();
@@ -518,11 +517,13 @@ $(document).ready(function() {
         },
         682: {
           items: 4,
-          stagePadding: 0
+          stagePadding: 0,
+          loop: false
         },
         1000: {
           items: 4,
-          stagePadding: 0
+          stagePadding: 0,
+          loop: false
         }
       }
     });
@@ -1000,13 +1001,9 @@ $(document).ready(function() {
   }
   hideBeforeActive();
 
-});
+  // cart-box-form apply coupon btn expanding on input focus
+  $(".cart-box-form input").focus(function() {
+    $(".cart-box-form button .text").show();
+  });
 
-// cart-box-form apply coupon btn expanding on input focus
-$(".cart-box-form input").focus(function() {
-  $(".cart-box-form button .text").show();
 });
-
-// input fields validation messages
-$("input:not([type=checkbox]):required").attr("data-error", "This is a required field.");
-$("input:not([type=checkbox]):required").attr("data-minlength-error", "This field should be at least 4 characters long.");

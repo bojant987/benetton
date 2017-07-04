@@ -2629,13 +2629,15 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
 .news .news-header {
   padding-top: 40px;
   border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
   background-color: #f3f3f3;
 }
 .news .news-header h1 {
+  padding-top: 6px;
   font-size: 40px;
   letter-spacing: 4px;
   font-family: "london-bold";
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 .news .news-header nav {
   padding: 0 25px;
@@ -2686,7 +2688,7 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
   background-color: #009933;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
 }
 .news .news-content {
   width: 100%;
