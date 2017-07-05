@@ -4,15 +4,27 @@
     .news-header {
 
       h1 {
+        font-size: 50px;
         padding-top: 36px;
         padding-bottom: 23px;
       }
 
       nav {
         padding: 12px 25px 0;
+        height: $news-nav-height-682px;
 
         .carousel-news-container {
           display: none;
+        }
+
+        ul {
+          li {
+            margin-bottom: 0;
+
+            a {
+              font-size: 14px;
+            }
+          }
         }
       }
     }
@@ -27,19 +39,7 @@
       h1 {
         font-size: 50px;
         letter-spacing: 5px;
-      }
-
-      nav {
-
-        ul {
-          li {
-            margin-bottom: 0;
-
-            a {
-              font-size: 14px;
-            }
-          }
-        }
+        padding-top: 42px;
       }
     }
 

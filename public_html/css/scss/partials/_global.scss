@@ -50,11 +50,11 @@ button {
 }
 
 .header-is-fixed {
-  padding-top: $nav-main-height;
+  padding-top: $nav-main-height + $upper-header-height-320px;
 }
 
 .two-navs-fixed {
-  padding-top: $nav-main-height + 70px !important;
+  padding-top: $nav-main-height + $upper-header-height-320px + $news-h1-height + $news-nav-height-320px !important;
 }
 
 .remove-padding {

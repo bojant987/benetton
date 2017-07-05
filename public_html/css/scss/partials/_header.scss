@@ -6,6 +6,7 @@ header {
     .upper-header {
       border-bottom: 1px solid $color-border-primary;
       background-color: $bg-nav;
+      height: $upper-header-height-320px;
 
       p {
         padding: 7px 0;
