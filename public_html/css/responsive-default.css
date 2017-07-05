@@ -15,24 +15,10 @@
   }
 }
 
-@media (min-width: 500px) {
-  /* ---- global styles ---- */
-  .header-is-fixed {
-    padding-top: 95px;
-  }
-  .two-navs-fixed {
-    padding-top: 304px !important;
-  }
-  /* ---- header styles ---- */
-  header .navigation .upper-header {
-    height: 31px;
-  }
-}
-
 @media (min-width: 682px) {
   /* ---- global styles ---- */
   .two-navs-fixed {
-    padding-top: 279px !important;
+    padding-top: 108px !important;
   }
   /* ---- news styles ---- */
   .news .news-header h1 {
@@ -74,6 +60,7 @@
     background-color: #fff;
   }
   header .navigation .navigation-main {
+    background-color: #fff;
     height: 64px;
   }
   header .navigation .navigation-main .navigation-header .navigation-brand img {

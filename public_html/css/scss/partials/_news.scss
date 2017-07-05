@@ -7,7 +7,6 @@
     background-color: $bg-news-header;
 
     h1 {
-      height: $news-h1-height;
       padding-top: 46px;
       padding-bottom: 5px;
       font-size: 40px;
@@ -16,6 +15,7 @@
     }
 
     nav {
+      background-color: $bg-news-header;
       padding: 40px 25px 0;
       height: $news-nav-height-320px;
       transition: 0.4s;

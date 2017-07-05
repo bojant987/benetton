@@ -1,19 +1,9 @@
 @import "../components/buttons-responsive";
 @import "../components/pagination-responsive";
 
-@media (min-width: 500px) {
-  .header-is-fixed {
-    padding-top: $nav-main-height + $upper-header-height-500px;
-  }
-
-  .two-navs-fixed {
-    padding-top: $nav-main-height + $upper-header-height-500px + $news-h1-height + $news-nav-height-320px !important;
-  }
-}
-
 @media (min-width: 682px) {
   .two-navs-fixed {
-    padding-top: $nav-main-height + $upper-header-height-500px + $news-h1-height + $news-nav-height-682px !important;
+    padding-top: $nav-main-height + $news-nav-height-682px !important;
   }
 }
 

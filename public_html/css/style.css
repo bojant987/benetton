@@ -92,7 +92,7 @@ button {
 }
 
 .fixed-header {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -100,11 +100,11 @@ button {
 }
 
 .header-is-fixed {
-  padding-top: 112px;
+  padding-top: 64px;
 }
 
 .two-navs-fixed {
-  padding-top: 321px !important;
+  padding-top: 133px !important;
 }
 
 .remove-padding {
@@ -696,7 +696,6 @@ header .navigation {
 header .navigation .upper-header {
   border-bottom: 1px solid #e7e7e7;
   background-color: #fff;
-  height: 48px;
 }
 header .navigation .upper-header p {
   padding: 7px 0;
@@ -705,8 +704,10 @@ header .navigation .upper-header p {
   letter-spacing: 2px;
 }
 header .navigation .navigation-main {
+  background-color: #009933;
   height: 64px;
   position: relative;
+  z-index: 201;
 }
 header .navigation .navigation-main .navigation-header .navigation-brand {
   height: auto;
@@ -2637,7 +2638,6 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
   background-color: #f3f3f3;
 }
 .news .news-header h1 {
-  height: 140px;
   padding-top: 46px;
   padding-bottom: 5px;
   font-size: 40px;
@@ -2645,6 +2645,7 @@ footer .lower-footer ul li a:focus, footer .lower-footer ul li a:hover {
   font-family: "london-bold";
 }
 .news .news-header nav {
+  background-color: #f3f3f3;
   padding: 40px 25px 0;
   height: 69px;
   transition: 0.4s;

@@ -267,46 +267,36 @@ $(document).ready(function() {
 
   // nav fixed on scroll
   $(document).scroll(function() {
-    // var headerHeight = $(".navigation-main").outerHeight() + $(".upper-header").outerHeight();
-    // var newsHeaderHeight = $(".news-header h1").outerHeight() + $(".news-header nav").outerHeight() + 2;
 
     // main nav
     if ($(document).scrollTop() > $(".upper-header").height()) {
 
-      $("header").addClass("fixed-header");
-      // $("body").css("padding-top", headerHeight + "px");
-      $("body").addClass("header-is-fixed");
-      $("header .upper-header").hide();
+      $(".navigation-main").addClass("fixed-header");
+      $("main").addClass("header-is-fixed");
 
     } else if ($(document).scrollTop() < $(".upper-header").height()) {
 
-      $("header").removeClass("fixed-header");
-      // $("body").css("padding", 0);
-      $("body").removeClass("header-is-fixed");
-      $("header .upper-header").show();
+      $(".navigation-main").removeClass("fixed-header");
+      $("main").removeClass("header-is-fixed");
 
     }
 
     // news nav
     if ($(document).scrollTop() > 600) {
 
-      $(".news-header").css({
+      $(".news-header nav").css({
         "position": "fixed",
         "top": newsHeaderPosition(),
         "left": "0",
         "width": "100%",
         "z-index": "100"
       });
-      $(".news-header h1").hide();
-      // $("body").css("padding-top", headerHeight + newsHeaderHeight + "px");
-      $("body").addClass("two-navs-fixed");
+      $("main").addClass("two-navs-fixed");
 
     } else if ($(document).scrollTop() > $(".upper-header").height()) {
 
-      $(".news-header").css("position", "static");
-      $(".news-header h1").show();
-      // $("body").css("padding-top", headerHeight + "px");
-      $("body").removeClass("two-navs-fixed");
+      $(".news-header nav").css("position", "static");
+      $("main").removeClass("two-navs-fixed");
 
     }
 
@@ -329,7 +319,7 @@ $(document).ready(function() {
   });
 
   function newsHeaderPosition() {
-    return $("header").height();
+    return $(".navigation-main").height();
   }
 
   // empty cart rendering

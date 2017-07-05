@@ -42,7 +42,7 @@ button {
 }
 
 .fixed-header {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -50,11 +50,11 @@ button {
 }
 
 .header-is-fixed {
-  padding-top: $nav-main-height + $upper-header-height-320px;
+  padding-top: $nav-main-height;
 }
 
 .two-navs-fixed {
-  padding-top: $nav-main-height + $upper-header-height-320px + $news-h1-height + $news-nav-height-320px !important;
+  padding-top: $nav-main-height + $news-nav-height-320px !important;
 }
 
 .remove-padding {
