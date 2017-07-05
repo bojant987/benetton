@@ -264,24 +264,31 @@ $(document).ready(function() {
 
   });
 
+
   // nav fixed on scroll
   $(document).scroll(function() {
+    // var headerHeight = $(".navigation-main").outerHeight() + $(".upper-header").outerHeight();
+    // var newsHeaderHeight = $(".news-header h1").outerHeight() + $(".news-header nav").outerHeight() + 2;
+
     // main nav
     if ($(document).scrollTop() > $(".upper-header").height()) {
 
       $("header").addClass("fixed-header");
+      // $("body").css("padding-top", headerHeight + "px");
       $("body").addClass("header-is-fixed");
       $("header .upper-header").hide();
 
-    } else {
+    } else if ($(document).scrollTop() < $(".upper-header").height()) {
 
       $("header").removeClass("fixed-header");
+      // $("body").css("padding", 0);
       $("body").removeClass("header-is-fixed");
       $("header .upper-header").show();
 
     }
+
     // news nav
-    if ($(document).scrollTop() > $("header").height()) {
+    if ($(document).scrollTop() > 600) {
 
       $(".news-header").css({
         "position": "fixed",
@@ -291,16 +298,34 @@ $(document).ready(function() {
         "z-index": "100"
       });
       $(".news-header h1").hide();
+      // $("body").css("padding-top", headerHeight + newsHeaderHeight + "px");
       $("body").addClass("two-navs-fixed");
 
-    } else {
+    } else if ($(document).scrollTop() > $(".upper-header").height()) {
 
       $(".news-header").css("position", "static");
       $(".news-header h1").show();
+      // $("body").css("padding-top", headerHeight + "px");
       $("body").removeClass("two-navs-fixed");
 
     }
 
+    // back to top button
+    if ($(document).scrollTop() > 1200) {
+      $(".back-to-top").fadeIn();
+    } else {
+      $(".back-to-top").fadeOut();
+    }
+
+  });
+
+  // back to top button
+  $(".back-to-top").click(function(e) {
+    e.preventDefault();
+
+    $("html, body").animate({
+      scrollTop: 0
+    }, 800);
   });
 
   function newsHeaderPosition() {
@@ -623,25 +648,7 @@ $(document).ready(function() {
     }
   });
 
-  // back to top button
-  $(document).scroll(function() {
 
-    if ($(document).scrollTop() > 1200) {
-      $(".back-to-top").fadeIn();
-    } else {
-      $(".back-to-top").fadeOut();
-    }
-
-  });
-
-  $(".back-to-top").click(function(e) {
-    e.preventDefault();
-
-    $("html, body").animate({
-      scrollTop: 0
-    }, 800);
-
-  });
 
   // fake checkboxes
   $(".accordion-content-filters, .register-form, .contact-us-form").on("change", "input[type=checkbox]", function() {
