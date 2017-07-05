@@ -282,7 +282,7 @@ $(document).ready(function() {
     }
 
     // news nav
-    if ($(document).scrollTop() > 600) {
+    if ($(document).scrollTop() > ($(".navigation-main").outerHeight() + $(".news-header h1").outerHeight())) {
 
       $(".news-header nav").css({
         "position": "fixed",
@@ -292,11 +292,13 @@ $(document).ready(function() {
         "z-index": "100"
       });
       $("main").addClass("two-navs-fixed");
+      $(".news-header nav").css("border-color", "#dfdfdf");
 
     } else if ($(document).scrollTop() > $(".upper-header").height()) {
 
       $(".news-header nav").css("position", "static");
       $("main").removeClass("two-navs-fixed");
+      $(".news-header nav").css("border-color", "transparent");
 
     }
 

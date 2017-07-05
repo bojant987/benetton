@@ -17,7 +17,7 @@
 }
 @media (min-width: 682px) {
   .two-navs-fixed {
-    padding-top: 108px !important;
+    padding-top: 110px !important;
   }
 }
 @media (min-width: 1600px) {
@@ -960,7 +960,7 @@
   }
   .news .news-header nav {
     padding: 12px 25px 0;
-    height: 44px;
+    height: 46px;
   }
   .news .news-header nav .carousel-news-container {
     display: none;
