@@ -1,0 +1,35 @@
+.good-to-know {
+  padding: 30px 0;
+
+  h2 {
+    font-size: 32px;
+    // font-family: $font-primary-bold;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: $color-text-primary;
+    margin-bottom: 40px;
+  }
+
+  article {
+    height: 200px;
+
+    img {
+      max-height: 90px;
+      margin-bottom: 20px;
+    }
+
+    p:first-of-type {
+      // font-family: $font-primary-bold;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    p:nth-of-type(2) {
+      color: #999;
+    }
+
+    p {
+      line-height: 1.2em;
+    }
+  }
+}

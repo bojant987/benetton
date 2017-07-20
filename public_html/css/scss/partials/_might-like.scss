@@ -1,0 +1,36 @@
+.might-like {
+  padding: 50px 0;
+  background-color: #fff;
+
+  h2 {
+    color: $color-text-primary;
+  }
+
+  .carousel-container {
+    .recommendations-carousel {
+
+      .item {
+        .title {
+          color: $color-text-primary;
+        }
+
+        .prices {
+          color: $color-text-primary;
+        }
+      }
+      .slider-dots {
+        text-align: center;
+        margin-top: 0;
+
+        .slider-dot {
+          background-color: #000;
+
+          &.active {
+            background-color: transparent;
+            border-color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

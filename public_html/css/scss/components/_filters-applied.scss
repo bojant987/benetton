@@ -6,7 +6,8 @@
     .single-filter {
       display: inline-block;
       font-size: 14px;
-      font-family: $font-primary-light;
+      // font-family: $font-primary-light;
+      font-weight: 300;
       color: #fff;
       background-color: $color-secondary;
       margin: 0 5px 10px;

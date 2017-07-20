@@ -5,7 +5,7 @@ footer {
   }
 
   .upper-footer {
-    padding: 0 0 5px;
+    padding: 15px 0 5px;
     background-color: $bg-footer-upper;
 
     article {
@@ -36,26 +36,15 @@ footer {
       }
     }
 
-    .footer-category {
-      ul {
-        text-align: center;
-        background-color: #272727;
-        padding: 50px 0 30px;
-        margin-left: -15px;
-        margin-right: -15px;
+    .follow-us {
+      .headline {
+        margin-bottom: 15px;
 
-        li {
-          display: inline-block;
-          margin: 0 10px 20px;
-
-          a {
-            text-transform: uppercase;
-          }
+        &+p {
+          color: $color-footer-text;
+          margin-bottom: 15px;
         }
       }
-    }
-
-    .follow-us {
       li {
         margin: 0 25px 30px 0;
 
@@ -68,76 +57,96 @@ footer {
       }
     }
 
-    .newsletter-form {
-      .form-group {
-        width: 100%;
-        position: relative;
-        margin-bottom: 0;
+    // .newsletter-form {
+    //   .form-group {
+    //     width: 100%;
+    //     position: relative;
+    //     margin-bottom: 0;
+    //
+    //     .help-block {
+    //       li {
+    //         float: left;
+    //         margin-right: 7px;
+    //       }
+    //     }
+    //
+    //     input[type=email] {
+    //       border-color: $color-footer-text;
+    //       color: #fff;
+    //
+    //       &.email-invalid {
+    //         padding-bottom: 20px;
+    //
+    //         &+.button-newsletter {
+    //           bottom: 26px;
+    //         }
+    //       }
+    //
+    //       &::-webkit-input-placeholder {
+    //         /* Chrome/Opera/Safari */
+    //         color: #585858;
+    //       }
+    //
+    //       &::-moz-placeholder {
+    //         /* Firefox 19+ */
+    //         color: #585858;
+    //       }
+    //
+    //       &:-ms-input-placeholder {
+    //         /* IE 10+ */
+    //         color: #585858;
+    //       }
+    //
+    //       &:-moz-placeholder {
+    //         /* Firefox 18- */
+    //         color: #585858;
+    //       }
+    //     }
+    //
+    //     .button-newsletter {
+    //       position: absolute;
+    //       bottom: 18px;
+    //       right: 10px;
+    //
+    //       &+.help-block {
+    //         bottom: 0;
+    //         left: 0;
+    //         height: 1em;
+    //       }
+    //     }
+    //
+    //     &+p {
+    //       margin-top: 15px;
+    //       color: $color-footer-text;
+    //       font-size: 14px;
+    //     }
+    //
+    //     .help-block {
+    //       color: #fff;
+    //       font-size: 12px;
+    //       position: absolute;
+    //       font-family: $font-primary-italic;
+    //     }
+    //   }
+    // }
 
-        .help-block {
-          li {
-            float: left;
-            margin-right: 7px;
-          }
-        }
+    .newsletter {
 
-        input[type=email] {
-          border-color: $color-footer-text;
-          color: #fff;
+      .headline {
+        margin-bottom: 15px;
 
-          &.email-invalid {
-            padding-bottom: 20px;
-
-            &+.button-newsletter {
-              bottom: 26px;
-            }
-          }
-
-          &::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            color: #585858;
-          }
-
-          &::-moz-placeholder {
-            /* Firefox 19+ */
-            color: #585858;
-          }
-
-          &:-ms-input-placeholder {
-            /* IE 10+ */
-            color: #585858;
-          }
-
-          &:-moz-placeholder {
-            /* Firefox 18- */
-            color: #585858;
-          }
-        }
-
-        .button-newsletter {
-          position: absolute;
-          bottom: 18px;
-          right: 10px;
-
-          &+.help-block {
-            bottom: 0;
-            left: 0;
-            height: 1em;
-          }
-        }
-
-        &+p {
-          margin-top: 15px;
+        & + p {
           color: $color-footer-text;
-          font-size: 14px;
+          margin-bottom: 15px;
         }
+      }
 
-        .help-block {
-          color: #fff;
-          font-size: 12px;
-          position: absolute;
-          font-family: $font-primary-italic;
-        }
+      a {
+        padding: 10px 40px;
+        display: inline-block;
+        color: #fff;
+        background-color: $color-primary;
+        letter-spacing: 2px;
       }
     }
 

@@ -9,7 +9,8 @@
 
     article {
       .category-collapse {
-        font-family: $font-primary-bold;
+        // font-family: $font-primary-bold;
+        font-weight: 700;
         font-size: 16px;
         color: $color-secondary;
         padding: 10px 0;
@@ -38,7 +39,6 @@
           border-bottom: 1px solid #ebebeb;
 
           a {
-            // font-family: $font-primary-light;
             font-size: 14px;
 
             &:hover, &:focus {

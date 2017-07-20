@@ -1,0 +1,78 @@
+@media (min-width: 768px) {
+  .help {
+
+    nav {
+
+      .help-carousel {
+
+        li {
+
+          a {
+            display: block;
+            font-size: 14px;
+          }
+        }
+
+        .prev, .next {
+          display: none;
+        }
+      }
+  }
+
+  .help-faq {
+    .single-question {
+      padding: 25px 30px 25px 0;
+
+      .accordion-content {
+        padding: 20px 30px;
+      }
+    }
+  }
+
+  .tab {
+    padding: 30px 30px 75px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .clients-service {
+
+    .more-info {
+      padding: 50px;
+    }
+  }
+
+  .delivery-and-returns, .product-care {
+    .content {
+      padding: 45px 20px 20px;
+    }
+  }
+ }
+}
+
+@media (min-width: 992px) {
+  .help {
+
+    nav {
+
+      .help-carousel {
+
+        li {
+          padding: 20px 25px;
+        }
+      }
+  }
+
+    .help-faq {
+      .single-question {
+
+        .accordion-handler {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}

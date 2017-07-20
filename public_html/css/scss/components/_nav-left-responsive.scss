@@ -245,7 +245,8 @@
 
             > a {
               color: #fff;
-              font-family: $font-primary-light;
+              // font-family: $font-primary-light;
+              font-weight: 300;
               height: 30px;
               line-height: 10px;
 
@@ -318,7 +319,8 @@
                 margin-bottom: 5px;
                 height: auto;
                 line-height: 1.2em;
-                font-family: $font-primary-bold;
+                // font-family: $font-primary-bold;
+                font-weight: 700;
               }
 
               .accordion-content {

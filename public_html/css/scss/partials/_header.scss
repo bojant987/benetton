@@ -2,6 +2,7 @@ header {
 
   .navigation {
     background-color: $color-primary;
+    position: relative;
 
     .upper-header {
       border-bottom: 1px solid $color-border-primary;
@@ -18,7 +19,6 @@ header {
       background-color: $color-primary;
       height: $nav-main-height;
       position: relative;
-      z-index: 201;
 
       .navigation-header .navigation-brand {
         height: auto;

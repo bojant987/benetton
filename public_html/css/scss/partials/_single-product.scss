@@ -153,6 +153,7 @@
             letter-spacing: 2px;
             background-color: rgba($color-primary, 0.65);
             border: 3px solid $color-primary;
+            margin-bottom: 5px;
             transition: 0.4s;
 
             &.something-picked {
@@ -160,122 +161,124 @@
             }
           }
 
-          .link-big {
-            width: 50%;
+          .wishlist-btn {
+            display: block;
+            height: 68px;
+            line-height: 68px;
+            width: 100%;
+            color: #fff;
+            letter-spacing: 2px;
+            background-color: #999ea8;
+            transition: 0.4s;
+            position: relative;
 
-            a {
-              display: inline-block;
-
-              span {
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                font-size: 40px;
-                color: $color-primary;
-              }
+            &.added {
+              color: $color-primary;
             }
 
-            &:nth-of-type(2) {
-              border-right: none;
+            .icon-font {
+              position: absolute;
+              top: 50%;
+              left: 10%;
+              transform: translateY(-50%);
+              font-size: 32px;
+              color: #fff;
 
-              a {
-                span {
-                  width: 28px;
-                  font-size: 28px;
-                }
+              &.added {
+                color: $color-primary;
               }
             }
           }
 
           .share-links {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 10;
             width: 100%;
-            display: none;
 
-            .link-small {
-              width: 25%;
-              padding: 0;
-
-              a {
-                display: block;
-                padding: 10px 0;
-
-                span {
-                  width: 40px;
-                  height: 40px;
-                  line-height: 40px;
-                  font-size: 40px;
-                }
-              }
-
-              &:nth-of-type(1) {
-                span {
-                  color: #597ac7;
-                }
-
-                &:hover, &:focus {
-                  background-color: #597ac7;
-
-                  span {
-                    color: #fff;
-                  }
-                }
-              }
-
-              &:nth-of-type(2) {
-                span {
-                  color: #5bbcec;
-                }
-
-                &:hover, &:focus {
-                  background-color: #5bbcec;
-
-                  span {
-                    color: #fff;
-                  }
-                }
-              }
-
-              &:nth-of-type(3) {
-                span {
-                  color: #db4e3f;
-                }
-
-                &:hover, &:focus {
-                  background-color: #db4e3f;
-
-                  span {
-                    color: #fff;
-                  }
-                }
-              }
-
-              &:nth-of-type(4) {
-                border-right:  none;
-                span {
-                  color: #bd081c;
-                }
-
-                &:hover, &:focus {
-                  background-color: #bd081c;
-
-                  span {
-                    color: #fff;
-                  }
-                }
-              }
+            p {
+              color: #999ea8;
+              display: inline-block;
+              margin-right: 15px;
             }
-          }
-          .link {
-            float: left;
-            background-color: #f6f6f6;
-            width: 50%;
-            border-right: 1px solid #e6e4e4;
-            padding: 10px 0;
-            height: 60px;
+
+            .links {
+              display: inline-block;
+
+                .link {
+                  display: inline-block;
+                  padding: 10px 0;
+                  margin: 5px 10px 0;
+
+                  span:before {
+                    width: 32px;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 32px;
+                    padding: 3px;
+                    border-radius: 50%;
+                    border: 1px solid #999ea8;
+                    transition: 0.4s;
+                  }
+
+                  &.facebook {
+                    .icon-facebook:before {
+                      color: #3B5998;
+                      border-color: #3B5998;
+                    }
+
+                    &:hover, &:focus {
+                      .icon-facebook:before {
+                        color: #fff;
+                        border-color: transparent;
+                        background-color: #3B5998;
+                      }
+                    }
+                  }
+
+                  &.twitter {
+                    .icon-twitter:before {
+                      color: #1DA1F2;
+                      border-color: #1DA1F2;
+                    }
+
+                    &:hover, &:focus {
+                      .icon-twitter:before {
+                        color: #fff;
+                        border-color: transparent;
+                        background-color: #1DA1F2;
+                      }
+                    }
+                  }
+
+                  &.google {
+                    .icon-google-plus:before {
+                      color: #DB4437;
+                      border-color: #DB4437;
+                    }
+
+                    &:hover, &:focus {
+                      .icon-google-plus:before {
+                        color: #fff;
+                        border-color: transparent;
+                        background-color: #DB4437;
+                      }
+                    }
+                  }
+
+                  &.pinterest {
+                    .icon-pinterest:before {
+                      color: #BD081C;
+                      border-color: #BD081C;
+                    }
+
+                    &:hover, &:focus {
+                      .icon-pinterest:before {
+                        color: #fff;
+                        border-color: transparent;
+                        background-color: #BD081C;
+                      }
+                    }
+                  }
+                }
+            }
           }
         }
 

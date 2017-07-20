@@ -1,0 +1,57 @@
+.instagram {
+  background-color: $bg-color-instagram;
+  padding: 30px 0;
+
+  h2 {
+    font-size: 32px;
+
+    &:after {
+      content: "";
+      width: 80px;
+      height: 1px;
+      background-color: #999;
+      display: block;
+      margin: 10px auto 10px;
+    }
+
+    +p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .discover {
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+  .carousel-container {
+    .instagram-carousel {
+
+      .carousel-nav-container {
+
+        .next {
+          right: -80px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .prev {
+          left: -80px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .icon-font {
+          background-color: transparent;
+
+          &:before {
+            font-size: 44px;
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+}

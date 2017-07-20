@@ -1,0 +1,38 @@
+@media (min-width: 450px) and (max-width: 767px) {
+  .product-showcase {
+    > .container {
+      > .row {
+        > .col-md-3 {
+          width: 50%;
+          padding-left: 15px;
+          padding-right: 15px;
+          float: left;
+
+          article {
+            .text-content {
+              h3 {
+                font-size: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .product-showcase {
+
+    article {
+
+      .text-content {
+
+        h3 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+}

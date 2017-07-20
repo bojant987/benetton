@@ -82,8 +82,6 @@
         right: 0;
         cursor: pointer;
         z-index: 10;
-        // font-family: "benetton-light";
-        // float: left;
 
         &::before {
           content: "+";
@@ -123,7 +121,8 @@
         >li {
 
           >a {
-            font-family: $font-primary-light;
+            // font-family: $font-primary-light;
+            font-weight: 300;
 
             &:hover, &:focus {
               text-decoration: underline;

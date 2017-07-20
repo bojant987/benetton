@@ -32,7 +32,8 @@
         color: #fff;
         background-color: $color-primary;
         font-size: 20px;
-        font-family: $font-primary-bold;
+        // font-family: $font-primary-bold;
+        font-weight: 700;
       }
 
       &:hover {
