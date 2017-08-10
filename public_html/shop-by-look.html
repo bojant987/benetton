@@ -7,9 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Benetton</title>
 
-    <!-- custom css -->
-    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
-    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
     <!-- core css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/icon-fonts.css" rel="stylesheet" type="text/css"/>
@@ -1072,233 +1069,101 @@
       </div>
     </header>
     <main>
-      <section class="single-product">
-        <div class="row">
-          <div class="col-md-7">
-            <article class="product-showcase">
-              <ul class="bxslider single-product-slider">
-                <li>
-                  <img src="img/single-product-01.jpg"/>
-                </li>
-                <li>
-                  <img src="img/single-product-02.jpg"/>
-                </li>
-                <li>
-                  <img src="img/single-product-03.jpg"/>
-                </li>
-                <li>
-                  <img src="img/single-product-04.jpg"/>
-                </li>
-                <li>
-                  <img src="img/single-product-05.jpg"/>
-                </li>
-              </ul>
-              <div class="slider-buttons">
-                <a href="#" id="single-product-slider-prev"></a>
-                <a href="#" id="single-product-slider-next"></a>
-              </div>
-              <div id="bx-pager" class="hidden-xs">
-                <a data-slide-index="0" href="#"><img src="img/product-thumbnail-01.jpg"/></a>
-                <a data-slide-index="1" href="#"><img src="img/product-thumbnail-02.jpg"/></a>
-                <a data-slide-index="2" href="#"><img src="img/product-thumbnail-03.jpg"/></a>
-                <a data-slide-index="3" href="#"><img src="img/product-thumbnail-04.jpg"/></a>
-                <a data-slide-index="4" href="#"><img src="img/product-thumbnail-05.jpg"/></a>
-              </div>
-              <div id="product-slider-pager" class="slider-pager hidden-sm hidden-md hidden-lg">
-               <a href="#" class="slider-dot" data-slide-index="0"></a>
-               <a href="#" class="slider-dot" data-slide-index="1"></a>
-               <a href="#" class="slider-dot" data-slide-index="2"></a>
-               <a href="#" class="slider-dot" data-slide-index="3"></a>
-               <a href="#" class="slider-dot" data-slide-index="4"></a>
-             </div>
-            </article>   <!-- product-showcase -->
-          </div>   <!-- col -->
-          <div class="col-md-4">
-            <article class="single-product-info">
-              <ol class="breadcrumb">
-                <li><a href="#" class="text-uppercase">home</a></li>
-                <li><a href="#" class="text-uppercase">women</a></li>
-                <li><a href="#" class="text-uppercase">tops</a></li>
-                <li><a href="#" class="text-uppercase">t-shirts</a></li>
-                <li class="active text-uppercase">t-shirt with pocket</li>
-              </ol>
-              <h2 class="product-name">T-shirt with pocket</h2>
-              <p>Product code: <span class="product-id">3P7XE1E35</span></p>
-              <div class="info-wrapper">
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-                <div class="color-picker">
-                  <p>Color: <span class="picked-color">yellow</span></p>
-                  <div class="all-colors">
-                    <a href="#"><img src="img/color-01.jpg" alt=""></a>
-                    <a href="#"><img src="img/color-02.jpg" alt=""></a>
-                  </div>
-                </div>
-                <form class="single-product-form" data-toggle="validator" data-role="form" data-focus="false">
-                  <a href="#">Size guide</a>
-                  <div class="size-picker-desktop">
-                    <div class="form-group has-feedback" data-location="single-product-form">
-                      <input type="radio" name="size" value="xs" data-validate="true" required>
-                      <p class="fake-radio text-uppercase text-center">xs</p>
-                      <input type="radio" name="size" value="s" data-validate="true" required>
-                      <p class="fake-radio text-uppercase text-center">s</p>
-                      <input type="radio" name="size" value="m" data-validate="true" required>
-                      <p class="fake-radio text-uppercase text-center">m</p>
-                      <input type="radio" name="size" value="l" data-validate="true" required>
-                      <p class="fake-radio text-uppercase text-center">l</p>
-                      <input type="radio" name="size" value="xl" data-validate="true" required>
-                      <p class="fake-radio text-uppercase text-center">xl</p>
-                      <div class="help-block with-errors"></div>
+      <section class="shop-by-look">
+        <div class="container">
+          <h1>Shop by look</h1>
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li><a href="#" class="text-uppercase">home</a></li>
+              <li class="active text-uppercase">shop by look</li>
+            </ol>
+          </div>   <!-- breadcrumb-wrapper -->
+          <div class="looks">
+            <div class="row">
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
                     </div>
-                  </div>
-                  <div class="buttons-group clearfix">
-                    <button type="submit" class="submit-btn text-uppercase text-center" data-focus="false">choose your size</button>
-                    <a href="#" class="wishlist-btn text-uppercase text-center" data-location=".single-product">
-                      <span class="icon-font icon-wishlist"></span><span class="text">add to wishlist</span>
-                    </a>
-                    <div class="share-links text-right">
-                        <p>Share on:</p>
-                      <div class="links text-center">
-                        <a href="#" class="link facebook"><span class="icon-font icon-facebook"></span></a>
-                        <a href="#" class="link twitter"><span class="icon-font icon-twitter"></span></a>
-                        <a href="#" class="link google"><span class="icon-font icon-google-plus"></span></a>
-                        <a href="#" class="link pinterest"><span class="icon-font icon-pinterest"></span></a>
-                      </div>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
                     </div>
-                  </div>
-                </form>
-                <p>
-                  100% cotton t-shirt with round neck and short sleeves. Featuring
-                  patch pocket in patterned fabric at left breast and contrasting
-                  inner neck.
-                </p>
-                <div class="more-info">
-                  <div class="accordion-info">
-                    <p class="accordion-handler show-mode">Composition<span class="icon-font icon-caret-down"></span></p>
-                    <div class="accordion-content" data-location=".more-info">
-                      <p>100%<span class="text-uppercase"> cotton</span></p>
-                      <ul class="symbols list-inline">
-                        <li><span class="icon-font icon-1C"></span></li>
-                        <li><span class="icon-font icon-2X"></span></li>
-                        <li><span class="icon-font icon-3X"></span></li>
-                        <li><span class="icon-font icon-4E"></span></li>
-                        <li><span class="icon-font icon-5A"></span></li>
-                        <li><span class="icon-font icon-6X"></span></li>
-                      </ul>
-                      <a href="#">Product care guide</a>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
                     </div>
-                  </div>   <!-- accordion-info -->
-                  <div class="accordion-info">
-                    <p class="accordion-handler">Shipping<span class="icon-font icon-caret-down"></span></p>
-                    <div class="accordion-content" data-location=".more-info">
-                      <p><a href="#">Click here</a> for details on shipping times</p>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
                     </div>
-                  </div>   <!-- accordion-info -->
-                  <div class="accordion-info">
-                    <p class="accordion-handler">Returns<span class="icon-font icon-caret-down"></span></p>
-                    <div class="accordion-content" data-location=".more-info">
-                      <p>
-                        If you are not satisfied with your purchase, you have 14
-                        days from the date you receive your order in which to return
-                        the purchased products.
-                      </p>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
                     </div>
-                  </div>   <!-- accordion-info -->
-                </div>   <!-- more-info -->
-              </div>   <!-- info-wrapper -->
-            </article>   <!-- single-product-info -->
-          </div>   <!-- col -->
-        </div>   <!-- row -->
-      </section>   <!-- single-product -->
-      <section class="recommendations might-like">
-        <h2 class="text-uppercase text-center">You might also like</h2>
-        <div class="wrapper">
-          <div class="carousel-container">
-            <div class="owl-carousel recommendations-carousel">
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-              <div class="item text-center">
-                <a href="#" class="photo">
-                  <img src="img/recommendations-01.png" alt="">
-                </a>
-                <a href="#" class="title">
-                  <span>T-shirt with bel sleeves</span>
-                </a>
-                <p class="prices"><span class="price-original">£15.95</span> <span class="price-discount">-25%</span> <span class="price-final">£11.90</span></p>
-              </div>   <!-- item -->
-            </div>   <!-- owl carousel -->
-          </div>   <!-- carousel container -->
-        </div>
-      </section>   <!-- might-like -->
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
+                    </div>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
+                    </div>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+              <div class="col-sm-4 col-lg-3">
+                <article class="looks-product">
+                  <a href="#">
+                    <img src="img/product-02.png" alt="">
+                    <div class="text">
+                      <p class="text-uppercase text-center">a/w outfit 2</p>
+                    </div>
+                  </a>
+                </article>
+              </div>   <!-- col -->
+            </div>   <!-- row -->
+          </div>   <!-- looks -->
+        </div>   <!-- container -->
+      </section>   <!-- shop-by-look -->
     </main>
     <footer>
       <div class="upper-footer">
@@ -1464,10 +1329,6 @@
 
     <!-- core js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- custom js -->
-    <script src="js/jquery.bxslider.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- core js -->
     <script src="js/validator.min.js"></script>
     <script src="js/main.js"></script>
   </body>

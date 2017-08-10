@@ -1,0 +1,90 @@
+.share-links {
+  width: 100%;
+
+  p {
+    color: #999ea8;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .links {
+    display: inline-block;
+
+      .link {
+        display: inline-block;
+        padding: 10px 0;
+        margin: 5px 10px 0;
+
+        span:before {
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          font-size: 32px;
+          padding: 3px;
+          border-radius: 50%;
+          border: 1px solid #999ea8;
+          transition: 0.4s;
+        }
+
+        &.facebook {
+          .icon-facebook:before {
+            color: #3B5998;
+            border-color: #3B5998;
+          }
+
+          &:hover, &:focus {
+            .icon-facebook:before {
+              color: #fff;
+              border-color: transparent;
+              background-color: #3B5998;
+            }
+          }
+        }
+
+        &.twitter {
+          .icon-twitter:before {
+            color: #1DA1F2;
+            border-color: #1DA1F2;
+          }
+
+          &:hover, &:focus {
+            .icon-twitter:before {
+              color: #fff;
+              border-color: transparent;
+              background-color: #1DA1F2;
+            }
+          }
+        }
+
+        &.google {
+          .icon-google-plus:before {
+            color: #DB4437;
+            border-color: #DB4437;
+          }
+
+          &:hover, &:focus {
+            .icon-google-plus:before {
+              color: #fff;
+              border-color: transparent;
+              background-color: #DB4437;
+            }
+          }
+        }
+
+        &.pinterest {
+          .icon-pinterest:before {
+            color: #BD081C;
+            border-color: #BD081C;
+          }
+
+          &:hover, &:focus {
+            .icon-pinterest:before {
+              color: #fff;
+              border-color: transparent;
+              background-color: #BD081C;
+            }
+          }
+        }
+      }
+  }
+}

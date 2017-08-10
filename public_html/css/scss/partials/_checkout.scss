@@ -1,0 +1,184 @@
+.checkout {
+  padding: 35px 0 100px;
+  background-color: $bg-checkout;
+
+  .container {
+    position: relative;
+  }
+
+  h2 {
+    font-weight: 500;
+    margin-bottom: 75px;
+
+    &+p {
+      margin-bottom: 10px;
+
+      a {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .checkout-form {
+
+    .help-block {
+      font-size: 11px;
+    }
+
+    .form-card {
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    h3 {
+      font-weight: 300;
+      margin-bottom: 30px;
+
+      span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $color-primary;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+    }
+
+    .input-info {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+
+    input[type=checkbox], input[type=radio], .create-account, .shipping-address, .content {
+      display: none;
+    }
+
+    .checkbox-label {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      height: 20px;
+      line-height: 20px;
+
+      .fake-checkbox {
+        margin-right: 10px;
+        border-color: $color-primary;
+
+        &.checked {
+
+          &:before {
+            background: $color-primary;
+          }
+        }
+      }
+
+      a {
+        color: #898989;
+        font-size: 13px;
+        text-decoration: underline;
+        letter-spacing: 1px;
+        display: block;
+        vertical-align: top;
+        line-height: 1.2em;
+        margin-left: 28px;
+      }
+    }
+
+    .checkboxes {
+      margin-top: 40px;
+      padding-left: 15px;
+
+      .checkbox-label:first-of-type {
+        margin-bottom: 25px;
+      }
+    }
+
+    .radio-wrapper {
+      padding-left: 15px;
+      margin-bottom: 15px;
+    }
+
+    .radio-label {
+      font-weight: 400;
+      font-size: 16px;
+      vertical-align: top;
+      line-height: 20px;
+      padding-left: 30px;
+      display: block;
+    }
+
+    .shipping-address {
+      margin-top: 30px;
+    }
+
+    .right {
+      h3 {
+        font-size: 20px;
+        color: $color-primary;
+        padding-top: 20px;
+        margin-bottom: 40px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 12px;
+        margin-bottom: 3px;
+
+        .category {
+          color: #a3a3a3;
+        }
+      }
+
+      .name {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .pricing {
+        font-size: 14px;
+        margin-bottom: 6px;
+
+        &.subtotal {
+          margin-top: 50px;
+        }
+      }
+
+      .total {
+        margin: 40px 0 22px;
+        font-size: 18px;
+        font-weight: 500;
+
+        .category {
+          color: $color-text-primary;
+        }
+
+        .value {
+          color: $color-primary;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+      }
+
+      .checkbox-label {
+        height: auto;
+      }
+
+      .login-button {
+        width: 230px;
+        margin: 0 auto;
+        background-color: $color-primary;
+        font-size: 13px;
+      }
+    }
+  }
+}

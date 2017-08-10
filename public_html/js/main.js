@@ -656,7 +656,7 @@ $(document).ready(function() {
 
 
   // swap img on product hover
-  $(".product .upper, .recommendations .item").mouseenter(function() {
+  $(".product .upper, .recommendations .item, .looks .looks-product").mouseenter(function() {
     var orgSrc = $(this).find("img").attr("src");
     var hoverSrc = orgSrc.replace(".", "-hov.");
 
@@ -751,16 +751,39 @@ $(document).ready(function() {
 
 
   // fake checkboxes
-  $(".accordion-content-filters, .register-form, .contact-us-form").on("change", "input[type=checkbox]", function() {
+  $(".accordion-content-filters, .register-form, .contact-us-form, .checkout-form").on("change", "input[type=checkbox]", function() {
+    var location = $(this).parent().attr("data-location");
 
     if ($(this).is(":checked")) {
       $(this).next().addClass("checked");
+      if (location === "checkout-form") {
+        if ($(this).attr("data-reverse") === "true") {
+          $(this).parent().next().hide();
+        } else {
+          $(this).parent().next().show();
+        }
+      }
     } else {
       $(this).next().removeClass("checked");
+
+      if (location === "checkout-form") {
+        if ($(this).attr("data-reverse") === "true") {
+          $(this).parent().next().show();
+        } else {
+          $(this).parent().next().hide();
+        }
+      }
     }
     // for filter checkboxes
     renderButton();
 
+  });
+
+  // empty checkboxes on page reload
+  $("input[type=checkbox]").each(function() {
+    if ($(this).attr("data-reverse") !== "true") {
+      $(this).prop("checked", false);
+    }
   });
 
   // render apply or close button for filters
@@ -1020,37 +1043,88 @@ $(document).ready(function() {
   });
 
   // fake radio
-  $(".fake-radio").click(function() {
+  $(".fake-radio, .fake-radio-classic").click(function() {
     var target = $(this);
+    var location = $(this).parent().attr("data-location");
 
-    $(this).prev().prop("checked", true);
-    $(".single-product-form .submit-btn").addClass("something-picked");
-    $(".single-product-form .submit-btn").html("add to cart");
+    $(this).prev().prop("checked", true).change();
 
-    $(this).siblings(".fake-radio").each(function() {
-      if (!$(this).is(target)) {
-        $(this).removeClass("picked");
-      }
-    });
-    $(".single-product-form").validator("validate");
+    if (location == "single-product-form") {
+      $(".single-product-form .submit-btn").addClass("something-picked");
+      $(".single-product-form .submit-btn").html("add to cart");
+
+      $(this).siblings(".fake-radio").each(function() {
+        if (!$(this).is(target)) {
+          $(this).removeClass("picked");
+        }
+      });
+
+      $(this).siblings(".fake-radio").each(function() {
+        if (!$(this).is(target)) {
+          $(this).removeClass("picked");
+        }
+      });
+
+      $(".single-product-form").validator("validate");
+    } else {
+      $(this).parent().siblings().find(".fake-radio-classic").each(function() {
+        if (!$(this).is(target)) {
+          $(this).removeClass("picked");
+        }
+      });
+
+    }
+
     $(this).addClass("picked");
   });
 
-  $(".single-product-form input[type=radio]").each(function() {
+
+  $(".checkout-form").on("change", "input[type=radio]", function() {
+    var target = $(this);
+
+    if ($(this).is(":checked")) {
+      $(this).next().addClass("picked");
+
+      $(this).parent().siblings().find(".fake-radio-classic").each(function() {
+        if (!$(this).is(target)) {
+          $(this).removeClass("picked");
+        }
+      });
+
+      if ($(this).attr("name") === "payment-method") {
+        $(".checkout-form .content").hide();
+        $(this).parent().next().show();
+      }
+
+    } else {
+      $(this).next().removeClass("picked");
+    }
+
+  });
+
+  $(".single-product-form input[type=radio], .checkout-form input[type=radio]").each(function() {
     $(this).prop("checked", false);
   });
 
 
   // single product add to wishlist
-  $(".single-product .wishlist-btn").click(function(e) {
+  $(".single-product .wishlist-btn, .single-look .wishlist-btn").click(function(e) {
     e.preventDefault();
-    var item = $(".single-product h2").text();
+    var location = $(this).attr("data-location");
+    var item;
+
+    if (location === ".single-product") {
+      item = $(".single-product h2").text();
+    } else {
+      item = $(this).parent().find("h3").text();
+    }
+
 
     $(this).toggleClass("added");
     $(this).find(".icon-font").toggleClass("added");
-    checkIfInWishlist();
+    checkIfInWishlist(location);
 
-    if ($(".single-product .wishlist-btn").hasClass("added")) {
+    if ($(this).hasClass("added")) {
       $(".added-removed").html(item + " has been added to your wishlist");
       showAddedRemoved();
     } else {
@@ -1061,15 +1135,25 @@ $(document).ready(function() {
 
   });
 
-  function checkIfInWishlist() {
-
-    if ($(".single-product .wishlist-btn").hasClass("added")) {
-      $(".single-product .wishlist-btn .text").text("Remove from wishlist");
+  function checkIfInWishlist(location) {
+    if (location === ".single-look") {
+      $(".single-look .look-item").each(function() {
+        if ($(this).find(".wishlist-btn").hasClass("added")) {
+          $(this).find(".wishlist-btn .text").text("Remove");
+        } else {
+          $(this).find(".wishlist-btn .text").text("Add");
+        }
+      });
     } else {
-      $(".single-product .wishlist-btn .text").text("Add to wishlist");
+      if ($(".single-product .wishlist-btn").hasClass("added")) {
+        $(".single-product .wishlist-btn .text").text("Remove");
+      } else {
+        $(".single-product .wishlist-btn .text").text("Add to wishlist");
+      }
     }
+
   }
-  checkIfInWishlist();
+  checkIfInWishlist("");
 
   // aside nav height
   function asideNavHeight() {
@@ -1123,4 +1207,9 @@ $(document).ready(function() {
     $(".cart-box-form button .text").show();
   });
 
+});
+
+// exclude hidden fields from validation
+$(".checkout-form").validator({
+  excluded: [":hidden", ":not(:visible)"]
 });

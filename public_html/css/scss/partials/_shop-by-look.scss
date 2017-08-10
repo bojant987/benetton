@@ -1,0 +1,49 @@
+.shop-by-look {
+  padding: 40px 0;
+
+  h1 {
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .breadcrumb-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .looks {
+    .looks-product {
+      position: relative;
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
+
+      a {
+        display: block;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        p {
+          height: 40px;
+          line-height: 40px;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+
+      &:hover, &:focus {
+        .text {
+          background-color: rgba($color-primary, 0.5);
+        }
+      }
+    }
+  }
+}

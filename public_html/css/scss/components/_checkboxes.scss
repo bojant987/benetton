@@ -82,3 +82,31 @@
     border-color: transparent;
   }
 }
+
+.fake-radio-classic {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid $color-primary;
+  margin-right: 4px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background: transparent;
+  }
+
+  &.picked:before {
+    background: $color-primary;
+  }
+}
