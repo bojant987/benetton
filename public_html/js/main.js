@@ -758,9 +758,27 @@ $(document).ready(function() {
       $(this).next().addClass("checked");
       if (location === "checkout-form") {
         if ($(this).attr("data-reverse") === "true") {
-          $(this).parent().next().hide();
+          $(this).parent().parent().next().hide();
+
+          // for hidden fields
+          $(this).parent().parent().next().find("select").attr("data-validate", "false");
+          $(this).parent().parent().next().find("select").addClass("hidden");
+          $(this).parent().parent().next().find("input").each(function() {
+            $(this).attr("data-validate", "false");
+            $(this).addClass("hidden");
+          });
+          $(".checkout-form").validator("update");
         } else {
-          $(this).parent().next().show();
+          $(this).parent().parent().next().show();
+
+            // for hidden fields
+            $(this).parent().parent().next().find("select").attr("data-validate", "true");
+            $(this).parent().parent().next().find("select").removeClass("hidden");
+            $(this).parent().parent().next().find("input").each(function() {
+                $(this).attr("data-validate", "true");
+                $(this).removeClass("hidden");
+            });
+            $(".checkout-form").validator("update");
         }
       }
     } else {
@@ -768,9 +786,27 @@ $(document).ready(function() {
 
       if (location === "checkout-form") {
         if ($(this).attr("data-reverse") === "true") {
-          $(this).parent().next().show();
+          $(this).parent().parent().next().show();
+
+            // for hidden fields
+            $(this).parent().parent().next().find("select").attr("data-validate", "true");
+            $(this).parent().parent().next().find("select").removeClass("hidden");
+            $(this).parent().parent().next().find("input").each(function() {
+                $(this).attr("data-validate", "true");
+                $(this).removeClass("hidden");
+            });
+            $(".checkout-form").validator("update");
         } else {
-          $(this).parent().next().hide();
+          $(this).parent().parent().next().hide();
+
+            // for hidden fields
+            $(this).parent().parent().next().find("select").attr("data-validate", "false");
+            $(this).parent().parent().next().find("select").addClass("hidden");
+            $(this).parent().parent().next().find("input").each(function() {
+                $(this).attr("data-validate", "false");
+                $(this).addClass("hidden");
+            });
+            $(".checkout-form").validator("update");
         }
       }
     }
@@ -1048,6 +1084,9 @@ $(document).ready(function() {
     var location = $(this).parent().attr("data-location");
 
     $(this).prev().prop("checked", true).change();
+    $(this).parent().parent().siblings().find("input[type=radio]").each(function() {
+      $(this).prop("checked", false).change();
+    });
 
     if (location == "single-product-form") {
       $(".single-product-form .submit-btn").addClass("something-picked");
@@ -1067,7 +1106,7 @@ $(document).ready(function() {
 
       $(".single-product-form").validator("validate");
     } else {
-      $(this).parent().siblings().find(".fake-radio-classic").each(function() {
+      $(this).parent().parent().siblings().find(".fake-radio-classic").each(function() {
         if (!$(this).is(target)) {
           $(this).removeClass("picked");
         }
@@ -1078,6 +1117,11 @@ $(document).ready(function() {
     $(this).addClass("picked");
   });
 
+  // exclude hidden fields from validation
+  $(".checkout-form .hidden").each(function() {
+    $(this).attr("data-validate", "false");
+  });
+  $(".checkout-form").validator("update");
 
   $(".checkout-form").on("change", "input[type=radio]", function() {
     var target = $(this);
@@ -1085,7 +1129,7 @@ $(document).ready(function() {
     if ($(this).is(":checked")) {
       $(this).next().addClass("picked");
 
-      $(this).parent().siblings().find(".fake-radio-classic").each(function() {
+      $(this).parent().parent().siblings().find(".fake-radio-classic").each(function() {
         if (!$(this).is(target)) {
           $(this).removeClass("picked");
         }
@@ -1093,12 +1137,24 @@ $(document).ready(function() {
 
       if ($(this).attr("name") === "payment-method") {
         $(".checkout-form .content").hide();
-        $(this).parent().next().show();
+        $(this).parent().parent().next().show();
       }
+      // for hidden fields
+        $(this).parent().parent().siblings().find("select").attr("data-validate", "false");
+        $(this).parent().parent().siblings().find("select").addClass("hidden");
+      $(this).parent().parent().next().find("select").attr("data-validate", "true");
+      $(this).parent().parent().next().find("select").removeClass("hidden");
+      $(".checkout-form").validator("update");
 
     } else {
       $(this).next().removeClass("picked");
+
+        // for hidden fields
+        // $(this).parent().next().find("select").attr("data-validate", "false");
+        // $(this).parent().next().find("select").addClass("hidden");
+        // $(".checkout-form").validator("update");
     }
+
 
   });
 
@@ -1207,9 +1263,4 @@ $(document).ready(function() {
     $(".cart-box-form button .text").show();
   });
 
-});
-
-// exclude hidden fields from validation
-$(".checkout-form").validator({
-  excluded: [":hidden", ":not(:visible)"]
 });

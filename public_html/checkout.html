@@ -1086,7 +1086,7 @@
                       </div>
                     </div>   <!-- col -->
                     <div class="col-sm-6">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="text" name="surname" value="" placeholder="Surname" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1094,13 +1094,13 @@
                   </div>   <!-- row -->
                   <div class="row">
                     <div class="col-sm-6">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="email" name="email" value="" placeholder="Email Address" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>   <!-- col -->
                     <div class="col-sm-6">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="tel" name="phone" value="" placeholder="Telephone" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                         <p class="input-info text-uppercase text-right">We shall use your number only for shipping information</p>
@@ -1123,7 +1123,7 @@
                       </div>
                     </div>   <!-- col -->
                     <div class="col-sm-6">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="text" name="city" value="" placeholder="City" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1131,7 +1131,7 @@
                   </div>   <!-- row -->
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="text" name="address" value="" placeholder="Address and street number" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1139,7 +1139,7 @@
                   </div>   <!-- row -->
                   <div class="row">
                     <div class="col-sm-6">
-                      <div class="form-group has-feeback">
+                      <div class="form-group has-feedback">
                         <input type="text" name="post-code" value="" placeholder="Post code" data-minlength="4" maxlength="35" required>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -1148,51 +1148,55 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group checkboxes">
-                        <label class="checkbox-label clearfix" data-location="checkout-form">
-                          <input type="checkbox" name="create-account" value="account">
-                          <span class="fake-checkbox"></span>
-                          Create an account for later use
-                        </label>
+                        <div>
+                          <label class="checkbox-label clearfix" data-location="checkout-form">
+                            <input type="checkbox" name="create-account" value="account">
+                            <span class="fake-checkbox"></span>
+                            <span class="text">Create an account for later use</span>
+                          </label>
+                        </div>
                         <div class="create-account">
                           <div class="row">
-                            <div class="col-sm-offset-6 col-sm-3">
-                              <div class="form-group has-feeback">
-                                <input type="password" name="password" value="" placeholder="Password" data-minlength="4" maxlength="35" required>
+                            <div class="col-sm-offset-4 col-sm-4">
+                              <div class="form-group has-feedback">
+                                <input type="password" name="password" value="" placeholder="Password" data-minlength="4" maxlength="35" required id="password" data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
-                            <div class="col-sm-3">
-                              <div class="form-group has-feeback">
-                                <input type="password" name="confirm-password" value="" placeholder="Confirm password" data-minlength="4" maxlength="35" required>
+                            <div class="col-sm-4">
+                              <div class="form-group has-feedback">
+                                <input type="password" name="confirm-password" value="" placeholder="Confirm password" data-minlength="4" maxlength="35" data-match="#password" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
                           </div>   <!-- row -->
                         </div>   <!-- create-account -->
-                        <label class="checkbox-label clearfix" data-location="checkout-form">
-                          <input type="checkbox" name="shipping" value="shipping" checked data-reverse="true">
-                          <span class="fake-checkbox checked"></span>
-                          Ship to the same address
-                        </label>
+                        <div>
+                          <label class="checkbox-label clearfix" data-location="checkout-form">
+                            <input type="checkbox" name="shipping" value="shipping" checked data-reverse="true">
+                            <span class="fake-checkbox checked"></span>
+                            <span class="text">Ship to the same address</span>
+                          </label>
+                        </div>
                         <div class="shipping-address">
                           <div class="row">
                             <div class="col-sm-6">
                               <div class="form-group has-feedback">
-                                <input type="text" name="shipping-name" value="" placeholder="First name" data-minlength="4" maxlength="35" required>
+                                <input type="text" name="shipping-name" value="" placeholder="First name" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
                             <div class="col-sm-6">
-                              <div class="form-group has-feeback">
-                                <input type="text" name="shipping-surname" value="" placeholder="Surname" data-minlength="4" maxlength="35" required>
+                              <div class="form-group has-feedback">
+                                <input type="text" name="shipping-surname" value="" placeholder="Surname" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
                           </div>   <!-- row -->
                           <div class="row">
                             <div class="col-sm-6">
-                              <div class="form-group has-feeback">
-                                <input type="tel" name="shipping-phone" value="" placeholder="Telephone" data-minlength="4" maxlength="35" required>
+                              <div class="form-group has-feedback">
+                                <input type="tel" name="shipping-phone" value="" placeholder="Telephone" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                                 <p class="input-info text-uppercase text-right">We shall use your number only for shipping information</p>
                               </div>
@@ -1202,7 +1206,7 @@
                             <div class="col-sm-6">
                               <div class="form-group has-feedback">
                                 <div class="select-box">
-                                  <select class="select-country" name="shipping-country" required>
+                                  <select class="select-country" name="shipping-country" required data-validate="false" class="hidden">
                                     <option value="">Select country</option>
                                     <option value="uk">United Kingdom</option>
                                     <option value="rs">Serbia</option>
@@ -1214,24 +1218,24 @@
                               </div>
                             </div>   <!-- col -->
                             <div class="col-sm-6">
-                              <div class="form-group has-feeback">
-                                <input type="text" name="shipping-city" value="" placeholder="City" data-minlength="4" maxlength="35" required>
+                              <div class="form-group has-feedback">
+                                <input type="text" name="shipping-city" value="" placeholder="City" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
                           </div>   <!-- row -->
                           <div class="row">
                             <div class="col-sm-12">
-                              <div class="form-group has-feeback">
-                                <input type="text" name="shipping-address" value="" placeholder="Address and street number" data-minlength="4" maxlength="35" required>
+                              <div class="form-group has-feedback">
+                                <input type="text" name="shipping-address" value="" placeholder="Address and street number" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
                           </div>   <!-- row -->
                           <div class="row">
                             <div class="col-sm-6">
-                              <div class="form-group has-feeback">
-                                <input type="text" name="shipping-post-code" value="" placeholder="Post code" data-minlength="4" maxlength="35" required>
+                              <div class="form-group has-feedback">
+                                <input type="text" name="shipping-post-code" value="" placeholder="Post code" data-minlength="4" maxlength="35" required data-validate="false" class="hidden">
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>   <!-- col -->
@@ -1243,10 +1247,12 @@
                   <h3><span class="section-number text-center">2</span>Shipping method</h3>
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="form-group has-feedback radio-wrapper clearfix" data-location="checkout-form">
-                        <input type="radio" name="shipping-method" value="ups" id="ups" required>
-                        <span class="fake-radio-classic"></span>
-                        <label for="ups" class="radio-label">UPS Standard £9.47</label>
+                      <div class="form-group has-feedback radio-wrapper clearfix">
+                        <label class="radio-label clearfix" data-location="checkout-form">
+                          <input type="radio" name="shipping-method" value="ups" id="ups" data-validate="true" required>
+                          <span class="fake-radio-classic"></span>
+                          <span class="text">UPS Standard £9.47</span>
+                        </label>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>   <!-- col -->
@@ -1255,16 +1261,18 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group has-feedback radio-wrapper clearfix">
-                        <input type="radio" name="payment-method" value="card" required id="card1">
-                        <span class="fake-radio-classic"></span>
-                        <label for="card1" class="radio-label">Credit Card, PayPal or Bank Transfer</label>
+                        <label class="radio-label clearfix" data-location="checkout-form">
+                          <input type="radio" name="payment-method" value="card1" required id="card1">
+                          <span class="fake-radio-classic"></span>
+                          <span class="text">Credit Card, PayPal or Bank Transfer</span>
+                        </label>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="row content">
                         <div class="col-sm-6">
                           <div class="form-group has-feedback">
                             <div class="select-box">
-                              <select class="select-card" name="cards" required>
+                              <select class="select-card" name="cards" required data-validate="false" class="hidden">
                                 <option value="">-- Please select --</option>
                                 <optgroup label="Credit card / Debit card">
                                   <option value="visa">Visa</option>
@@ -1282,20 +1290,27 @@
                               <span class="icon-font icon-select"></span>
                             </div>
                             <div class="help-block with-errors"></div>
+                            <p class="input-info text-right">
+                              After placing the order,
+                              you'll be redirected to the GlobalCollect page for
+                              completion of the payment
+                            </p>
                           </div>
                         </div>   <!-- col -->
                       </div>   <!-- row -->
                       <div class="form-group has-feedback radio-wrapper clearfix">
-                        <input type="radio" name="payment-method" value="card" required id="card2">
-                        <span class="fake-radio-classic"></span>
-                        <label for="card2" class="radio-label">Credit Card, PayPal or Bank Transfer</label>
+                        <label class="radio-label clearfix" data-location="checkout-form">
+                          <input type="radio" name="payment-method" value="card2" required id="card2">
+                          <span class="fake-radio-classic"></span>
+                          <span class="text">Credit Card, PayPal or Bank Transfer</span>
+                        </label>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="row content">
                         <div class="col-sm-6">
                           <div class="form-group has-feedback">
                             <div class="select-box">
-                              <select class="select-card" name="cards" required>
+                              <select class="select-card" name="cards" required data-validate="false" class="hidden">
                                 <option value="">-- Please select --</option>
                                 <optgroup label="Credit card / Debit card">
                                   <option value="visa">Visa</option>
@@ -1313,20 +1328,27 @@
                               <span class="icon-font icon-select"></span>
                             </div>
                             <div class="help-block with-errors"></div>
+                            <p class="input-info text-right">
+                              After placing the order,
+                              you'll be redirected to the GlobalCollect page for
+                              completion of the payment
+                            </p>
                           </div>
                         </div>   <!-- col -->
                       </div>   <!-- row -->
                       <div class="form-group has-feedback radio-wrapper clearfix">
-                        <input type="radio" name="payment-method" value="card" required id="card3">
-                        <span class="fake-radio-classic"></span>
-                        <label for="card3" class="radio-label">Credit Card, PayPal or Bank Transfer</label>
+                        <label class="radio-label clearfix" data-location="checkout-form">
+                          <input type="radio" name="payment-method" value="card3" required id="card3">
+                          <span class="fake-radio-classic"></span>
+                          <span class="text">Credit Card, PayPal or Bank Transfer</span>
+                        </label>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="row content">
                         <div class="col-sm-6">
                           <div class="form-group has-feedback">
                             <div class="select-box">
-                              <select class="select-card" name="cards" required>
+                              <select class="select-card" name="cards" required data-validate="false" class="hidden">
                                 <option value="">-- Please select --</option>
                                 <optgroup label="Credit card / Debit card">
                                   <option value="visa">Visa</option>
@@ -1344,6 +1366,11 @@
                               <span class="icon-font icon-select"></span>
                             </div>
                             <div class="help-block with-errors"></div>
+                            <p class="input-info text-right">
+                              After placing the order,
+                              you'll be redirected to the GlobalCollect page for
+                              completion of the payment
+                            </p>
                           </div>
                         </div>   <!-- col -->
                       </div>   <!-- row -->
